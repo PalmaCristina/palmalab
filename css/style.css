@@ -82,8 +82,8 @@ nav a:hover {
   line-height: 1.75;
   max-width: 850px;
   color: #555555;
-  margin: 0;
 }
+
 
 /* =========================
    Hero Details
@@ -137,8 +137,38 @@ nav a:hover {
 
 .secondary-button:hover {
   background: #f7f5f9;
-  color: #3f1d5f;
 }
+
+
+/* =========================
+   About Section
+   ========================= */
+
+.about-section {
+  background: #f7f5f9;
+  padding: 70px 7%;
+}
+
+.about-inner {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.about-inner h2 {
+  font-size: 2.2rem;
+  max-width: 700px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.about-inner p {
+  max-width: 850px;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #555555;
+}
+
+
 /* =========================
    General Sections
    ========================= */
@@ -179,35 +209,6 @@ nav a:hover {
   max-width: 850px;
   padding-left: 22px;
 }
-
-/* =========================
-   About Section
-   ========================= */
-
-.about-section {
-  background: #f7f5f9;
-  padding: 70px 7%;
-}
-
-.about-inner {
-  max-width: 1150px;
-  margin: 0 auto;
-}
-
-.about-inner h2 {
-  font-size: 2.2rem;
-  max-width: 700px;
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-
-.about-inner p {
-  max-width: 850px;
-  font-size: 1.15rem;
-  line-height: 1.8;
-  color: #555555;
-}
-
 
 
 /* =========================
@@ -261,13 +262,6 @@ nav a:hover {
 .join p {
   max-width: 800px;
   font-size: 1.1rem;
-}
-
-.join a {
-  display: inline-block;
-  margin-top: 8px;
-  font-weight: 600;
-  text-decoration: none;
 }
 
 
