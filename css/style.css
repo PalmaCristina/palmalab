@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  background: #ffffff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 7%;
+  border-bottom: 1px solid #e6e6e6;
+  background: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+nav a {
+  margin-left: 28px;
+  text-decoration: none;
+  color: #222;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  padding: 90px 7% 70px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  max-width: 900px;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  max-width: 800px;
+  color: #555;
+}
+
+.section {
+  padding: 70px 7%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section h1,
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  border-top: 3px solid #222;
+  padding-top: 20px;
+}
+
+.card p {
+  line-height: 1.6;
+  color: #555;
+}
+
+.join {
+  background: #f5f5f5;
+  padding: 70px 7%;
+}
+
+.join-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+footer {
+  padding: 35px 7%;
+  border-top: 1px solid #e6e6e6;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 60px;
+}
+
+@media (max-width: 800px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 15px;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-right: 18px;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
