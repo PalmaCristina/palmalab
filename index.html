@@ -1,10 +1,221 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Palma Lab</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      background: #ffffff;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 7%;
+      border-bottom: 1px solid #e6e6e6;
+      background: white;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    nav a {
+      margin-left: 28px;
+      text-decoration: none;
+      color: #222;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      padding: 90px 7% 70px 7%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      line-height: 1.1;
+      margin-bottom: 25px;
+      max-width: 900px;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      max-width: 800px;
+      color: #555;
+    }
+
+    .section {
+      padding: 70px 7%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 35px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .card {
+      border-top: 3px solid #222;
+      padding-top: 20px;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .join {
+      background: #f5f5f5;
+      padding: 70px 7%;
+    }
+
+    .join-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .join h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .join p {
+      max-width: 800px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 35px 7%;
+      border-top: 1px solid #e6e6e6;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 15px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 18px;
+      }
+
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Palma Lab</h1>
-  <p>Website coming soon.</p>
+
+  <header>
+    <div class="logo">Palma Lab</div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Research</a>
+      <a href="#">People</a>
+      <a href="#">Publications</a>
+      <a href="#">Join Us</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Quantitative Systems Biology of Microbial Stress Adaptation</h1>
+
+    <p>
+      We investigate how microorganisms sense, respond to, and adapt to
+      environmental stress. By combining mathematical modeling, systems biology,
+      synthetic biology, and quantitative experiments, we uncover the regulatory
+      principles that shape microbial behavior.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Research</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Microbial Stress Response</h3>
+        <p>
+          Understanding how microorganisms detect environmental perturbations
+          and coordinate adaptive responses.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Gene Regulatory Dynamics</h3>
+        <p>
+          Investigating how regulatory networks generate dynamic cellular
+          responses across time and environmental conditions.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Predictive Systems Biology</h3>
+        <p>
+          Integrating mathematical models with quantitative experiments to
+          explain and predict microbial behavior.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="join">
+    <div class="join-inner">
+      <h2>Join the Palma Lab</h2>
+
+      <p>
+        We are recruiting motivated students and researchers interested in
+        interdisciplinary work spanning molecular biology, microbiology,
+        computer science, mathematics, bioengineering, and related fields.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    Palma Lab · University of Wyoming
+  </footer>
+
 </body>
 </html>
