@@ -473,7 +473,7 @@ nav a:hover {
 
 
 /* =========================
-   Footer
+   Standard Footer
    ========================= */
 
 footer {
@@ -489,14 +489,6 @@ footer {
   color: var(--text-light);
 
   font-size: 0.9rem;
-}
-
-
-/* Smaller gap between homepage
-   buttons and footer */
-
-.hero + footer {
-  margin-top: 20px;
 }
 
 
@@ -518,6 +510,82 @@ footer a:hover {
   color: #8b5a00;
 
   text-decoration: underline;
+}
+
+
+/* =========================
+   Homepage Footer
+   ========================= */
+
+.hero + .home-footer {
+  margin-top: 20px;
+}
+
+.home-footer {
+  position: relative;
+
+  width: 100%;
+  max-width: none;
+
+  margin-left: 0;
+  margin-right: 0;
+
+  padding: 0;
+
+  border-top: none;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+
+/* Footer text */
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: var(--content-width);
+
+  margin: 0 auto;
+
+  padding:
+    32px
+    var(--page-padding)
+    20px;
+
+  border-top: 1px solid var(--border);
+
+  color: var(--text-light);
+
+  font-size: 0.9rem;
+}
+
+
+/* Mountain illustration */
+
+.footer-mountains {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  line-height: 0;
+}
+
+.footer-mountains img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  opacity: 0.32;
+
+  pointer-events: none;
+  user-select: none;
 }
 
 
@@ -593,6 +661,13 @@ footer a:hover {
     grid-template-columns: 1fr;
   }
 
+
+  /* Homepage Footer */
+
+  .footer-content {
+    padding-top: 28px;
+  }
+
 }
 
 
@@ -661,14 +736,33 @@ footer a:hover {
   }
 
 
-  /* Footer */
+  /* Standard Footer */
 
   footer {
     margin-top: 50px;
   }
 
-  .hero + footer {
+
+  /* Homepage Footer */
+
+  .hero + .home-footer {
     margin-top: 15px;
+  }
+
+  .home-footer {
+    margin-top: 15px;
+  }
+
+  .footer-content {
+    padding-top: 25px;
+    padding-bottom: 15px;
+  }
+
+  .footer-mountains img {
+    width: 140%;
+    max-width: none;
+
+    margin-left: -20%;
   }
 
 }
