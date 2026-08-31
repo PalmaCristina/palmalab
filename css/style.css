@@ -1,11 +1,46 @@
 /* =========================
+   Palma Lab Website
+   Main Stylesheet
+   ========================= */
+
+
+/* =========================
+   Color & Layout Variables
+   ========================= */
+
+:root {
+  --content-width: 1150px;
+  --page-padding: 7%;
+
+  --wyoming-gold: #ffc425;
+  --wyoming-gold-dark: #b8860b;
+  --wyoming-brown: #492f24;
+  --light-gold: #fff8df;
+
+  --text-dark: #1f1f1f;
+  --text-mid: #555555;
+  --text-light: #777777;
+
+  --border: #e8e8e8;
+}
+
+
+/* =========================
    Global
    ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  color: #1f1f1f;
+  color: var(--text-dark);
   background: #ffffff;
   line-height: 1.6;
 }
@@ -15,111 +50,153 @@ a {
 }
 
 a:hover {
-  color: #492f24;
+  color: var(--wyoming-brown);
 }
 
 
 /* =========================
-   Header / Navigation
+   Header
    ========================= */
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px 7%;
-  border-bottom: 1px solid #e8e8e8;
+  width: 100%;
   background: #ffffff;
+  border-bottom: 1px solid var(--border);
+
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
+
+/* Header content uses same width
+   as the rest of the website */
+
+.header-inner {
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+
+  padding: 24px var(--page-padding);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* =========================
+   Logo
+   ========================= */
+
 .logo {
   font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: 0.3px;
+  white-space: nowrap;
 }
 
 .logo a {
-  color: #1f1f1f;
+  color: var(--text-dark);
   text-decoration: none;
 }
 
 .logo a:hover {
-  color: #492f24;
+  color: var(--wyoming-brown);
+}
+
+
+/* =========================
+   Navigation
+   ========================= */
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 nav a {
-  margin-left: 28px;
+  margin-left: 26px;
+
   text-decoration: none;
   color: #333333;
+
   font-size: 0.95rem;
   font-weight: 500;
+
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
-  color: #b8860b;
+  color: var(--wyoming-gold-dark);
 }
 
 
 /* =========================
-   Hero
+   Homepage Hero
    ========================= */
 
 .hero {
-  padding: 95px 7% 85px;
-  max-width: 1250px;
+  width: 100%;
+  max-width: var(--content-width);
   margin: 0 auto;
-}
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 70px;
-  align-items: center;
+  padding: 95px var(--page-padding) 90px;
 }
 
 .hero h1 {
+  max-width: 950px;
+
+  margin: 0 0 28px;
+
   font-size: 4rem;
   line-height: 1.08;
-  margin: 0 0 28px;
   font-weight: 700;
-  color: #1f1f1f;
+
+  color: var(--text-dark);
 }
 
 .hero p {
+  max-width: 850px;
+
   font-size: 1.3rem;
   line-height: 1.75;
-  max-width: 850px;
-  color: #555555;
-}
 
-.hero-image img {
-  display: block;
-  width: 100%;
-  height: 480px;
-  object-fit: cover;
-  border-radius: 6px;
+  color: var(--text-mid);
 }
 
 
 /* =========================
-   Hero Details
+   Hero Eyebrow
    ========================= */
 
 .eyebrow {
+  margin-top: 0 !important;
+  margin-bottom: 22px !important;
+
   text-transform: uppercase;
   letter-spacing: 2px;
+
   font-size: 0.82rem !important;
   font-weight: 700;
+
   color: #8b5a00 !important;
-  margin-bottom: 22px !important;
 }
+
+
+/* =========================
+   Hero Text
+   ========================= */
 
 .hero-text {
   margin-bottom: 35px !important;
 }
+
+
+/* =========================
+   Hero Buttons
+   ========================= */
 
 .hero-buttons {
   display: flex;
@@ -129,21 +206,34 @@ nav a:hover {
 
 .button {
   display: inline-block;
+
   padding: 13px 22px;
+
   border-radius: 4px;
+
   text-decoration: none;
-  font-weight: 600;
   font-size: 0.95rem;
-  transition: 0.2s ease;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
 }
 
 
-/* Main Wyoming Gold Button */
+/* Primary Button */
 
 .primary-button {
-  background: #ffc425;
+  background: var(--wyoming-gold);
   color: #2b2118;
-  border: 2px solid #ffc425;
+
+  border: 2px solid var(--wyoming-gold);
 }
 
 .primary-button:hover {
@@ -157,73 +247,55 @@ nav a:hover {
 
 .secondary-button {
   background: #ffffff;
-  color: #492f24;
-  border: 2px solid #ffc425;
+  color: var(--wyoming-brown);
+
+  border: 2px solid var(--wyoming-gold);
 }
 
 .secondary-button:hover {
-  background: #fff8df;
-  color: #492f24;
+  background: var(--light-gold);
+  color: var(--wyoming-brown);
 }
 
 
 /* =========================
-   About Section
-   ========================= */
-
-.about-section {
-  background: #fff8df;
-  padding: 70px 7%;
-}
-
-.about-inner {
-  max-width: 1150px;
-  margin: 0 auto;
-}
-
-.about-inner h2 {
-  font-size: 2.2rem;
-  max-width: 700px;
-  margin-top: 0;
-  margin-bottom: 20px;
-  color: #2b2118;
-}
-
-.about-inner p {
-  max-width: 850px;
-  font-size: 1.15rem;
-  line-height: 1.8;
-  color: #555555;
-}
-
-
-/* =========================
-   General Sections
+   General Page Sections
    ========================= */
 
 .section {
-  padding: 80px 7%;
-  max-width: 1150px;
+  width: 100%;
+  max-width: var(--content-width);
+
   margin: 0 auto;
+
+  padding: 80px var(--page-padding);
 }
 
 .section h1 {
-  font-size: 3rem;
   margin-top: 0;
   margin-bottom: 35px;
+
+  font-size: 3rem;
+  line-height: 1.15;
+
   color: #2b2118;
 }
 
 .section h2 {
-  font-size: 2rem;
   margin-top: 55px;
   margin-bottom: 18px;
+
+  font-size: 2rem;
+  line-height: 1.25;
+
   color: #2b2118;
 }
 
 .section h3 {
-  font-size: 1.3rem;
   margin-bottom: 10px;
+
+  font-size: 1.3rem;
+
   color: #2b2118;
 }
 
@@ -243,29 +315,77 @@ nav a:hover {
 
 
 /* =========================
+   About Section
+   ========================= */
+
+.about-section {
+  background: var(--light-gold);
+}
+
+.about-inner {
+  width: 100%;
+  max-width: var(--content-width);
+
+  margin: 0 auto;
+
+  padding: 70px var(--page-padding);
+}
+
+.about-inner h2 {
+  max-width: 700px;
+
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-size: 2.2rem;
+
+  color: #2b2118;
+}
+
+.about-inner p {
+  max-width: 850px;
+
+  font-size: 1.15rem;
+  line-height: 1.8;
+
+  color: var(--text-mid);
+}
+
+
+/* =========================
    Research Cards
    ========================= */
 
 .cards {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
+
   gap: 34px;
+
   margin-top: 35px;
 }
 
 .card {
   padding: 28px;
-  border: 1px solid #e3e3e3;
-  border-top: 4px solid #ffc425;
-  border-radius: 4px;
+
   background: #ffffff;
-  transition: transform 0.2s ease,
-              box-shadow 0.2s ease;
+
+  border: 1px solid #e3e3e3;
+  border-top: 4px solid var(--wyoming-gold);
+
+  border-radius: 4px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .card h3 {
@@ -273,7 +393,7 @@ nav a:hover {
 }
 
 .card p {
-  color: #555555;
+  color: var(--text-mid);
 }
 
 
@@ -282,35 +402,42 @@ nav a:hover {
    ========================= */
 
 .join {
-  background: #fff8df;
-  padding: 85px 7%;
+  background: var(--light-gold);
 }
 
 .join-inner {
-  max-width: 1150px;
+  width: 100%;
+  max-width: var(--content-width);
+
   margin: 0 auto;
+
+  padding: 85px var(--page-padding);
 }
 
 .join h2 {
-  font-size: 2.4rem;
   margin-top: 0;
   margin-bottom: 20px;
+
+  font-size: 2.4rem;
+
   color: #2b2118;
 }
 
 .join p {
   max-width: 800px;
+
   font-size: 1.1rem;
 }
 
 .join a {
   color: #8b5a00;
+
   font-weight: 600;
   text-decoration: none;
 }
 
 .join a:hover {
-  color: #492f24;
+  color: var(--wyoming-brown);
 }
 
 
@@ -319,21 +446,42 @@ nav a:hover {
    ========================= */
 
 footer {
-  padding: 40px 7%;
-  border-top: 1px solid #e8e8e8;
-  color: #777777;
+  width: 100%;
+  max-width: var(--content-width);
+
+  margin: 70px auto 0;
+
+  padding: 40px var(--page-padding);
+
+  border-top: 1px solid var(--border);
+
+  color: var(--text-light);
+
   font-size: 0.9rem;
-  margin-top: 70px;
+}
+
+
+/* Footer Department Links */
+
+footer a {
+  color: var(--text-light);
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: #8b5a00;
 }
 
 
 /* =========================
-   Responsive
+   Responsive Design
    ========================= */
 
 @media (max-width: 900px) {
 
-  header {
+  .header-inner {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -345,16 +493,16 @@ footer {
   nav a {
     margin-left: 0;
     margin-right: 18px;
+
     line-height: 2;
   }
 
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 45px;
-  }
+
+  /* Hero */
 
   .hero {
     padding-top: 65px;
+    padding-bottom: 65px;
   }
 
   .hero h1 {
@@ -365,16 +513,67 @@ footer {
     font-size: 1.15rem;
   }
 
-  .hero-image img {
-    height: auto;
-    max-height: 500px;
-  }
+
+  /* General Sections */
 
   .section h1 {
     font-size: 2.3rem;
   }
 
+
+  /* Cards */
+
   .cards {
     grid-template-columns: 1fr;
   }
+
+}
+
+
+/* =========================
+   Small Phones
+   ========================= */
+
+@media (max-width: 550px) {
+
+  .header-inner {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  nav a {
+    margin-right: 14px;
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    padding-top: 50px;
+  }
+
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .hero p {
+    font-size: 1.05rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  footer {
+    margin-top: 50px;
+  }
+
 }
