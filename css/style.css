@@ -36,13 +36,9 @@ html {
 
 body {
   margin: 0;
-
   background: #ffffff;
-
   color: var(--text);
-
   font-family: Arial, Helvetica, sans-serif;
-
   line-height: 1.65;
 }
 
@@ -61,32 +57,22 @@ a {
 
 header {
   position: sticky;
-
   top: 0;
-
   z-index: 1000;
-
   background: rgba(255, 255, 255, 0.97);
-
   border-bottom: 1px solid var(--border);
 }
 
 .header-inner {
   width: 100%;
-
   max-width: var(--max-width);
-
   min-height: 92px;
-
   margin: 0 auto;
-
   padding-left: var(--page-padding);
   padding-right: var(--page-padding);
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 }
 
@@ -101,15 +87,12 @@ header {
 
 .logo a {
   display: flex;
-
   align-items: center;
 }
 
 .logo img {
   display: block;
-
   width: 205px;
-
   height: auto;
 }
 
@@ -120,23 +103,18 @@ header {
 
 nav {
   display: flex;
-
   align-items: center;
-
   gap: 30px;
 }
 
 nav a {
   position: relative;
-
   padding: 34px 0 30px;
 
   color: #383838;
-
   text-decoration: none;
 
   font-size: 0.93rem;
-
   font-weight: 500;
 
   white-space: nowrap;
@@ -148,7 +126,6 @@ nav a:hover {
 
 nav a.active {
   color: var(--brown);
-
   font-weight: 600;
 }
 
@@ -156,14 +133,11 @@ nav a.active::after {
   content: "";
 
   position: absolute;
-
   left: 0;
   right: 0;
-
   bottom: 25px;
 
   height: 2px;
-
   background: var(--gold);
 }
 
@@ -178,11 +152,9 @@ nav a.active::after {
   color: var(--gold-dark);
 
   font-size: 0.78rem;
-
   font-weight: 700;
 
   letter-spacing: 0.15em;
-
   text-transform: uppercase;
 }
 
@@ -193,7 +165,6 @@ nav a.active::after {
 
 .hero {
   width: 100%;
-
   max-width: var(--max-width);
 
   margin: 0 auto;
@@ -209,7 +180,6 @@ nav a.active::after {
   color: var(--brown-dark);
 
   font-size: clamp(1.8rem, 2.7vw, 2.8rem);
-
   line-height: 1.12;
 
   letter-spacing: -0.025em;
@@ -223,7 +193,6 @@ nav a.active::after {
   color: var(--text-mid);
 
   font-size: 1.18rem;
-
   line-height: 1.75;
 }
 
@@ -234,17 +203,13 @@ nav a.active::after {
 
 .hero-buttons {
   display: flex;
-
   gap: 14px;
-
   flex-wrap: wrap;
 }
 
 .button {
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
 
   min-height: 48px;
@@ -254,7 +219,6 @@ nav a.active::after {
   text-decoration: none;
 
   font-size: 0.94rem;
-
   font-weight: 600;
 
   border-radius: 3px;
@@ -262,25 +226,19 @@ nav a.active::after {
 
 .primary-button {
   background: var(--gold);
-
   border: 2px solid var(--gold);
-
   color: #241c14;
 }
 
 .primary-button:hover {
   background: #e8b31a;
-
   border-color: #e8b31a;
-
   color: #241c14;
 }
 
 .secondary-button {
   background: #ffffff;
-
   border: 2px solid #d5aa21;
-
   color: var(--brown);
 }
 
@@ -295,7 +253,6 @@ nav a.active::after {
 
 .page {
   width: 100%;
-
   max-width: var(--max-width);
 
   margin: 0 auto;
@@ -305,7 +262,6 @@ nav a.active::after {
 
 .page-intro {
   max-width: 900px;
-
   margin-bottom: 70px;
 }
 
@@ -315,7 +271,6 @@ nav a.active::after {
   color: var(--brown-dark);
 
   font-size: clamp(3rem, 5vw, 4.8rem);
-
   line-height: 1.05;
 
   letter-spacing: -0.035em;
@@ -329,7 +284,6 @@ nav a.active::after {
   color: var(--text-mid);
 
   font-size: 1.18rem;
-
   line-height: 1.8;
 }
 
@@ -340,7 +294,6 @@ nav a.active::after {
 
 .content-section {
   max-width: var(--content-width);
-
   margin-bottom: 75px;
 }
 
@@ -350,7 +303,6 @@ nav a.active::after {
   color: var(--brown-dark);
 
   font-size: 2rem;
-
   line-height: 1.2;
 }
 
@@ -363,7 +315,6 @@ nav a.active::after {
   color: var(--text-mid);
 
   font-size: 1.05rem;
-
   line-height: 1.8;
 }
 
@@ -373,19 +324,16 @@ nav a.active::after {
 
 .content-section ul {
   max-width: 820px;
-
   padding-left: 21px;
 }
 
 .section-divider {
   width: 100%;
-
   max-width: var(--content-width);
 
   margin: 10px 0 70px;
 
   border: 0;
-
   border-top: 1px solid var(--border);
 }
 
@@ -396,7 +344,6 @@ nav a.active::after {
 
 .pi-profile {
   display: grid;
-
   grid-template-columns: 220px minmax(0, 650px);
 
   gap: 48px;
@@ -410,7 +357,6 @@ nav a.active::after {
 
 .pi-photo {
   width: 220px;
-
   height: 275px;
 
   overflow: hidden;
@@ -422,11 +368,9 @@ nav a.active::after {
   display: block;
 
   width: 220px;
-
   height: 275px;
 
   object-fit: cover;
-
   object-position: center top;
 }
 
@@ -440,11 +384,9 @@ nav a.active::after {
   color: var(--gold-dark);
 
   font-size: 0.76rem;
-
   font-weight: 700;
 
   letter-spacing: 0.14em;
-
   text-transform: uppercase;
 }
 
@@ -454,7 +396,6 @@ nav a.active::after {
   color: var(--brown-dark);
 
   font-size: 2.15rem;
-
   line-height: 1.12;
 }
 
@@ -464,7 +405,6 @@ nav a.active::after {
   color: var(--brown);
 
   font-size: 1.02rem;
-
   font-weight: 600;
 }
 
@@ -474,7 +414,6 @@ nav a.active::after {
   color: var(--text-light);
 
   font-size: 0.94rem;
-
   line-height: 1.6;
 }
 
@@ -486,13 +425,11 @@ nav a.active::after {
   color: var(--text-mid);
 
   font-size: 1rem;
-
   line-height: 1.75;
 }
 
 .pi-links {
   display: flex;
-
   gap: 9px;
 
   margin-top: 24px;
@@ -502,7 +439,6 @@ nav a.active::after {
   color: var(--brown);
 
   text-decoration: none;
-
   font-weight: 600;
 }
 
@@ -513,7 +449,6 @@ nav a.active::after {
 
 .team-recruiting {
   width: 100%;
-
   max-width: 1050px;
 
   padding: 50px 55px;
@@ -533,11 +468,9 @@ nav a.active::after {
   color: var(--gold-dark);
 
   font-size: 0.78rem;
-
   font-weight: 700;
 
   letter-spacing: 0.14em;
-
   text-transform: uppercase;
 }
 
@@ -555,7 +488,6 @@ nav a.active::after {
   color: var(--text-mid);
 
   font-size: 1.05rem;
-
   line-height: 1.75;
 }
 
@@ -566,7 +498,6 @@ nav a.active::after {
 
 .contact-page {
   width: 100%;
-
   max-width: var(--max-width);
 
   margin: 0 auto;
@@ -575,30 +506,10 @@ nav a.active::after {
 }
 
 
-/* Contact heading */
-
-.contact-heading {
-  margin-bottom: 40px;
-}
-
-.contact-heading h1 {
-  margin: 0;
-
-  color: var(--brown-dark);
-
-  font-size: clamp(3rem, 5vw, 4.8rem);
-
-  line-height: 1;
-
-  letter-spacing: -0.04em;
-}
-
-
 /* Contact photograph */
 
 .contact-hero-image {
   width: 100%;
-
   max-width: 1100px;
 
   height: 430px;
@@ -612,7 +523,6 @@ nav a.active::after {
   display: block;
 
   width: 100%;
-
   height: 100%;
 
   object-fit: cover;
@@ -625,7 +535,6 @@ nav a.active::after {
 
 .contact-grid {
   width: 100%;
-
   max-width: 1100px;
 
   display: grid;
@@ -637,7 +546,6 @@ nav a.active::after {
 
 .contact-box {
   min-width: 0;
-
   min-height: 280px;
 
   padding: 30px;
@@ -647,27 +555,12 @@ nav a.active::after {
   border-top: 3px solid var(--gold);
 }
 
-.contact-box-label {
-  margin: 0 0 10px;
-
-  color: var(--gold-dark);
-
-  font-size: 0.72rem;
-
-  font-weight: 700;
-
-  letter-spacing: 0.14em;
-
-  text-transform: uppercase;
-}
-
 .contact-box h2 {
   margin: 0 0 20px;
 
   color: var(--brown-dark);
 
   font-size: 1.55rem;
-
   line-height: 1.2;
 }
 
@@ -677,7 +570,6 @@ nav a.active::after {
   color: var(--text-mid);
 
   font-size: 0.97rem;
-
   line-height: 1.7;
 }
 
@@ -687,7 +579,6 @@ nav a.active::after {
   text-decoration: none;
 
   font-size: 0.95rem;
-
   font-weight: 600;
 }
 
@@ -695,7 +586,6 @@ nav a.active::after {
   text-decoration: underline;
 
   text-decoration-color: var(--gold);
-
   text-underline-offset: 4px;
 }
 
@@ -730,7 +620,6 @@ nav a.active::after {
   color: var(--text-mid);
 
   font-size: 1.05rem;
-
   line-height: 1.8;
 }
 
@@ -741,7 +630,6 @@ nav a.active::after {
 
 .publication {
   max-width: 900px;
-
   margin-bottom: 32px;
 }
 
@@ -778,7 +666,6 @@ nav a.active::after {
   padding: 26px;
 
   border: 1px solid var(--border);
-
   border-top: 3px solid var(--gold);
 
   background: #ffffff;
@@ -813,12 +700,11 @@ footer {
 
 .footer-content {
   width: 100%;
-
   max-width: var(--max-width);
 
   margin: 0 auto;
 
-  padding: 28px var(--page-padding) 22px;
+  padding: 28px var(--page-padding) 10px;
 
   font-size: 0.86rem;
 }
@@ -834,14 +720,21 @@ footer {
 }
 
 
-/* Mountains */
+/* =========================================================
+   MOUNTAIN FOOTER
+   ========================================================= */
+
+/*
+   Shorter mountain area + image pushed downward.
+   This keeps the mountains close to the bottom of the page
+   instead of rising too high into the footer.
+*/
 
 .footer-mountains {
   position: relative;
 
   width: 100%;
-
-  height: 150px;
+  height: 85px;
 
   overflow: hidden;
 }
@@ -850,16 +743,17 @@ footer {
   position: absolute;
 
   left: 50%;
-
-  bottom: -45px;
+  bottom: -70px;
 
   width: 100%;
-
   min-width: 1000px;
 
   transform: translateX(-50%);
 
   opacity: 0.28;
+
+  pointer-events: none;
+  user-select: none;
 }
 
 
@@ -880,7 +774,6 @@ footer {
     padding-bottom: 14px;
 
     flex-direction: column;
-
     align-items: flex-start;
   }
 
@@ -923,7 +816,6 @@ footer {
   .pi-photo,
   .pi-photo img {
     width: 190px;
-
     height: 238px;
   }
 
@@ -947,6 +839,17 @@ footer {
 
   .internal-grid {
     grid-template-columns: 1fr;
+  }
+
+
+  /* Mountains */
+
+  .footer-mountains {
+    height: 75px;
+  }
+
+  .footer-mountains img {
+    bottom: -65px;
   }
 
 }
@@ -979,7 +882,6 @@ footer {
 
   .hero {
     padding-top: 55px;
-
     padding-bottom: 55px;
   }
 
@@ -993,7 +895,6 @@ footer {
 
   .hero-buttons {
     flex-direction: column;
-
     align-items: flex-start;
   }
 
@@ -1003,7 +904,6 @@ footer {
   .page,
   .contact-page {
     padding-top: 52px;
-
     padding-bottom: 45px;
   }
 
@@ -1023,7 +923,6 @@ footer {
   .pi-photo,
   .pi-photo img {
     width: 180px;
-
     height: 225px;
   }
 
@@ -1037,10 +936,6 @@ footer {
 
 
   /* Contact */
-
-  .contact-heading {
-    margin-bottom: 30px;
-  }
 
   .contact-hero-image {
     height: 250px;
@@ -1068,19 +963,20 @@ footer {
   /* Footer */
 
   .footer-content {
+    padding-bottom: 6px;
+
     line-height: 1.8;
   }
 
   .footer-mountains {
-    height: 90px;
+    height: 60px;
   }
 
   .footer-mountains img {
     width: 150%;
-
     min-width: 700px;
 
-    bottom: -25px;
+    bottom: -55px;
   }
 
 }
