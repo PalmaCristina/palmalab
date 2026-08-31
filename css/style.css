@@ -759,7 +759,7 @@ footer {
 .footer-mountains {
   width: 100%;
 
-  margin-top: 0;
+  margin-top: -55px;
 
   overflow: visible;
 }
