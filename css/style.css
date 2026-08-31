@@ -340,7 +340,7 @@ nav a.active::after {
 
 
 /* =========================================================
-   CONTENT SECTIONS
+   CONTENT
    ========================================================= */
 
 .content-section {
@@ -388,7 +388,7 @@ nav a.active::after {
 
 
 /* =========================================================
-   SECTION DIVIDER
+   DIVIDERS
    ========================================================= */
 
 .section-divider {
@@ -424,8 +424,6 @@ nav a.active::after {
 
   border: 1px solid var(--border);
   border-top: 3px solid var(--gold);
-
-  border-radius: 2px;
 }
 
 .card h3 {
@@ -445,12 +443,6 @@ nav a.active::after {
    TEAM PAGE
    ========================================================= */
 
-/*
-   IMPORTANT:
-   The first column has a fixed width of 220px.
-   This prevents the PI photograph from becoming huge.
-*/
-
 .pi-profile {
   display: grid;
 
@@ -464,9 +456,6 @@ nav a.active::after {
 
   margin-bottom: 90px;
 }
-
-
-/* PI PHOTO */
 
 .pi-photo {
   width: 220px;
@@ -489,9 +478,6 @@ nav a.active::after {
   object-position: center top;
 }
 
-
-/* PI TEXT */
-
 .pi-content {
   padding-top: 2px;
 }
@@ -505,7 +491,6 @@ nav a.active::after {
   font-weight: 700;
 
   letter-spacing: 0.14em;
-
   text-transform: uppercase;
 }
 
@@ -548,9 +533,6 @@ nav a.active::after {
   font-size: 1rem;
   line-height: 1.75;
 }
-
-
-/* PI LINKS */
 
 .pi-links {
   margin-top: 24px;
@@ -613,7 +595,6 @@ nav a.active::after {
   font-weight: 700;
 
   letter-spacing: 0.14em;
-
   text-transform: uppercase;
 }
 
@@ -648,11 +629,19 @@ nav a.active::after {
 
   margin: 0 auto;
 
-  padding: 85px var(--page-padding) 60px;
+  padding: 80px var(--page-padding) 70px;
 }
 
-.contact-page > h1 {
-  margin: 0 0 48px;
+.contact-intro {
+  margin-bottom: 42px;
+}
+
+.contact-intro .eyebrow {
+  margin-bottom: 14px;
+}
+
+.contact-intro h1 {
+  margin: 0;
 
   color: var(--brown-dark);
 
@@ -662,11 +651,14 @@ nav a.active::after {
   letter-spacing: -0.04em;
 }
 
+
+/* Contact image */
+
 .contact-photo {
   width: 100%;
-  max-width: 1050px;
+  max-width: 1100px;
 
-  margin-bottom: 48px;
+  margin-bottom: 45px;
 
   overflow: hidden;
 }
@@ -675,53 +667,85 @@ nav a.active::after {
   display: block;
 
   width: 100%;
-  height: 500px;
+  height: 470px;
 
   object-fit: cover;
 }
 
-.contact-find {
-  max-width: 700px;
 
-  margin-bottom: 75px;
+/* Contact cards */
+
+.contact-cards {
+  width: 100%;
+  max-width: 1100px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
 }
 
-.contact-find h2,
-.contact-text-section h2 {
-  margin: 0 0 16px;
+.contact-card {
+  min-height: 300px;
+
+  padding: 30px 30px 32px;
+
+  background: #ffffff;
+
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--gold);
+}
+
+.contact-card-label {
+  margin: 0 0 10px;
+
+  color: var(--gold-dark);
+
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contact-card h2 {
+  margin: 0 0 20px;
 
   color: var(--brown-dark);
 
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   line-height: 1.2;
 }
 
-.contact-find p,
-.contact-text-section p {
-  max-width: 760px;
-
-  margin: 0 0 14px;
+.contact-card p {
+  margin: 0 0 17px;
 
   color: var(--text-mid);
 
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 0.98rem;
+  line-height: 1.7;
 }
 
-.contact-text-section {
-  max-width: 800px;
-
-  margin-bottom: 60px;
+.contact-card p:last-child {
+  margin-bottom: 0;
 }
 
-.contact-find a,
-.contact-text-section a {
+.contact-card a {
   color: var(--brown);
 
   font-weight: 600;
 
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+
   text-decoration-color: var(--gold);
-  text-underline-offset: 3px;
+
+  text-underline-offset: 4px;
 }
 
 
@@ -785,7 +809,7 @@ nav a.active::after {
 
 
 /* =========================================================
-   INTERNAL PAGE
+   INTERNAL
    ========================================================= */
 
 .internal-grid {
@@ -987,7 +1011,16 @@ footer {
   /* Contact */
 
   .contact-photo img {
-    height: 390px;
+    height: 380px;
+  }
+
+  .contact-cards {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-card:last-child {
+    grid-column: 1 / -1;
   }
 
 
@@ -1092,12 +1125,32 @@ footer {
 
   /* Contact */
 
-  .contact-page > h1 {
-    margin-bottom: 32px;
+  .contact-intro {
+    margin-bottom: 30px;
+  }
+
+  .contact-photo {
+    margin-bottom: 30px;
   }
 
   .contact-photo img {
     height: 260px;
+  }
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .contact-card:last-child {
+    grid-column: auto;
+  }
+
+  .contact-card {
+    min-height: 0;
+
+    padding: 27px 25px;
   }
 
 
