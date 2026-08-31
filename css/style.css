@@ -142,7 +142,7 @@ nav a:hover {
   max-width: var(--content-width);
   margin: 0 auto;
 
-  padding: 95px var(--page-padding) 90px;
+  padding: 95px var(--page-padding) 35px;
 }
 
 .hero h1 {
