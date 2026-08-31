@@ -572,7 +572,10 @@ footer a:hover {
   width: 100%;
 
   overflow: hidden;
-
+   
+  /* Pull mountains upward */
+  margin-top: -70px;
+   
   line-height: 0;
 }
 
