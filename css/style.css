@@ -730,7 +730,7 @@ footer {
 
   margin: 0 auto;
 
-  padding: 28px var(--page-padding) 4px;
+  padding: 28px var(--page-padding) 10px;
 
   font-size: 0.86rem;
 }
@@ -751,15 +751,16 @@ footer {
    ========================================================= */
 
 /*
-   Mountains intentionally sit very low.
-   Only the upper mountain outline should be visible.
+   The footer itself stays shallow,
+   but the mountain image is high enough
+   that the peaks remain clearly visible.
 */
 
 .footer-mountains {
   position: relative;
 
   width: 100%;
-  height: 58px;
+  height: 95px;
 
   overflow: hidden;
 }
@@ -769,10 +770,7 @@ footer {
 
   left: 50%;
 
-  /*
-     More negative = mountains move DOWN.
-  */
-  bottom: -105px;
+  bottom: -20px;
 
   width: 100%;
   min-width: 1000px;
@@ -874,11 +872,11 @@ footer {
   /* Mountains */
 
   .footer-mountains {
-    height: 52px;
+    height: 85px;
   }
 
   .footer-mountains img {
-    bottom: -95px;
+    bottom: -18px;
   }
 
 }
@@ -992,21 +990,20 @@ footer {
   /* Footer */
 
   .footer-content {
-    padding-bottom: 2px;
+    padding-bottom: 6px;
 
     line-height: 1.8;
   }
 
   .footer-mountains {
-    height: 45px;
+    height: 75px;
   }
 
   .footer-mountains img {
     width: 150%;
-
     min-width: 700px;
 
-    bottom: -90px;
+    bottom: -15px;
   }
 
 }
