@@ -5,7 +5,7 @@
 
 
 /* =========================
-   Color & Layout Variables
+   Colors & Layout
    ========================= */
 
 :root {
@@ -39,9 +39,12 @@ html {
 
 body {
   margin: 0;
+
   font-family: Arial, Helvetica, sans-serif;
+
   color: var(--text-dark);
   background: #ffffff;
+
   line-height: 1.6;
 }
 
@@ -60,7 +63,9 @@ a:hover {
 
 header {
   width: 100%;
+
   background: #ffffff;
+
   border-bottom: 1px solid var(--border);
 
   position: sticky;
@@ -69,15 +74,15 @@ header {
 }
 
 
-/* Header content uses same width
-   as the rest of the website */
+/* Header stretches across page.
+   Logo stays left.
+   Navigation stays right. */
 
 .header-inner {
   width: 100%;
-  max-width: var(--content-width);
-  margin: 0 auto;
+  margin: 0;
 
-  padding: 24px var(--page-padding);
+  padding: 20px var(--page-padding);
 
   display: flex;
   justify-content: space-between;
@@ -86,23 +91,29 @@ header {
 
 
 /* =========================
-   Logo
+   Palma Lab Logo
    ========================= */
 
 .logo {
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .logo a {
-  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+
   text-decoration: none;
 }
 
-.logo a:hover {
-  color: var(--wyoming-brown);
+.logo img {
+  display: block;
+
+  width: 220px;
+  height: auto;
+
+  max-width: 100%;
 }
 
 
@@ -113,13 +124,17 @@ header {
 nav {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   flex-wrap: wrap;
+
+  margin-left: auto;
 }
 
 nav a {
   margin-left: 26px;
 
   text-decoration: none;
+
   color: #333333;
 
   font-size: 0.95rem;
@@ -140,6 +155,7 @@ nav a:hover {
 .hero {
   width: 100%;
   max-width: var(--content-width);
+
   margin: 0 auto;
 
   padding: 95px var(--page-padding) 35px;
@@ -168,7 +184,7 @@ nav a:hover {
 
 
 /* =========================
-   Hero Eyebrow
+   Eyebrow Text
    ========================= */
 
 .eyebrow {
@@ -186,7 +202,7 @@ nav a:hover {
 
 
 /* =========================
-   Hero Text
+   Hero Description
    ========================= */
 
 .hero-text {
@@ -212,6 +228,7 @@ nav a:hover {
   border-radius: 4px;
 
   text-decoration: none;
+
   font-size: 0.95rem;
   font-weight: 600;
 
@@ -231,6 +248,7 @@ nav a:hover {
 
 .primary-button {
   background: var(--wyoming-gold);
+
   color: #2b2118;
 
   border: 2px solid var(--wyoming-gold);
@@ -238,7 +256,9 @@ nav a:hover {
 
 .primary-button:hover {
   background: #e6ad00;
+
   border-color: #e6ad00;
+
   color: #2b2118;
 }
 
@@ -247,6 +267,7 @@ nav a:hover {
 
 .secondary-button {
   background: #ffffff;
+
   color: var(--wyoming-brown);
 
   border: 2px solid var(--wyoming-gold);
@@ -254,12 +275,15 @@ nav a:hover {
 
 .secondary-button:hover {
   background: var(--light-gold);
+
   color: var(--wyoming-brown);
 }
 
 
 /* =========================
    General Page Sections
+   Research / Team /
+   Publications / Join / Contact
    ========================= */
 
 .section {
@@ -310,6 +334,7 @@ nav a:hover {
 
 .section ul {
   max-width: 850px;
+
   padding-left: 22px;
 }
 
@@ -433,6 +458,7 @@ nav a:hover {
   color: #8b5a00;
 
   font-weight: 600;
+
   text-decoration: none;
 }
 
@@ -460,21 +486,32 @@ footer {
   font-size: 0.9rem;
 }
 
+
+/* Smaller gap between
+   homepage buttons and footer */
+
 .hero + footer {
   margin-top: 20px;
 }
 
-/* Footer Department Links */
+
+/* =========================
+   Footer Links
+   ========================= */
 
 footer a {
   color: var(--wyoming-brown);
+
   text-decoration: none;
+
   font-weight: 500;
+
   transition: color 0.2s ease;
 }
 
 footer a:hover {
   color: #8b5a00;
+
   text-decoration: underline;
 }
 
@@ -485,13 +522,31 @@ footer a:hover {
 
 @media (max-width: 900px) {
 
+  /* Header */
+
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
+
+    padding-top: 18px;
+    padding-bottom: 18px;
   }
+
+
+  /* Logo */
+
+  .logo img {
+    width: 190px;
+  }
+
+
+  /* Navigation */
 
   nav {
     margin-top: 16px;
+    margin-left: 0;
+
+    justify-content: flex-start;
   }
 
   nav a {
@@ -506,7 +561,7 @@ footer a:hover {
 
   .hero {
     padding-top: 65px;
-    padding-bottom: 65px;
+    padding-bottom: 35px;
   }
 
   .hero h1 {
@@ -540,19 +595,35 @@ footer a:hover {
 
 @media (max-width: 550px) {
 
+  /* Header */
+
   .header-inner {
-    padding-top: 18px;
-    padding-bottom: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
-  .logo {
-    font-size: 1.4rem;
+
+  /* Logo */
+
+  .logo img {
+    width: 165px;
+  }
+
+
+  /* Navigation */
+
+  nav {
+    margin-top: 12px;
   }
 
   nav a {
     margin-right: 14px;
+
     font-size: 0.9rem;
   }
+
+
+  /* Hero */
 
   .hero {
     padding-top: 50px;
@@ -566,18 +637,31 @@ footer a:hover {
     font-size: 1.05rem;
   }
 
+
+  /* Buttons */
+
   .hero-buttons {
     flex-direction: column;
     align-items: flex-start;
   }
+
+
+  /* General Sections */
 
   .section {
     padding-top: 60px;
     padding-bottom: 60px;
   }
 
+
+  /* Footer */
+
   footer {
     margin-top: 50px;
+  }
+
+  .hero + footer {
+    margin-top: 15px;
   }
 
 }
