@@ -110,7 +110,6 @@ header {
 nav {
   display: flex;
   align-items: center;
-
   gap: 30px;
 }
 
@@ -135,7 +134,6 @@ nav a:hover {
 
 nav a.active {
   color: var(--brown);
-
   font-weight: 600;
 }
 
@@ -215,9 +213,7 @@ nav a.active::after {
 
 .hero-buttons {
   display: flex;
-
   gap: 14px;
-
   flex-wrap: wrap;
 }
 
@@ -730,7 +726,7 @@ footer {
 
   margin: 0 auto;
 
-  padding: 28px var(--page-padding) 10px;
+  padding: 28px var(--page-padding) 8px;
 
   font-size: 0.86rem;
 }
@@ -751,31 +747,30 @@ footer {
    ========================================================= */
 
 /*
-   The footer itself stays shallow,
-   but the mountain image is high enough
-   that the peaks remain clearly visible.
+   IMPORTANT:
+   Show the COMPLETE mountain image.
+
+   No fixed height.
+   No cropping.
+   No overflow hidden.
+   No absolute positioning.
 */
 
 .footer-mountains {
-  position: relative;
-
   width: 100%;
-  height: 95px;
 
-  overflow: hidden;
+  margin-top: 0;
+
+  overflow: visible;
 }
 
 .footer-mountains img {
-  position: absolute;
-
-  left: 50%;
-
-  bottom: -20px;
+  display: block;
 
   width: 100%;
-  min-width: 1000px;
+  height: auto;
 
-  transform: translateX(-50%);
+  margin: 0;
 
   opacity: 0.28;
 
@@ -871,12 +866,9 @@ footer {
 
   /* Mountains */
 
-  .footer-mountains {
-    height: 85px;
-  }
-
   .footer-mountains img {
-    bottom: -18px;
+    width: 100%;
+    height: auto;
   }
 
 }
@@ -990,20 +982,27 @@ footer {
   /* Footer */
 
   .footer-content {
-    padding-bottom: 6px;
+    padding-bottom: 5px;
 
     line-height: 1.8;
   }
 
+
+  /* Mountains */
+
   .footer-mountains {
-    height: 75px;
+    width: 100%;
+
+    overflow: visible;
   }
 
   .footer-mountains img {
-    width: 150%;
-    min-width: 700px;
+    display: block;
 
-    bottom: -15px;
+    width: 100%;
+    height: auto;
+
+    margin: 0;
   }
 
 }
