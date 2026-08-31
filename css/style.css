@@ -43,14 +43,11 @@ html {
 
 body {
   margin: 0;
+
   background: #ffffff;
   color: var(--text);
 
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.65;
 }
 
@@ -162,7 +159,6 @@ nav a:hover {
 
 nav a.active {
   color: var(--brown);
-
   font-weight: 600;
 }
 
@@ -191,10 +187,7 @@ nav a.active::after {
 
   margin: 0 auto;
 
-  padding:
-    95px
-    var(--page-padding)
-    75px;
+  padding: 95px var(--page-padding) 75px;
 }
 
 .eyebrow {
@@ -206,7 +199,6 @@ nav a.active::after {
   font-weight: 700;
 
   letter-spacing: 0.15em;
-
   text-transform: uppercase;
 }
 
@@ -315,10 +307,7 @@ nav a.active::after {
 
   margin: 0 auto;
 
-  padding:
-    85px
-    var(--page-padding)
-    70px;
+  padding: 85px var(--page-padding) 70px;
 }
 
 .page-intro {
@@ -406,10 +395,7 @@ nav a.active::after {
   width: 100%;
   max-width: var(--content-width);
 
-  margin:
-    10px
-    0
-    70px;
+  margin: 10px 0 70px;
 
   border: 0;
   border-top: 1px solid var(--border);
@@ -459,26 +445,32 @@ nav a.active::after {
    TEAM PAGE
    ========================================================= */
 
+/*
+   IMPORTANT:
+   The first column has a fixed width of 220px.
+   This prevents the PI photograph from becoming huge.
+*/
+
 .pi-profile {
   display: grid;
 
-  grid-template-columns:
-    minmax(260px, 380px)
-    minmax(0, 650px);
+  grid-template-columns: 220px minmax(0, 650px);
 
-  gap: 70px;
+  gap: 48px;
 
   align-items: start;
+
+  max-width: 950px;
 
   margin-bottom: 90px;
 }
 
 
-/* PI photo */
+/* PI PHOTO */
 
 .pi-photo {
-  width: 100%;
-  max-width: 380px;
+  width: 220px;
+  height: 275px;
 
   overflow: hidden;
 
@@ -488,27 +480,28 @@ nav a.active::after {
 .pi-photo img {
   display: block;
 
-  width: 100%;
-  height: auto;
+  width: 220px;
+  height: 275px;
 
-  aspect-ratio: 4 / 5;
+  max-width: none;
 
   object-fit: cover;
+  object-position: center top;
 }
 
 
-/* PI text */
+/* PI TEXT */
 
 .pi-content {
-  padding-top: 10px;
+  padding-top: 2px;
 }
 
 .pi-kicker {
-  margin: 0 0 10px;
+  margin: 0 0 9px;
 
   color: var(--gold-dark);
 
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 700;
 
   letter-spacing: 0.14em;
@@ -521,51 +514,51 @@ nav a.active::after {
 
   color: var(--brown-dark);
 
-  font-size: 2.3rem;
+  font-size: 2.15rem;
   line-height: 1.12;
 
   letter-spacing: -0.025em;
 }
 
 .pi-position {
-  margin: 0 0 8px;
+  margin: 0 0 7px;
 
   color: var(--brown);
 
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   font-weight: 600;
 }
 
 .pi-departments {
-  margin: 0 0 28px;
+  margin: 0 0 25px;
 
   color: var(--text-light);
 
-  font-size: 0.96rem;
+  font-size: 0.94rem;
   line-height: 1.6;
 }
 
 .pi-content > p:not(.pi-kicker):not(.pi-position):not(.pi-departments) {
-  max-width: 650px;
+  max-width: 630px;
 
-  margin: 0 0 18px;
+  margin: 0 0 17px;
 
   color: var(--text-mid);
 
-  font-size: 1.03rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.75;
 }
 
 
-/* PI links */
+/* PI LINKS */
 
 .pi-links {
-  margin-top: 27px;
+  margin-top: 24px;
 
   display: flex;
-  gap: 9px;
-
   align-items: center;
+
+  gap: 9px;
 }
 
 .pi-links a {
@@ -573,7 +566,7 @@ nav a.active::after {
 
   text-decoration: none;
 
-  font-size: 0.95rem;
+  font-size: 0.93rem;
   font-weight: 600;
 }
 
@@ -596,10 +589,11 @@ nav a.active::after {
 
 .team-recruiting {
   width: 100%;
+  max-width: 1050px;
 
   margin-top: 20px;
 
-  padding: 58px;
+  padding: 50px 55px;
 
   background: #faf7ee;
 
@@ -607,7 +601,7 @@ nav a.active::after {
 }
 
 .team-recruiting-inner {
-  max-width: 760px;
+  max-width: 720px;
 }
 
 .team-recruiting-label {
@@ -654,10 +648,7 @@ nav a.active::after {
 
   margin: 0 auto;
 
-  padding:
-    85px
-    var(--page-padding)
-    60px;
+  padding: 85px var(--page-padding) 60px;
 }
 
 .contact-page > h1 {
@@ -855,10 +846,7 @@ footer {
 
   margin: 0 auto;
 
-  padding:
-    28px
-    var(--page-padding)
-    22px;
+  padding: 28px var(--page-padding) 22px;
 
   font-size: 0.86rem;
 }
@@ -946,10 +934,7 @@ footer {
   }
 
   nav a {
-    padding:
-      5px
-      0
-      8px;
+    padding: 5px 0 8px;
   }
 
   nav a.active::after {
@@ -971,25 +956,42 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .pi-profile {
-    grid-template-columns:
-      minmax(220px, 300px)
-      1fr;
 
-    gap: 45px;
+  /* Team */
+
+  .pi-profile {
+    grid-template-columns: 190px minmax(0, 1fr);
+
+    gap: 38px;
+  }
+
+  .pi-photo {
+    width: 190px;
+    height: 238px;
+  }
+
+  .pi-photo img {
+    width: 190px;
+    height: 238px;
   }
 
   .pi-content h2 {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 
   .team-recruiting {
-    padding: 45px;
+    padding: 42px;
   }
+
+
+  /* Contact */
 
   .contact-photo img {
     height: 390px;
   }
+
+
+  /* Footer */
 
   .footer-mountains {
     height: 120px;
@@ -1013,9 +1015,7 @@ footer {
   }
 
   nav {
-    gap:
-      8px
-      18px;
+    gap: 8px 18px;
   }
 
   nav a {
@@ -1058,15 +1058,23 @@ footer {
   /* Team */
 
   .pi-profile {
-    grid-template-columns: 1fr;
+    display: block;
 
-    gap: 30px;
+    max-width: 100%;
 
     margin-bottom: 65px;
   }
 
   .pi-photo {
-    max-width: 300px;
+    width: 180px;
+    height: 225px;
+
+    margin-bottom: 28px;
+  }
+
+  .pi-photo img {
+    width: 180px;
+    height: 225px;
   }
 
   .pi-content {
