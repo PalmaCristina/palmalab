@@ -61,7 +61,6 @@ header {
   z-index: 1000;
 
   background: rgba(255, 255, 255, 0.97);
-
   border-bottom: 1px solid var(--border);
 }
 
@@ -119,7 +118,6 @@ nav a {
   padding: 34px 0 30px;
 
   color: #383838;
-
   text-decoration: none;
 
   font-size: 0.93rem;
@@ -219,7 +217,6 @@ nav a.active::after {
 
 .button {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
 
@@ -237,7 +234,6 @@ nav a.active::after {
 
 .primary-button {
   background: var(--gold);
-
   border: 2px solid var(--gold);
 
   color: #241c14;
@@ -245,7 +241,6 @@ nav a.active::after {
 
 .primary-button:hover {
   background: #e8b31a;
-
   border-color: #e8b31a;
 
   color: #241c14;
@@ -253,7 +248,6 @@ nav a.active::after {
 
 .secondary-button {
   background: #ffffff;
-
   border: 2px solid #d5aa21;
 
   color: var(--brown);
@@ -279,7 +273,6 @@ nav a.active::after {
 
 .page-intro {
   max-width: 900px;
-
   margin-bottom: 70px;
 }
 
@@ -359,7 +352,133 @@ nav a.active::after {
 
 
 /* =========================================================
-   TEAM PAGE
+   TEAM GRID
+   ========================================================= */
+
+.team-grid {
+  width: 100%;
+  max-width: 1000px;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 70px;
+
+  align-items: start;
+
+  margin-bottom: 90px;
+}
+
+.team-member {
+  min-width: 0;
+}
+
+
+/* Team member photos */
+
+.team-member-photo {
+  width: 220px;
+  height: 275px;
+
+  margin-bottom: 25px;
+
+  overflow: hidden;
+
+  background: #f4f2ef;
+}
+
+.team-member-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center top;
+}
+
+
+/* Photo placeholder */
+
+.team-photo-placeholder {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #f4f2ef;
+
+  border: 1px solid var(--border);
+
+  color: #aaaaaa;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+
+/* Team member information */
+
+.team-member-content {
+  max-width: 400px;
+}
+
+.team-member-content h2 {
+  margin: 0 0 7px;
+
+  color: var(--brown-dark);
+
+  font-size: 1.8rem;
+  line-height: 1.15;
+}
+
+.pi-kicker {
+  margin: 0 0 9px;
+
+  color: var(--gold-dark);
+
+  font-size: 0.76rem;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.pi-position {
+  margin: 0 0 7px;
+
+  color: var(--brown);
+
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.pi-departments {
+  margin: 0 0 22px;
+
+  color: var(--text-light);
+
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+.team-email {
+  margin: 22px 0 0;
+
+  color: var(--text-mid);
+
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   OLD PI PROFILE
+   Kept for compatibility if used elsewhere
    ========================================================= */
 
 .pi-profile {
@@ -399,18 +518,6 @@ nav a.active::after {
   padding-top: 2px;
 }
 
-.pi-kicker {
-  margin: 0 0 9px;
-
-  color: var(--gold-dark);
-
-  font-size: 0.76rem;
-  font-weight: 700;
-
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
 .pi-content h2 {
   margin: 0 0 7px;
 
@@ -420,49 +527,13 @@ nav a.active::after {
   line-height: 1.12;
 }
 
-.pi-position {
-  margin: 0 0 7px;
-
-  color: var(--brown);
-
-  font-size: 1.02rem;
-  font-weight: 600;
-}
-
-.pi-departments {
-  margin: 0 0 25px;
-
-  color: var(--text-light);
-
-  font-size: 0.94rem;
-  line-height: 1.6;
-}
-
-.pi-content > p:not(.pi-kicker):not(.pi-position):not(.pi-departments) {
-  max-width: 630px;
-
-  margin: 0 0 17px;
+.pi-contact p {
+  margin: 22px 0 0;
 
   color: var(--text-mid);
 
-  font-size: 1rem;
-  line-height: 1.75;
-}
-
-.pi-links {
-  display: flex;
-
-  gap: 9px;
-
-  margin-top: 24px;
-}
-
-.pi-links a {
-  color: var(--brown);
-
-  text-decoration: none;
-
-  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.7;
 }
 
 
@@ -606,7 +677,6 @@ nav a.active::after {
   text-decoration: underline;
 
   text-decoration-color: var(--gold);
-
   text-underline-offset: 4px;
 }
 
@@ -747,13 +817,8 @@ footer {
    ========================================================= */
 
 /*
-   IMPORTANT:
-   Show the COMPLETE mountain image.
-
-   No fixed height.
-   No cropping.
-   No overflow hidden.
-   No absolute positioning.
+   Keep the complete mountain image visible.
+   The whole image is pulled upward by 200px.
 */
 
 .footer-mountains {
@@ -829,6 +894,15 @@ footer {
 
   /* Team */
 
+  .team-grid {
+    gap: 45px;
+  }
+
+  .team-member-photo {
+    width: 190px;
+    height: 238px;
+  }
+
   .pi-profile {
     grid-template-columns: 190px 1fr;
 
@@ -861,14 +935,6 @@ footer {
 
   .internal-grid {
     grid-template-columns: 1fr;
-  }
-
-
-  /* Mountains */
-
-  .footer-mountains img {
-    width: 100%;
-    height: auto;
   }
 
 }
@@ -933,6 +999,19 @@ footer {
 
   /* Team */
 
+  .team-grid {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+
+    margin-bottom: 65px;
+  }
+
+  .team-member-photo {
+    width: 180px;
+    height: 225px;
+  }
+
   .pi-profile {
     display: block;
 
@@ -992,6 +1071,8 @@ footer {
 
   .footer-mountains {
     width: 100%;
+
+    margin-top: -200px;
 
     overflow: visible;
   }
