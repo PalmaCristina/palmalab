@@ -1,11 +1,5 @@
 /* =========================================================
    PALMA LAB
-   Global Website Styles
-   ========================================================= */
-
-
-/* =========================================================
-   VARIABLES
    ========================================================= */
 
 :root {
@@ -15,6 +9,7 @@
 
   --gold: #ffc425;
   --gold-dark: #9b6b00;
+
   --brown: #492f24;
   --brown-dark: #2f211a;
 
@@ -24,8 +19,6 @@
 
   --border: #e8e5e2;
   --soft-background: #faf9f7;
-
-  --header-height: 92px;
 }
 
 
@@ -45,9 +38,11 @@ body {
   margin: 0;
 
   background: #ffffff;
+
   color: var(--text);
 
   font-family: Arial, Helvetica, sans-serif;
+
   line-height: 1.65;
 }
 
@@ -59,10 +54,6 @@ a {
   color: var(--brown);
 }
 
-a:hover {
-  color: var(--gold-dark);
-}
-
 
 /* =========================================================
    HEADER
@@ -70,10 +61,10 @@ a:hover {
 
 header {
   position: sticky;
-  top: 0;
-  z-index: 1000;
 
-  width: 100%;
+  top: 0;
+
+  z-index: 1000;
 
   background: rgba(255, 255, 255, 0.97);
 
@@ -82,9 +73,10 @@ header {
 
 .header-inner {
   width: 100%;
+
   max-width: var(--max-width);
 
-  min-height: var(--header-height);
+  min-height: 92px;
 
   margin: 0 auto;
 
@@ -92,7 +84,9 @@ header {
   padding-right: var(--page-padding);
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 }
 
@@ -102,23 +96,20 @@ header {
    ========================================================= */
 
 .logo {
-  display: flex;
-  align-items: center;
-
   flex-shrink: 0;
 }
 
 .logo a {
   display: flex;
-  align-items: center;
 
-  text-decoration: none;
+  align-items: center;
 }
 
 .logo img {
   display: block;
 
   width: 205px;
+
   height: auto;
 }
 
@@ -129,6 +120,7 @@ header {
 
 nav {
   display: flex;
+
   align-items: center;
 
   gap: 30px;
@@ -137,8 +129,6 @@ nav {
 nav a {
   position: relative;
 
-  display: inline-block;
-
   padding: 34px 0 30px;
 
   color: #383838;
@@ -146,11 +136,10 @@ nav a {
   text-decoration: none;
 
   font-size: 0.93rem;
+
   font-weight: 500;
 
   white-space: nowrap;
-
-  transition: color 0.2s ease;
 }
 
 nav a:hover {
@@ -159,6 +148,7 @@ nav a:hover {
 
 nav a.active {
   color: var(--brown);
+
   font-weight: 600;
 }
 
@@ -169,6 +159,7 @@ nav a.active::after {
 
   left: 0;
   right: 0;
+
   bottom: 25px;
 
   height: 2px;
@@ -178,28 +169,36 @@ nav a.active::after {
 
 
 /* =========================================================
-   HOMEPAGE HERO
+   EYEBROW
+   ========================================================= */
+
+.eyebrow {
+  margin: 0 0 18px;
+
+  color: var(--gold-dark);
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HOMEPAGE
    ========================================================= */
 
 .hero {
   width: 100%;
+
   max-width: var(--max-width);
 
   margin: 0 auto;
 
   padding: 95px var(--page-padding) 75px;
-}
-
-.eyebrow {
-  margin: 0 0 22px;
-
-  color: var(--gold-dark);
-
-  font-size: 0.78rem;
-  font-weight: 700;
-
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
 }
 
 .hero h1 {
@@ -210,6 +209,7 @@ nav a.active::after {
   color: var(--brown-dark);
 
   font-size: clamp(1.8rem, 2.7vw, 2.8rem);
+
   line-height: 1.12;
 
   letter-spacing: -0.025em;
@@ -223,6 +223,7 @@ nav a.active::after {
   color: var(--text-mid);
 
   font-size: 1.18rem;
+
   line-height: 1.75;
 }
 
@@ -233,7 +234,6 @@ nav a.active::after {
 
 .hero-buttons {
   display: flex;
-  align-items: center;
 
   gap: 14px;
 
@@ -242,29 +242,22 @@ nav a.active::after {
 
 .button {
   display: inline-flex;
+
   align-items: center;
+
   justify-content: center;
 
   min-height: 48px;
 
   padding: 11px 22px;
 
-  border-radius: 3px;
-
   text-decoration: none;
 
   font-size: 0.94rem;
+
   font-weight: 600;
 
-  transition:
-    background-color 0.2s ease,
-    border-color 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease;
-}
-
-.button:hover {
-  transform: translateY(-1px);
+  border-radius: 3px;
 }
 
 .primary-button {
@@ -277,6 +270,7 @@ nav a.active::after {
 
 .primary-button:hover {
   background: #e8b31a;
+
   border-color: #e8b31a;
 
   color: #241c14;
@@ -292,8 +286,6 @@ nav a.active::after {
 
 .secondary-button:hover {
   background: #fff9e7;
-
-  color: var(--brown);
 }
 
 
@@ -303,6 +295,7 @@ nav a.active::after {
 
 .page {
   width: 100%;
+
   max-width: var(--max-width);
 
   margin: 0 auto;
@@ -322,6 +315,7 @@ nav a.active::after {
   color: var(--brown-dark);
 
   font-size: clamp(3rem, 5vw, 4.8rem);
+
   line-height: 1.05;
 
   letter-spacing: -0.035em;
@@ -335,12 +329,13 @@ nav a.active::after {
   color: var(--text-mid);
 
   font-size: 1.18rem;
+
   line-height: 1.8;
 }
 
 
 /* =========================================================
-   CONTENT
+   GENERAL CONTENT
    ========================================================= */
 
 .content-section {
@@ -355,17 +350,12 @@ nav a.active::after {
   color: var(--brown-dark);
 
   font-size: 2rem;
-  line-height: 1.2;
 
-  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 .content-section h3 {
-  margin: 30px 0 10px;
-
   color: var(--brown-dark);
-
-  font-size: 1.25rem;
 }
 
 .content-section p,
@@ -373,6 +363,7 @@ nav a.active::after {
   color: var(--text-mid);
 
   font-size: 1.05rem;
+
   line-height: 1.8;
 }
 
@@ -386,56 +377,16 @@ nav a.active::after {
   padding-left: 21px;
 }
 
-
-/* =========================================================
-   DIVIDERS
-   ========================================================= */
-
 .section-divider {
   width: 100%;
+
   max-width: var(--content-width);
 
   margin: 10px 0 70px;
 
   border: 0;
+
   border-top: 1px solid var(--border);
-}
-
-
-/* =========================================================
-   GENERIC CARDS
-   ========================================================= */
-
-.cards {
-  display: grid;
-
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
-
-  gap: 24px;
-
-  margin-top: 35px;
-}
-
-.card {
-  padding: 28px;
-
-  background: #ffffff;
-
-  border: 1px solid var(--border);
-  border-top: 3px solid var(--gold);
-}
-
-.card h3 {
-  margin: 0 0 13px;
-
-  color: var(--brown-dark);
-}
-
-.card p {
-  margin-bottom: 0;
-
-  color: var(--text-mid);
 }
 
 
@@ -459,6 +410,7 @@ nav a.active::after {
 
 .pi-photo {
   width: 220px;
+
   height: 275px;
 
   overflow: hidden;
@@ -470,11 +422,11 @@ nav a.active::after {
   display: block;
 
   width: 220px;
+
   height: 275px;
 
-  max-width: none;
-
   object-fit: cover;
+
   object-position: center top;
 }
 
@@ -488,9 +440,11 @@ nav a.active::after {
   color: var(--gold-dark);
 
   font-size: 0.76rem;
+
   font-weight: 700;
 
   letter-spacing: 0.14em;
+
   text-transform: uppercase;
 }
 
@@ -500,9 +454,8 @@ nav a.active::after {
   color: var(--brown-dark);
 
   font-size: 2.15rem;
-  line-height: 1.12;
 
-  letter-spacing: -0.025em;
+  line-height: 1.12;
 }
 
 .pi-position {
@@ -511,6 +464,7 @@ nav a.active::after {
   color: var(--brown);
 
   font-size: 1.02rem;
+
   font-weight: 600;
 }
 
@@ -520,6 +474,7 @@ nav a.active::after {
   color: var(--text-light);
 
   font-size: 0.94rem;
+
   line-height: 1.6;
 }
 
@@ -531,16 +486,16 @@ nav a.active::after {
   color: var(--text-mid);
 
   font-size: 1rem;
+
   line-height: 1.75;
 }
 
 .pi-links {
-  margin-top: 24px;
-
   display: flex;
-  align-items: center;
 
   gap: 9px;
+
+  margin-top: 24px;
 }
 
 .pi-links a {
@@ -548,20 +503,7 @@ nav a.active::after {
 
   text-decoration: none;
 
-  font-size: 0.93rem;
   font-weight: 600;
-}
-
-.pi-links a:hover {
-  text-decoration: underline;
-
-  text-decoration-color: var(--gold);
-
-  text-underline-offset: 4px;
-}
-
-.pi-links span {
-  color: #b3b3b3;
 }
 
 
@@ -571,9 +513,8 @@ nav a.active::after {
 
 .team-recruiting {
   width: 100%;
-  max-width: 1050px;
 
-  margin-top: 20px;
+  max-width: 1050px;
 
   padding: 50px 55px;
 
@@ -592,9 +533,11 @@ nav a.active::after {
   color: var(--gold-dark);
 
   font-size: 0.78rem;
+
   font-weight: 700;
 
   letter-spacing: 0.14em;
+
   text-transform: uppercase;
 }
 
@@ -604,17 +547,15 @@ nav a.active::after {
   color: var(--brown-dark);
 
   font-size: 2rem;
-  line-height: 1.2;
 }
 
 .team-recruiting p {
-  max-width: 700px;
-
   margin: 0 0 28px;
 
   color: var(--text-mid);
 
   font-size: 1.05rem;
+
   line-height: 1.75;
 }
 
@@ -625,122 +566,132 @@ nav a.active::after {
 
 .contact-page {
   width: 100%;
+
   max-width: var(--max-width);
 
   margin: 0 auto;
 
-  padding: 80px var(--page-padding) 70px;
+  padding: 80px var(--page-padding) 75px;
 }
 
-.contact-intro {
-  margin-bottom: 42px;
+
+/* Contact heading */
+
+.contact-heading {
+  margin-bottom: 40px;
 }
 
-.contact-intro .eyebrow {
-  margin-bottom: 14px;
-}
-
-.contact-intro h1 {
+.contact-heading h1 {
   margin: 0;
 
   color: var(--brown-dark);
 
   font-size: clamp(3rem, 5vw, 4.8rem);
+
   line-height: 1;
 
   letter-spacing: -0.04em;
 }
 
 
-/* Contact image */
+/* Contact photograph */
 
-.contact-photo {
+.contact-hero-image {
   width: 100%;
+
   max-width: 1100px;
 
-  margin-bottom: 45px;
+  height: 430px;
+
+  margin-bottom: 32px;
 
   overflow: hidden;
 }
 
-.contact-photo img {
+.contact-hero-image img {
   display: block;
 
   width: 100%;
-  height: 470px;
+
+  height: 100%;
 
   object-fit: cover;
 }
 
 
-/* Contact cards */
+/* =========================================================
+   CONTACT THREE-CARD GRID
+   ========================================================= */
 
-.contact-cards {
+.contact-grid {
   width: 100%;
+
   max-width: 1100px;
 
   display: grid;
 
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
 
-  gap: 24px;
+  gap: 20px;
 }
 
-.contact-card {
-  min-height: 300px;
+.contact-box {
+  min-width: 0;
 
-  padding: 30px 30px 32px;
+  min-height: 280px;
 
-  background: #ffffff;
+  padding: 30px;
 
-  border: 1px solid var(--border);
+  background: #faf9f7;
+
   border-top: 3px solid var(--gold);
 }
 
-.contact-card-label {
+.contact-box-label {
   margin: 0 0 10px;
 
   color: var(--gold-dark);
 
   font-size: 0.72rem;
+
   font-weight: 700;
 
   letter-spacing: 0.14em;
+
   text-transform: uppercase;
 }
 
-.contact-card h2 {
+.contact-box h2 {
   margin: 0 0 20px;
 
   color: var(--brown-dark);
 
-  font-size: 1.6rem;
+  font-size: 1.55rem;
+
   line-height: 1.2;
 }
 
-.contact-card p {
+.contact-box p {
   margin: 0 0 17px;
 
   color: var(--text-mid);
 
-  font-size: 0.98rem;
+  font-size: 0.97rem;
+
   line-height: 1.7;
 }
 
-.contact-card p:last-child {
-  margin-bottom: 0;
-}
-
-.contact-card a {
+.contact-box a {
   color: var(--brown);
 
-  font-weight: 600;
-
   text-decoration: none;
+
+  font-size: 0.95rem;
+
+  font-weight: 600;
 }
 
-.contact-card a:hover {
+.contact-box a:hover {
   text-decoration: underline;
 
   text-decoration-color: var(--gold);
@@ -750,13 +701,13 @@ nav a.active::after {
 
 
 /* =========================================================
-   JOIN PAGE
+   JOIN
    ========================================================= */
 
 .opportunity {
   max-width: 820px;
 
-  padding: 0 0 45px;
+  padding-bottom: 45px;
 
   margin-bottom: 45px;
 
@@ -779,6 +730,7 @@ nav a.active::after {
   color: var(--text-mid);
 
   font-size: 1.05rem;
+
   line-height: 1.8;
 }
 
@@ -815,8 +767,7 @@ nav a.active::after {
 .internal-grid {
   display: grid;
 
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
 
   gap: 24px;
 
@@ -827,6 +778,7 @@ nav a.active::after {
   padding: 26px;
 
   border: 1px solid var(--border);
+
   border-top: 3px solid var(--gold);
 
   background: #ffffff;
@@ -836,8 +788,6 @@ nav a.active::after {
   margin: 0 0 10px;
 
   color: var(--brown-dark);
-
-  font-size: 1.25rem;
 }
 
 .internal-card p {
@@ -854,9 +804,6 @@ nav a.active::after {
 footer {
   width: 100%;
 
-  margin: 0;
-  padding: 0;
-
   color: var(--text-light);
 
   background: #ffffff;
@@ -866,6 +813,7 @@ footer {
 
 .footer-content {
   width: 100%;
+
   max-width: var(--max-width);
 
   margin: 0 auto;
@@ -881,25 +829,18 @@ footer {
   text-decoration: none;
 }
 
-.footer-content a:hover {
-  text-decoration: underline;
-
-  text-underline-offset: 3px;
-}
-
 .footer-divider {
   margin: 0 5px;
 }
 
 
-/* =========================================================
-   MOUNTAIN FOOTER
-   ========================================================= */
+/* Mountains */
 
 .footer-mountains {
   position: relative;
 
   width: 100%;
+
   height: 150px;
 
   overflow: hidden;
@@ -909,17 +850,16 @@ footer {
   position: absolute;
 
   left: 50%;
+
   bottom: -45px;
 
   width: 100%;
+
   min-width: 1000px;
 
   transform: translateX(-50%);
 
   opacity: 0.28;
-
-  pointer-events: none;
-  user-select: none;
 }
 
 
@@ -940,6 +880,7 @@ footer {
     padding-bottom: 14px;
 
     flex-direction: column;
+
     align-items: flex-start;
   }
 
@@ -965,69 +906,47 @@ footer {
     bottom: 2px;
   }
 
-  .hero {
-    padding-top: 70px;
-    padding-bottom: 65px;
-  }
-
   .page,
   .contact-page {
     padding-top: 65px;
-  }
-
-  .cards,
-  .internal-grid {
-    grid-template-columns: 1fr;
   }
 
 
   /* Team */
 
   .pi-profile {
-    grid-template-columns: 190px minmax(0, 1fr);
+    grid-template-columns: 190px 1fr;
 
     gap: 38px;
   }
 
-  .pi-photo {
-    width: 190px;
-    height: 238px;
-  }
-
+  .pi-photo,
   .pi-photo img {
     width: 190px;
+
     height: 238px;
-  }
-
-  .pi-content h2 {
-    font-size: 1.9rem;
-  }
-
-  .team-recruiting {
-    padding: 42px;
   }
 
 
   /* Contact */
 
-  .contact-photo img {
-    height: 380px;
+  .contact-hero-image {
+    height: 350px;
   }
 
-  .contact-cards {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
-  .contact-card:last-child {
+  .contact-box:last-child {
     grid-column: 1 / -1;
   }
 
 
-  /* Footer */
+  /* Internal */
 
-  .footer-mountains {
-    height: 120px;
+  .internal-grid {
+    grid-template-columns: 1fr;
   }
 
 }
@@ -1055,8 +974,12 @@ footer {
     font-size: 0.87rem;
   }
 
+
+  /* Homepage */
+
   .hero {
     padding-top: 55px;
+
     padding-bottom: 55px;
   }
 
@@ -1070,21 +993,22 @@ footer {
 
   .hero-buttons {
     flex-direction: column;
+
     align-items: flex-start;
   }
+
+
+  /* Standard pages */
 
   .page,
   .contact-page {
     padding-top: 52px;
+
     padding-bottom: 45px;
   }
 
   .page-intro {
     margin-bottom: 50px;
-  }
-
-  .content-section {
-    margin-bottom: 55px;
   }
 
 
@@ -1093,29 +1017,18 @@ footer {
   .pi-profile {
     display: block;
 
-    max-width: 100%;
-
     margin-bottom: 65px;
   }
 
-  .pi-photo {
-    width: 180px;
-    height: 225px;
-
-    margin-bottom: 28px;
-  }
-
+  .pi-photo,
   .pi-photo img {
     width: 180px;
+
     height: 225px;
   }
 
-  .pi-content {
-    padding-top: 0;
-  }
-
-  .pi-content h2 {
-    font-size: 1.8rem;
+  .pi-photo {
+    margin-bottom: 28px;
   }
 
   .team-recruiting {
@@ -1125,40 +1038,36 @@ footer {
 
   /* Contact */
 
-  .contact-intro {
+  .contact-heading {
     margin-bottom: 30px;
   }
 
-  .contact-photo {
-    margin-bottom: 30px;
+  .contact-hero-image {
+    height: 250px;
+
+    margin-bottom: 22px;
   }
 
-  .contact-photo img {
-    height: 260px;
-  }
-
-  .contact-cards {
+  .contact-grid {
     grid-template-columns: 1fr;
 
-    gap: 18px;
+    gap: 16px;
   }
 
-  .contact-card:last-child {
+  .contact-box:last-child {
     grid-column: auto;
   }
 
-  .contact-card {
+  .contact-box {
     min-height: 0;
 
-    padding: 27px 25px;
+    padding: 26px;
   }
 
 
   /* Footer */
 
   .footer-content {
-    padding-top: 24px;
-
     line-height: 1.8;
   }
 
@@ -1168,6 +1077,7 @@ footer {
 
   .footer-mountains img {
     width: 150%;
+
     min-width: 700px;
 
     bottom: -25px;
