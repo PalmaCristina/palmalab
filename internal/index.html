@@ -5,57 +5,406 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Palma Lab | University of Wyoming</title>
+  <title>Internal | Palma Lab</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+
+    /* =========================
+       Internal Page
+       ========================= */
+
+    .internal-hero {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 80px 4% 45px;
+    }
+
+    .internal-hero h1 {
+      font-size: 3rem;
+      line-height: 1.15;
+      margin: 0 0 20px;
+      color: #2b2118;
+    }
+
+    .internal-hero p {
+      max-width: 850px;
+      font-size: 1.05rem;
+      color: #555555;
+      line-height: 1.8;
+    }
+
+    .internal-note {
+      max-width: 850px;
+      margin-top: 30px;
+      padding: 20px 24px;
+
+      background: #fff8df;
+      border-left: 5px solid #ffc425;
+    }
+
+    .internal-note p {
+      margin: 0;
+      font-size: 0.98rem;
+      color: #494949;
+    }
+
+
+    /* =========================
+       Resource Section
+       ========================= */
+
+    .resource-section {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 30px 4% 90px;
+    }
+
+    .resource-section h2 {
+      margin-top: 0;
+      margin-bottom: 30px;
+
+      font-size: 2rem;
+      color: #2b2118;
+    }
+
+
+    /* =========================
+       Resource Grid
+       ========================= */
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .resource-card {
+      min-height: 180px;
+      padding: 28px;
+
+      background: #ffffff;
+
+      border: 1px solid #e5e5e5;
+      border-top: 5px solid #ffc425;
+      border-radius: 5px;
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-4px);
+
+      box-shadow:
+        0 10px 26px rgba(0, 0, 0, 0.08);
+    }
+
+    .resource-card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+
+      font-size: 1.3rem;
+      color: #2b2118;
+    }
+
+    .resource-card p {
+      color: #666666;
+      font-size: 0.98rem;
+      line-height: 1.65;
+    }
+
+    .resource-card a {
+      display: inline-block;
+      margin-top: 10px;
+
+      color: #8b5a00;
+
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .resource-card a:hover {
+      color: #492f24;
+    }
+
+    .coming-soon {
+      display: inline-block;
+      margin-top: 10px;
+
+      color: #8b5a00;
+
+      font-size: 0.85rem;
+      font-weight: 700;
+
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+
+    /* =========================
+       Back Home
+       ========================= */
+
+    .back-home {
+      margin-top: 50px;
+    }
+
+    .back-home a {
+      color: #8b5a00;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .back-home a:hover {
+      color: #492f24;
+    }
+
+
+    /* =========================
+       Responsive
+       ========================= */
+
+    @media (max-width: 900px) {
+
+      .internal-hero {
+        padding-top: 65px;
+      }
+
+      .internal-hero h1 {
+        font-size: 2.3rem;
+      }
+
+      .resource-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+
 </head>
+
 
 <body>
 
+
+  <!-- =========================
+       Header
+       ========================= -->
+
   <header>
 
-    <div class="logo">
-      <a href="index.html">Palma Lab</a>
-    </div>
+    <div class="header-inner">
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="research.html">Research</a>
-      <a href="people.html">Team</a>
-      <a href="publications.html">Publications</a>
-      <a href="join.html">Join Us</a>
-      <a href="contact.html">Contact</a>
-      <a href="internal/">Internal</a>
-    </nav>
+      <div class="logo">
+        <a href="../index.html">Palma Lab</a>
+      </div>
+
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../research.html">Research</a>
+        <a href="../people.html">Team</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../join.html">Join Us</a>
+        <a href="../contact.html">Contact</a>
+        <a href="index.html">Internal</a>
+      </nav>
+
+    </div>
 
   </header>
 
 
-  <section class="hero">
+
+  <!-- =========================
+       Internal Hero
+       ========================= -->
+
+  <section class="internal-hero">
 
     <p class="eyebrow">
-      University of Wyoming · Molecular Biology & School of Computing
+      Palma Lab · Internal Resources
     </p>
 
-    <h1>
-      Quantitative Systems Biology of Microbial Stress Adaptation
-    </h1>
+    <h1>Lab Resources</h1>
 
-    <p class="hero-text">
-      We investigate how microorganisms sense, respond to, and adapt to
-      environmental stress. By combining mathematical modeling, systems biology,
-      synthetic biology, and quantitative experiments, we uncover the regulatory
-      principles that shape microbial behavior.
+    <p>
+      Central access point for resources used by Palma Lab members,
+      including calendars, protocols, equipment reservations,
+      onboarding materials, ordering information, and lab policies.
     </p>
 
-    <div class="hero-buttons">
 
-      <a class="button primary-button" href="research.html">
-        Explore Our Research
-      </a>
+    <div class="internal-note">
 
-      <a class="button secondary-button" href="join.html">
-        Join the Lab
+      <p>
+        <strong>For Palma Lab members:</strong>
+        Some resources linked from this page may require a University of
+        Wyoming account or explicit access permission.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       Resources
+       ========================= -->
+
+  <section class="resource-section">
+
+    <h2>Resources</h2>
+
+
+    <div class="resource-grid">
+
+
+      <!-- Lab Calendar -->
+
+      <div class="resource-card">
+
+        <h3>Lab Calendar</h3>
+
+        <p>
+          Lab meetings, presentations, deadlines, conferences,
+          visitors, and other group events.
+        </p>
+
+        <span class="coming-soon">
+          Coming soon
+        </span>
+
+      </div>
+
+
+
+      <!-- Equipment -->
+
+      <div class="resource-card">
+
+        <h3>Equipment & Reservations</h3>
+
+        <p>
+          Equipment information, shared instrumentation,
+          maintenance notes, and reservation links.
+        </p>
+
+        <span class="coming-soon">
+          Coming soon
+        </span>
+
+      </div>
+
+
+
+      <!-- Protocols -->
+
+      <div class="resource-card">
+
+        <h3>Protocols</h3>
+
+        <p>
+          Experimental protocols, standard operating procedures,
+          strain information, and laboratory workflows.
+        </p>
+
+        <span class="coming-soon">
+          Coming soon
+        </span>
+
+      </div>
+
+
+
+      <!-- Onboarding -->
+
+      <div class="resource-card">
+
+        <h3>Onboarding</h3>
+
+        <p>
+          Resources for new lab members, including computing,
+          accounts, training, safety requirements, and lab practices.
+        </p>
+
+        <span class="coming-soon">
+          Coming soon
+        </span>
+
+      </div>
+
+
+
+      <!-- Ordering -->
+
+      <div class="resource-card">
+
+        <h3>Ordering</h3>
+
+        <p>
+          Purchasing procedures, vendors, frequently ordered materials,
+          and information for submitting lab orders.
+        </p>
+
+        <span class="coming-soon">
+          Coming soon
+        </span>
+
+      </div>
+
+
+
+      <!-- UW Resources -->
+
+      <div class="resource-card">
+
+        <h3>UW Resources</h3>
+
+        <p>
+          Useful University of Wyoming resources, core facilities,
+          computing services, research support, and administrative links.
+        </p>
+
+        <span class="coming-soon">
+          Coming soon
+        </span>
+
+      </div>
+
+
+
+      <!-- Lab Handbook -->
+
+      <div class="resource-card">
+
+        <h3>Lab Handbook</h3>
+
+        <p>
+          Lab expectations, communication practices, mentoring,
+          authorship, data management, and group policies.
+        </p>
+
+        <span class="coming-soon">
+          Coming soon
+        </span>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="back-home">
+
+      <a href="../index.html">
+        ← Back to Palma Lab
       </a>
 
     </div>
@@ -63,10 +412,35 @@
   </section>
 
 
+
+  <!-- =========================
+       Footer
+       ========================= -->
+
   <footer>
-    Palma Lab · Department of Molecular Biology & School of Computing ·
-    University of Wyoming
+
+    Palma Lab ·
+
+    <a
+      href="https://www.uwyo.edu/molecbio/index.html"
+      target="_blank"
+      rel="noopener noreferrer">
+      Department of Molecular Biology
+    </a>
+
+    ·
+
+    <a
+      href="https://www.uwyo.edu/soc/index.html"
+      target="_blank"
+      rel="noopener noreferrer">
+      School of Computing
+    </a>
+
+    · University of Wyoming
+
   </footer>
+
 
 </body>
 
