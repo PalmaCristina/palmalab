@@ -209,17 +209,14 @@ nav a.active::after {
 .hero h1 {
   max-width: 1000px;
 
-  margin:
-    0
-    0
-    30px;
+  margin: 0 0 30px;
 
   color: var(--brown-dark);
 
-  font-size: clamp(3.1rem, 5.3vw, 5.5rem);
-  line-height: 1.02;
+  font-size: clamp(1.8rem, 2.7vw, 2.8rem);
+  line-height: 1.12;
 
-  letter-spacing: -0.045em;
+  letter-spacing: -0.025em;
 }
 
 .hero-text {
