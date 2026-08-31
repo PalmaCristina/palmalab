@@ -467,14 +467,15 @@ footer {
 /* Footer Department Links */
 
 footer a {
-  color: var(--text-light);
+  color: var(--wyoming-brown);
   text-decoration: none;
-
+  font-weight: 500;
   transition: color 0.2s ease;
 }
 
 footer a:hover {
   color: #8b5a00;
+  text-decoration: underline;
 }
 
 
