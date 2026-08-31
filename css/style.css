@@ -74,15 +74,22 @@ header {
 }
 
 
-/* Header stretches across page.
-   Logo stays left.
-   Navigation stays right. */
+/* Logo aligns with main page content.
+   Navigation remains toward right edge. */
 
 .header-inner {
   width: 100%;
   margin: 0;
 
-  padding: 20px var(--page-padding);
+  padding-left: max(
+    var(--page-padding),
+    calc((100% - var(--content-width)) / 2 + var(--page-padding))
+  );
+
+  padding-right: var(--page-padding);
+
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   display: flex;
   justify-content: space-between;
@@ -282,8 +289,6 @@ nav a:hover {
 
 /* =========================
    General Page Sections
-   Research / Team /
-   Publications / Join / Contact
    ========================= */
 
 .section {
@@ -487,8 +492,8 @@ footer {
 }
 
 
-/* Smaller gap between
-   homepage buttons and footer */
+/* Smaller gap between homepage
+   buttons and footer */
 
 .hero + footer {
   margin-top: 20px;
@@ -528,6 +533,8 @@ footer a:hover {
     flex-direction: column;
     align-items: flex-start;
 
+    padding-left: var(--page-padding);
+    padding-right: var(--page-padding);
     padding-top: 18px;
     padding-bottom: 18px;
   }
