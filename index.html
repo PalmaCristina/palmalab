@@ -155,8 +155,7 @@
       z-index: 3;
     }
 
-    .footer-social a,
-    .footer-social .social-disabled {
+    .footer-social a {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -164,18 +163,16 @@
       height: 30px;
       color: var(--brown-dark);
       text-decoration: none;
+
+      transition:
+        color 0.2s ease,
+        transform 0.2s ease;
     }
 
     .footer-social svg {
       display: block;
       width: 25px;
       height: 25px;
-    }
-
-    .footer-social a {
-      transition:
-        color 0.2s ease,
-        transform 0.2s ease;
     }
 
     .footer-social a:hover {
@@ -186,10 +183,6 @@
     .footer-social a:focus-visible {
       outline: 2px solid var(--gold);
       outline-offset: 5px;
-    }
-
-    .footer-social .social-disabled {
-      cursor: default;
     }
 
     .footer-social .linkedin-icon {
@@ -491,12 +484,13 @@
 
 
 
-      <!-- YOUTUBE
-           NOT CLICKABLE YET -->
+      <!-- YOUTUBE -->
 
-      <span
-        class="social-disabled"
-        aria-label="Palma Lab YouTube coming soon"
+      <a
+        href="https://www.youtube.com/@PalmaLabWyo"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Palma Lab on YouTube"
         title="YouTube">
 
         <svg
@@ -510,7 +504,7 @@
 
         </svg>
 
-      </span>
+      </a>
 
 
 
