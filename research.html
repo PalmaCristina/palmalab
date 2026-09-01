@@ -24,7 +24,7 @@
 
 
     /* =========================================================
-       OPENING RESEARCH STATEMENT
+       OPENING
        ========================================================= */
 
     .research-opening {
@@ -41,9 +41,7 @@
 
     .research-opening-text h1 {
       margin: 0 0 22px;
-
       color: var(--brown-dark);
-
       font-size: 2rem;
       line-height: 1.2;
       letter-spacing: -0.02em;
@@ -52,9 +50,7 @@
 
     .research-opening-text p {
       margin: 0;
-
       color: var(--text-mid);
-
       font-size: 1rem;
       line-height: 1.78;
     }
@@ -71,26 +67,22 @@
 
     .research-opening-figure img {
       display: block;
-
       width: 100%;
       max-width: 360px;
       height: auto;
-
       margin: 0 auto;
     }
 
     .research-opening-figure figcaption {
       margin-top: 13px;
-
       color: var(--text-mid);
-
       font-size: 0.78rem;
       line-height: 1.5;
     }
 
 
     /* =========================================================
-       EXPANDABLE RESEARCH AREAS
+       RESEARCH LIST
        ========================================================= */
 
     .research-list {
@@ -104,11 +96,8 @@
 
     .research-item summary {
       position: relative;
-
       display: block;
-
       padding: 28px 58px 28px 0;
-
       cursor: pointer;
       list-style: none;
     }
@@ -136,21 +125,16 @@
 
     .research-item h2 {
       margin: 0 0 8px;
-
       color: var(--brown-dark);
-
       font-size: 1.35rem;
       line-height: 1.3;
       font-weight: 600;
-
       transition: color 0.2s ease;
     }
 
     .research-preview {
       margin: 0;
-
       color: var(--text-mid);
-
       font-size: 0.94rem;
       line-height: 1.65;
     }
@@ -162,10 +146,8 @@
 
     .research-toggle {
       position: absolute;
-
       top: 29px;
       right: 4px;
-
       width: 28px;
       height: 28px;
     }
@@ -173,16 +155,11 @@
     .research-toggle::before,
     .research-toggle::after {
       content: "";
-
       position: absolute;
-
       top: 50%;
       left: 50%;
-
       background: var(--gold);
-
       transform: translate(-50%, -50%);
-
       transition: transform 0.2s ease;
     }
 
@@ -207,15 +184,12 @@
 
     .research-detail {
       max-width: 850px;
-
       padding: 0 40px 32px 0;
     }
 
     .research-detail p {
       margin: 0 0 16px;
-
       color: var(--text-mid);
-
       font-size: 0.96rem;
       line-height: 1.75;
     }
@@ -239,81 +213,59 @@
 
 
     /* =========================================================
-       FOOTER ICONS
+       FOOTER SOCIAL ICONS
        ========================================================= */
 
     .footer-social {
       width: 100%;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       gap: 23px;
 
       padding: 28px var(--page-padding) 4px;
 
       position: relative;
-      z-index: 2;
+      z-index: 3;
     }
 
-    .footer-social-link,
-    .footer-social-disabled {
-      width: 31px;
-      height: 31px;
-
+    .footer-social a,
+    .footer-social .social-disabled {
       display: inline-flex;
       align-items: center;
       justify-content: center;
 
+      width: 30px;
+      height: 30px;
+
+      color: var(--brown-dark);
       text-decoration: none;
     }
 
-    .footer-social-link {
+    .footer-social svg {
+      display: block;
+      width: 25px;
+      height: 25px;
+    }
+
+    .footer-social a {
       transition:
-        transform 0.2s ease,
-        opacity 0.2s ease;
+        color 0.2s ease,
+        transform 0.2s ease;
     }
 
-    .footer-social-link:hover {
+    .footer-social a:hover {
+      color: var(--gold);
       transform: translateY(-2px);
-      opacity: 0.7;
     }
 
-    .footer-social-link:focus-visible {
+    .footer-social a:focus-visible {
       outline: 2px solid var(--gold);
       outline-offset: 5px;
     }
 
-    .footer-social-disabled {
+    .footer-social .social-disabled {
       cursor: default;
-    }
-
-    .footer-social img {
-      display: block;
-
-      width: 25px;
-      height: 25px;
-
-      object-fit: contain;
-    }
-
-    .footer-social-disabled img {
-      opacity: 0.88;
-    }
-
-
-    /* Email icon drawn directly in HTML */
-
-    .footer-email-icon {
-      width: 25px;
-      height: 25px;
-
-      fill: none;
-      stroke: var(--brown-dark);
-      stroke-width: 1.8;
-      stroke-linecap: round;
-      stroke-linejoin: round;
     }
 
 
@@ -325,9 +277,7 @@
 
       .research-opening {
         grid-template-columns: 1fr;
-
         gap: 38px;
-
         align-items: start;
       }
 
@@ -351,13 +301,11 @@
 
       .research-opening {
         margin-bottom: 50px;
-
         gap: 30px;
       }
 
       .research-opening-text h1 {
         margin-bottom: 18px;
-
         font-size: 1.65rem;
       }
 
@@ -405,13 +353,11 @@
       }
 
       .footer-social {
-        gap: 18px;
-
+        gap: 19px;
         padding-top: 24px;
       }
 
-      .footer-social img,
-      .footer-email-icon {
+      .footer-social svg {
         width: 23px;
         height: 23px;
       }
@@ -447,33 +393,19 @@
 
       <nav>
 
-        <a class="active" href="research.html">
-          Research
-        </a>
+        <a class="active" href="research.html">Research</a>
 
-        <a href="people.html">
-          Team
-        </a>
+        <a href="people.html">Team</a>
 
-        <a href="publications.html">
-          Publications
-        </a>
+        <a href="publications.html">Publications</a>
 
-        <a href="news.html">
-          News
-        </a>
+        <a href="news.html">News</a>
 
-        <a href="join.html">
-          Join Us
-        </a>
+        <a href="join.html">Join Us</a>
 
-        <a href="contact.html">
-          Contact
-        </a>
+        <a href="contact.html">Contact</a>
 
-        <a href="internal/">
-          Internal
-        </a>
+        <a href="internal/">Internal</a>
 
       </nav>
 
@@ -484,7 +416,7 @@
 
 
   <!-- =========================================================
-       RESEARCH PAGE
+       RESEARCH
        ========================================================= -->
 
   <main class="research-page">
@@ -520,7 +452,7 @@
       <figure class="research-opening-figure">
 
         <img
-          src="images/research-regulation.png"
+          src="images/research-regulation.jpg"
           alt="Diagram illustrating multiple mechanisms of microbial gene regulation">
 
         <figcaption>
@@ -753,16 +685,20 @@
       <!-- GOOGLE SCHOLAR -->
 
       <a
-        class="footer-social-link"
         href="https://scholar.google.com/citations?user=hZ1ScywAAAAJ&hl=en"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Google Scholar"
         title="Google Scholar">
 
-        <img
-          src="https://cdn.simpleicons.org/googlescholar/492f24"
-          alt="">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+          <path
+            fill="currentColor"
+            d="M12 2L1 8l11 6 9-4.91V17h2V8L12 2zm-6.5 9.18V16c0 2.21 2.91 4 6.5 4s6.5-1.79 6.5-4v-4.82L12 14.73 5.5 11.18z">
+          </path>
+
+        </svg>
 
       </a>
 
@@ -771,48 +707,75 @@
       <!-- ORCID -->
 
       <a
-        class="footer-social-link"
         href="https://orcid.org/0000-0002-0390-1440"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="ORCID"
         title="ORCID">
 
-        <img
-          src="https://cdn.simpleicons.org/orcid/492f24"
-          alt="">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+          <circle
+            cx="12"
+            cy="12"
+            r="10"
+            fill="currentColor">
+          </circle>
+
+          <text
+            x="12"
+            y="15.7"
+            text-anchor="middle"
+            fill="white"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="10"
+            font-weight="600">
+            iD
+          </text>
+
+        </svg>
 
       </a>
 
 
 
       <!-- LINKEDIN
-           Add href later when Palma Lab LinkedIn exists -->
+           NOT CLICKABLE YET -->
 
       <span
-        class="footer-social-disabled"
+        class="social-disabled"
         aria-label="Palma Lab LinkedIn coming soon"
-        title="Palma Lab LinkedIn">
+        title="LinkedIn">
 
-        <img
-          src="https://cdn.simpleicons.org/linkedin/492f24"
-          alt="">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+          <path
+            fill="currentColor"
+            d="M5.34 3.5A2.34 2.34 0 1 1 .66 3.5a2.34 2.34 0 0 1 4.68 0ZM1 8h4.7v15H1V8Zm7.6 0h4.5v2.05h.06c.63-1.2 2.17-2.46 4.47-2.46C22.4 7.59 23 10.73 23 14.81V23h-4.69v-7.25c0-1.73-.03-3.95-2.41-3.95-2.41 0-2.78 1.88-2.78 3.82V23H8.6V8Z">
+          </path>
+
+        </svg>
 
       </span>
 
 
 
       <!-- YOUTUBE
-           Add href later when Palma Lab YouTube exists -->
+           NOT CLICKABLE YET -->
 
       <span
-        class="footer-social-disabled"
+        class="social-disabled"
         aria-label="Palma Lab YouTube coming soon"
-        title="Palma Lab YouTube">
+        title="YouTube">
 
-        <img
-          src="https://cdn.simpleicons.org/youtube/492f24"
-          alt="">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+          <path
+            fill="currentColor"
+            d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z">
+          </path>
+
+        </svg>
 
       </span>
 
@@ -821,15 +784,18 @@
       <!-- EMAIL -->
 
       <a
-        class="footer-social-link"
         href="mailto:csantosd@uwyo.edu"
         aria-label="Email Cristina Palma"
         title="Email">
 
         <svg
-          class="footer-email-icon"
           viewBox="0 0 24 24"
-          aria-hidden="true">
+          aria-hidden="true"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round">
 
           <rect
             x="3"
@@ -839,9 +805,7 @@
             rx="1.5">
           </rect>
 
-          <path
-            d="M4 7l8 6 8-6">
-          </path>
+          <path d="M4 7l8 6 8-6"></path>
 
         </svg>
 
@@ -870,9 +834,7 @@
         href="https://www.uwyo.edu/molecbio/index.html"
         target="_blank"
         rel="noopener noreferrer">
-
         Department of Molecular Biology
-
       </a>
 
       <span class="footer-divider">
@@ -883,9 +845,7 @@
         href="https://www.uwyo.edu/soc/index.html"
         target="_blank"
         rel="noopener noreferrer">
-
         School of Computing
-
       </a>
 
       <span class="footer-divider">
