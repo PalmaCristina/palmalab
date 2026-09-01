@@ -10,6 +10,11 @@
   <link rel="stylesheet" href="css/style.css">
 
   <style>
+
+    /* =========================================================
+       DIRECTIONS LINK
+       ========================================================= */
+
     .directions-link {
       color: #6b2d2d;
       font-weight: 600;
@@ -21,9 +26,32 @@
       text-underline-offset: 4px;
     }
 
-    /* Clickable Science Initiative image */
+
+    /* =========================================================
+       CONTACT BUILDING IMAGE
+       Show complete image without cropping
+       ========================================================= */
+
+    .contact-hero-image {
+      width: 100%;
+      height: auto;
+      overflow: visible;
+    }
+
     .contact-hero-image a {
       display: block;
+      width: 100%;
+      height: auto;
+      text-decoration: none;
+    }
+
+    .contact-hero-image img {
+      display: block;
+      width: 100%;
+      height: auto !important;
+      max-height: none !important;
+      object-fit: contain !important;
+      object-position: center !important;
     }
 
     .contact-hero-image a:focus-visible {
@@ -31,41 +59,85 @@
       outline-offset: 4px;
     }
 
-    .contact-hero-image a img {
-      display: block;
-      width: 100%;
-    }
   </style>
+
 </head>
+
 
 <body>
 
+
+  <!-- =========================================================
+       HEADER
+       ========================================================= -->
+
   <header>
+
     <div class="header-inner">
 
       <div class="logo">
+
         <a href="index.html">
-          <img src="images/palma-lab-logo.png" alt="Palma Lab">
+
+          <img
+            src="images/palma-lab-logo.png"
+            alt="Palma Lab">
+
         </a>
+
       </div>
 
+
       <nav>
-        <a href="research.html">Research</a>
-        <a href="people.html">Team</a>
-        <a href="publications.html">Publications</a>
-        <a href="news.html">News</a>
-        <a href="join.html">Join Us</a>
-        <a class="active" href="contact.html">Contact</a>
-        <a href="internal/">Internal</a>
+
+        <a href="research.html">
+          Research
+        </a>
+
+        <a href="people.html">
+          Team
+        </a>
+
+        <a href="publications.html">
+          Publications
+        </a>
+
+        <a href="news.html">
+          News
+        </a>
+
+        <a href="join.html">
+          Join Us
+        </a>
+
+        <a
+          class="active"
+          href="contact.html">
+          Contact
+        </a>
+
+        <a href="internal/">
+          Internal
+        </a>
+
       </nav>
 
     </div>
+
   </header>
 
 
+
+  <!-- =========================================================
+       MAIN CONTENT
+       ========================================================= -->
+
   <main class="contact-page">
 
-    <!-- CLICKABLE SCIENCE INITIATIVE IMAGE -->
+
+    <!-- =======================================================
+         SCIENCE INITIATIVE BUILDING
+         ======================================================= -->
 
     <section class="contact-hero-image">
 
@@ -85,76 +157,154 @@
     </section>
 
 
+
+    <!-- =======================================================
+         CONTACT INFORMATION
+         ======================================================= -->
+
     <section class="contact-grid">
+
+
+      <!-- FIND US -->
 
       <article class="contact-box">
 
-        <h2>Find us</h2>
+        <h2>
+          Find us
+        </h2>
 
         <p>
-          <strong>Palma Lab</strong><br>
-          Office 2XXX<br>
-          Science Initiative Building<br>
-          1000 E. University Ave<br>
-          Laramie, Wyoming 82071<br>
+
+          <strong>
+            Palma Lab
+          </strong>
+
+          <br>
+
+          Office 2XXX
+
+          <br>
+
+          Science Initiative Building
+
+          <br>
+
+          1000 E. University Ave
+
+          <br>
+
+          Laramie, Wyoming 82071
+
+          <br>
+
           United States
+
         </p>
 
+
         <p>
+
           Email:
-          <a href="mailto:csantosd@uwyo.edu">csantosd[at]uwyo.edu</a>
+
+          <a href="mailto:csantosd@uwyo.edu">
+            csantosd[at]uwyo.edu
+          </a>
+
         </p>
 
       </article>
 
 
+
+      <!-- GETTING HERE -->
+
       <article class="contact-box">
 
-        <h2>Getting here</h2>
+        <h2>
+          Getting here
+        </h2>
+
 
         <p>
+
           <a
             class="directions-link"
             href="https://www.google.com/maps/place/Science+Initiative+Building/@41.3157178,-105.5848421,182m/data=!3m1!1e3!4m6!3m5!1s0x8768911d7d5673b9:0x8966e26d275a6cea!8m2!3d41.3157047!4d-105.5845149!16s%2Fg%2F11t86qthrb?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer">
+
             Get directions →
+
           </a>
+
         </p>
 
+
         <p>
-          <strong>Parking:</strong> Figuring it out myself. Updates soon.
+
+          <strong>
+            Parking:
+          </strong>
+
+          Figuring it out myself. Updates soon.
+
         </p>
 
       </article>
 
+
+
+      <!-- JOIN THE LAB -->
 
       <article class="contact-box">
 
-        <h2>Join the lab</h2>
+        <h2>
+          Join the lab
+        </h2>
+
 
         <p>
+
           We welcome inquiries from students and researchers interested
           in quantitative, computational, and experimental approaches
           to microbial biology.
+
         </p>
 
-        <a href="join.html">View opportunities →</a>
+
+        <a href="join.html">
+          View opportunities →
+        </a>
 
       </article>
 
+
     </section>
+
 
   </main>
 
 
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
   <footer>
+
 
     <div class="footer-main-row">
 
+
+      <!-- =====================================================
+           SOCIAL ICONS
+           ===================================================== -->
+
       <div class="footer-social">
 
-        <!-- Google Scholar -->
+
+        <!-- GOOGLE SCHOLAR -->
+
         <a
           href="https://scholar.google.com/citations?user=hZ1ScywAAAAJ&hl=en"
           target="_blank"
@@ -162,17 +312,23 @@
           aria-label="Cristina Palma on Google Scholar"
           title="Google Scholar">
 
-          <svg viewBox="0 0 24 24" aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true">
+
             <path
               fill="currentColor"
               d="M12 2L1 8l11 6 9-4.91V17h2V8L12 2zm-6.5 9.18V16c0 2.21 2.91 4 6.5 4s6.5-1.79 6.5-4v-4.82L12 14.73 5.5 11.18z">
             </path>
+
           </svg>
 
         </a>
 
 
+
         <!-- ORCID -->
+
         <a
           href="https://orcid.org/0000-0002-0390-1440"
           target="_blank"
@@ -180,7 +336,10 @@
           aria-label="Cristina Palma on ORCID"
           title="ORCID">
 
-          <svg viewBox="0 0 24 24" aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true">
+
             <circle
               cx="12"
               cy="12"
@@ -196,14 +355,19 @@
               font-family="Arial, Helvetica, sans-serif"
               font-size="10"
               font-weight="600">
+
               iD
+
             </text>
+
           </svg>
 
         </a>
 
 
-        <!-- LinkedIn -->
+
+        <!-- LINKEDIN -->
+
         <a
           href="https://www.linkedin.com/in/cristina-palma-312704156/"
           target="_blank"
@@ -226,7 +390,9 @@
         </a>
 
 
-        <!-- YouTube -->
+
+        <!-- YOUTUBE -->
+
         <a
           href="https://www.youtube.com/@PalmaLabWyo"
           target="_blank"
@@ -234,17 +400,23 @@
           aria-label="Palma Lab on YouTube"
           title="YouTube">
 
-          <svg viewBox="0 0 24 24" aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true">
+
             <path
               fill="currentColor"
               d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z">
             </path>
+
           </svg>
 
         </a>
 
 
-        <!-- Email -->
+
+        <!-- EMAIL -->
+
         <a
           href="mailto:csantosd@uwyo.edu"
           aria-label="Email Cristina Palma"
@@ -273,48 +445,86 @@
 
         </a>
 
+
       </div>
 
 
+
+      <!-- =====================================================
+           INSTITUTIONAL INFORMATION
+           ===================================================== -->
+
       <div class="footer-info">
 
-        <span>Palma Lab</span>
 
-        <span class="footer-divider">·</span>
+        <span>
+          Palma Lab
+        </span>
+
+
+        <span class="footer-divider">
+          ·
+        </span>
+
 
         <a
           href="https://www.uwyo.edu/molecbio/index.html"
           target="_blank"
           rel="noopener noreferrer">
+
           Department of Molecular Biology
+
         </a>
 
-        <span class="footer-divider">·</span>
+
+        <span class="footer-divider">
+          ·
+        </span>
+
 
         <a
           href="https://www.uwyo.edu/soc/index.html"
           target="_blank"
           rel="noopener noreferrer">
+
           School of Computing
+
         </a>
 
-        <span class="footer-divider">·</span>
 
-        <span>University of Wyoming</span>
+        <span class="footer-divider">
+          ·
+        </span>
+
+
+        <span>
+          University of Wyoming
+        </span>
+
 
       </div>
+
 
     </div>
 
 
+
+    <!-- =======================================================
+         MOUNTAINS
+         ======================================================= -->
+
     <div class="footer-mountains">
+
       <img
         src="images/mountains-footer.png"
         alt=""
         aria-hidden="true">
+
     </div>
 
+
   </footer>
+
 
 </body>
 
