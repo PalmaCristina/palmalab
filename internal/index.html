@@ -83,6 +83,8 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
 
       gap: 20px;
+
+      align-items: start;
     }
 
 
@@ -178,6 +180,142 @@
 
 
     /* =========================================================
+       UW RESOURCES EXPANDABLE CARD
+       ========================================================= */
+
+    .uw-resources-card {
+      padding: 0;
+
+      overflow: hidden;
+    }
+
+    .uw-resources-card summary {
+      min-height: 175px;
+
+      padding: 28px;
+
+      box-sizing: border-box;
+
+      cursor: pointer;
+
+      list-style: none;
+
+      position: relative;
+    }
+
+    .uw-resources-card summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .uw-resources-card summary::marker {
+      display: none;
+    }
+
+    .uw-resources-card summary::after {
+      content: "+";
+
+      position: absolute;
+
+      right: 27px;
+      bottom: 25px;
+
+      color: var(--brown);
+
+      font-size: 1.3rem;
+      line-height: 1;
+
+      font-weight: 400;
+
+      transition: transform 0.2s ease;
+    }
+
+    .uw-resources-card[open] summary::after {
+      content: "−";
+    }
+
+    .uw-resources-card summary:hover .internal-status {
+      text-decoration: underline;
+
+      text-decoration-color: var(--gold);
+
+      text-underline-offset: 4px;
+    }
+
+    .uw-resources-card summary:focus-visible {
+      outline: 2px solid var(--gold);
+
+      outline-offset: -4px;
+    }
+
+    .uw-resources-card[open] summary {
+      min-height: auto;
+
+      border-bottom: 1px solid #e6dccb;
+    }
+
+    .uw-resource-list {
+      margin: 0;
+
+      padding: 6px 28px 25px;
+
+      list-style: none;
+    }
+
+    .uw-resource-list li {
+      border-bottom: 1px solid #eee6da;
+    }
+
+    .uw-resource-list li:last-child {
+      border-bottom: none;
+    }
+
+    .uw-resource-list a {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 18px;
+
+      padding: 14px 0;
+
+      color: var(--brown);
+
+      text-decoration: none;
+
+      font-size: 0.9rem;
+      line-height: 1.4;
+
+      font-weight: 500;
+    }
+
+    .uw-resource-list a::after {
+      content: "↗";
+
+      flex-shrink: 0;
+
+      color: var(--gold);
+
+      font-size: 0.95rem;
+    }
+
+    .uw-resource-list a:hover {
+      text-decoration: underline;
+
+      text-decoration-color: var(--gold);
+
+      text-underline-offset: 4px;
+    }
+
+    .uw-resource-list a:focus-visible {
+      outline: 2px solid var(--gold);
+
+      outline-offset: 3px;
+    }
+
+
+    /* =========================================================
        MOBILE
        ========================================================= */
 
@@ -216,6 +354,25 @@
 
       .internal-card h2 {
         font-size: 1.15rem;
+      }
+
+      .uw-resources-card {
+        padding: 0;
+      }
+
+      .uw-resources-card summary {
+        min-height: auto;
+
+        padding: 24px;
+      }
+
+      .uw-resources-card summary::after {
+        right: 23px;
+        bottom: 22px;
+      }
+
+      .uw-resource-list {
+        padding: 5px 24px 20px;
       }
 
     }
@@ -461,21 +618,116 @@
            UW RESOURCES
            ===================================================== -->
 
-      <article class="internal-card">
+      <details class="internal-card uw-resources-card">
 
-        <h2>
-          UW Resources
-        </h2>
+        <summary>
 
-        <p>
-          Useful University of Wyoming resources for lab members.
-        </p>
+          <h2>
+            UW Resources
+          </h2>
 
-        <span class="internal-status">
-          Coming soon
-        </span>
+          <p>
+            Useful University of Wyoming resources for lab members.
+          </p>
 
-      </article>
+          <span class="internal-status">
+            View resources
+          </span>
+
+        </summary>
+
+
+        <ul class="uw-resource-list">
+
+
+          <li>
+
+            <a
+              href="https://www.uwyo.edu/safety/training/index.html"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              Safety &amp; Lab Training
+
+            </a>
+
+          </li>
+
+
+          <li>
+
+            <a
+              href="https://www.uwyo.edu/uwgrad/enrolled-students/index.html"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              Graduate Education
+
+            </a>
+
+          </li>
+
+
+          <li>
+
+            <a
+              href="https://www.uwyo.edu/research/index.html"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              Research &amp; Compliance
+
+            </a>
+
+          </li>
+
+
+          <li>
+
+            <a
+              href="https://www.uwyo.edu/software/"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              IT &amp; Software
+
+            </a>
+
+          </li>
+
+
+          <li>
+
+            <a
+              href="https://www.uwyo.edu/libraries/"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              UW Libraries
+
+            </a>
+
+          </li>
+
+
+          <li>
+
+            <a
+              href="https://www.uwyo.edu/research/researchers-and-faculty.html"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              Researcher &amp; Faculty Resources
+
+            </a>
+
+          </li>
+
+
+        </ul>
+
+
+      </details>
 
 
 
