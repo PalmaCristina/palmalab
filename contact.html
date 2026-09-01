@@ -12,56 +12,52 @@
   <style>
 
     /* =========================================================
-       CONTACT BUILDING IMAGE
+       CONTACT HERO IMAGE
        ========================================================= */
 
     .contact-hero-image {
       width: 100%;
-      height: auto;
+      height: 360px;
+      margin: 0 0 38px;
 
-      margin: 0 auto;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      background: transparent;
-      overflow: visible;
+      overflow: hidden;
+      background: #f4f1ec;
     }
 
     .contact-hero-image a {
       display: block;
-
-      width: auto;
-      height: auto;
-
+      width: 100%;
+      height: 100%;
       text-decoration: none;
-
-      transition: opacity 0.2s ease;
-    }
-
-    .contact-hero-image a:hover {
-      opacity: 0.94;
-    }
-
-    .contact-hero-image a:focus-visible {
-      outline: 3px solid #ffc425;
-      outline-offset: 4px;
     }
 
     .contact-hero-image img {
       display: block;
 
-      width: auto !important;
-      height: auto !important;
+      width: 100% !important;
+      height: 100% !important;
 
-      max-width: 100% !important;
-      max-height: 450px !important;
+      object-fit: cover !important;
 
-      object-fit: contain !important;
-      object-position: center !important;
+      /*
+        Move the crop slightly downward so more of the
+        building is visible and less empty sky dominates.
+      */
+      object-position: center 62% !important;
 
-      margin: 0 auto;
+      transition:
+        transform 0.35s ease,
+        opacity 0.2s ease;
+    }
+
+    .contact-hero-image a:hover img {
+      transform: scale(1.01);
+      opacity: 0.97;
+    }
+
+    .contact-hero-image a:focus-visible {
+      outline: 3px solid #ffc425;
+      outline-offset: 4px;
     }
 
 
@@ -87,10 +83,13 @@
 
     @media (max-width: 700px) {
 
+      .contact-hero-image {
+        height: 270px;
+        margin-bottom: 28px;
+      }
+
       .contact-hero-image img {
-        width: 100% !important;
-        height: auto !important;
-        max-height: none !important;
+        object-position: center 58% !important;
       }
 
     }
@@ -98,7 +97,6 @@
   </style>
 
 </head>
-
 
 <body>
 
@@ -171,9 +169,7 @@
   <main class="contact-page">
 
 
-    <!-- =======================================================
-         SCIENCE INITIATIVE BUILDING
-         ======================================================= -->
+    <!-- SCIENCE INITIATIVE BUILDING -->
 
     <section class="contact-hero-image">
 
@@ -194,9 +190,7 @@
 
 
 
-    <!-- =======================================================
-         CONTACT INFORMATION
-         ======================================================= -->
+    <!-- CONTACT INFORMATION -->
 
     <section class="contact-grid">
 
@@ -237,7 +231,6 @@
 
         </p>
 
-
         <p>
 
           Email:
@@ -260,7 +253,6 @@
           Getting here
         </h2>
 
-
         <p>
 
           <a
@@ -274,7 +266,6 @@
           </a>
 
         </p>
-
 
         <p>
 
@@ -298,15 +289,11 @@
           Join the lab
         </h2>
 
-
         <p>
-
           We welcome inquiries from students and researchers interested
           in quantitative, computational, and experimental approaches
           to microbial biology.
-
         </p>
-
 
         <a href="join.html">
           View opportunities →
@@ -328,13 +315,7 @@
 
   <footer>
 
-
     <div class="footer-main-row">
-
-
-      <!-- =====================================================
-           SOCIAL ICONS
-           ===================================================== -->
 
       <div class="footer-social">
 
@@ -348,9 +329,7 @@
           aria-label="Cristina Palma on Google Scholar"
           title="Google Scholar">
 
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
 
             <path
               fill="currentColor"
@@ -372,9 +351,7 @@
           aria-label="Cristina Palma on ORCID"
           title="ORCID">
 
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
 
             <circle
               cx="12"
@@ -391,9 +368,7 @@
               font-family="Arial, Helvetica, sans-serif"
               font-size="10"
               font-weight="600">
-
               iD
-
             </text>
 
           </svg>
@@ -436,9 +411,7 @@
           aria-label="Palma Lab on YouTube"
           title="YouTube">
 
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
 
             <path
               fill="currentColor"
@@ -486,22 +459,15 @@
 
 
 
-      <!-- =====================================================
-           INSTITUTIONAL INFORMATION
-           ===================================================== -->
-
       <div class="footer-info">
-
 
         <span>
           Palma Lab
         </span>
 
-
         <span class="footer-divider">
           ·
         </span>
-
 
         <a
           href="https://www.uwyo.edu/molecbio/index.html"
@@ -512,11 +478,9 @@
 
         </a>
 
-
         <span class="footer-divider">
           ·
         </span>
-
 
         <a
           href="https://www.uwyo.edu/soc/index.html"
@@ -527,27 +491,19 @@
 
         </a>
 
-
         <span class="footer-divider">
           ·
         </span>
-
 
         <span>
           University of Wyoming
         </span>
 
-
       </div>
-
 
     </div>
 
 
-
-    <!-- =======================================================
-         MOUNTAINS
-         ======================================================= -->
 
     <div class="footer-mountains">
 
@@ -557,7 +513,6 @@
         aria-hidden="true">
 
     </div>
-
 
   </footer>
 
