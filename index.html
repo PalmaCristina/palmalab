@@ -8,66 +8,311 @@
   <title>Palma Lab | University of Wyoming</title>
 
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+
+    /* =========================================================
+       HOME + LATEST NEWS
+       ========================================================= */
+
+    .home-hero {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 85px var(--page-padding) 75px;
+    }
+
+    .home-hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 270px;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .home-main {
+      min-width: 0;
+    }
+
+    .home-affiliation {
+      margin: 0 0 24px;
+      color: var(--brown);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+    }
+
+    .home-main h1 {
+      max-width: 850px;
+      margin: 0 0 25px;
+      color: var(--brown-dark);
+      font-size: clamp(1.8rem, 2.7vw, 2.8rem);
+      line-height: 1.12;
+      letter-spacing: -0.025em;
+    }
+
+    .home-description {
+      max-width: 780px;
+      margin: 0 0 30px;
+      color: var(--text-mid);
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .home-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+
+    /* =========================================================
+       LATEST NEWS CARD
+       ========================================================= */
+
+    .latest-news {
+      position: relative;
+      margin-top: 7px;
+      padding: 22px 22px 21px;
+      border: 1px solid var(--border);
+      background: #fff;
+    }
+
+    .latest-news::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--gold);
+    }
+
+    .latest-news-label {
+      margin: 0 0 18px;
+      color: var(--brown);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .latest-news-date {
+      margin: 0 0 7px;
+      color: var(--text-mid);
+      font-size: 0.78rem;
+      line-height: 1.4;
+    }
+
+    .latest-news h2 {
+      margin: 0 0 18px;
+      color: var(--brown-dark);
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .latest-news-link {
+      color: var(--brown);
+      font-size: 0.84rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .latest-news-link:hover {
+      text-decoration: underline;
+      text-decoration-color: var(--gold);
+      text-underline-offset: 4px;
+    }
+
+    .latest-news-all {
+      display: block;
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px solid var(--border);
+      color: var(--text-mid);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .latest-news-all:hover {
+      color: var(--brown);
+    }
+
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
+    @media (max-width: 850px) {
+
+      .home-hero {
+        padding-top: 60px;
+        padding-bottom: 55px;
+      }
+
+      .home-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .latest-news {
+        width: 100%;
+        max-width: 450px;
+        margin-top: 0;
+      }
+
+    }
+
+
+    @media (max-width: 650px) {
+
+      .home-main h1 {
+        font-size: 2rem;
+      }
+
+      .home-description {
+        font-size: 0.95rem;
+      }
+
+      .latest-news {
+        padding: 20px;
+      }
+
+    }
+
+  </style>
+
 </head>
+
 
 <body>
 
   <header>
+
     <div class="header-inner">
 
       <div class="logo">
+
         <a href="index.html">
           <img src="images/palma-lab-logo.png" alt="Palma Lab">
         </a>
+
       </div>
 
+
       <nav>
+
         <a href="research.html">Research</a>
+
         <a href="people.html">Team</a>
+
         <a href="publications.html">Publications</a>
+
         <a href="news.html">News</a>
+
         <a href="join.html">Join Us</a>
+
         <a href="contact.html">Contact</a>
+
         <a href="internal/">Internal</a>
+
       </nav>
 
     </div>
+
   </header>
+
 
 
   <main>
 
-    <section class="hero">
+    <section class="home-hero">
 
-      <p class="eyebrow">
-        University of Wyoming · Molecular Biology &amp; Computing
-      </p>
+      <div class="home-hero-grid">
 
-      <h1>
-        Understanding how microorganisms sense, respond to,
-        and adapt to changing environments.
-      </h1>
 
-      <p class="hero-text">
-        The Palma Lab combines mathematical and computational modeling,
-        quantitative experiments, and synthetic biology to uncover the
-        regulatory mechanisms that control microbial stress responses
-        and adaptation.
-      </p>
+        <!-- =====================================================
+             MAIN HOMEPAGE TEXT
+             ===================================================== -->
 
-      <div class="hero-buttons">
+        <div class="home-main">
 
-        <a
-          class="button primary-button"
-          href="research.html">
-          Explore Our Research
-        </a>
+          <p class="home-affiliation">
+            University of Wyoming · Molecular Biology &amp; Computing
+          </p>
 
-        <a
-          class="button secondary-button"
-          href="join.html">
-          Join the Lab
-        </a>
+
+          <h1>
+            Understanding how microorganisms sense, respond to,
+            and adapt to changing environments.
+          </h1>
+
+
+          <p class="home-description">
+            The Palma Lab combines mathematical and computational modeling,
+            quantitative experiments, and synthetic biology to uncover the
+            regulatory mechanisms that control microbial stress responses
+            and adaptation.
+          </p>
+
+
+          <div class="home-actions">
+
+            <a
+              class="button primary-button"
+              href="research.html">
+              Explore Our Research
+            </a>
+
+            <a
+              class="button"
+              href="join.html">
+              Join the Lab
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             LATEST NEWS
+             ===================================================== -->
+
+        <aside class="latest-news">
+
+          <p class="latest-news-label">
+            Latest News
+          </p>
+
+
+          <p class="latest-news-date">
+            15 October 2026
+          </p>
+
+
+          <h2>
+            Palma Lab opens at the University of Wyoming
+          </h2>
+
+
+          <a
+            class="latest-news-link"
+            href="news.html#15-october-2026">
+            Read more →
+          </a>
+
+
+          <a
+            class="latest-news-all"
+            href="news.html">
+            View all news →
+          </a>
+
+        </aside>
+
 
       </div>
 
@@ -76,13 +321,18 @@
   </main>
 
 
+
   <footer>
 
     <div class="footer-content">
 
-      <span>Palma Lab</span>
+      <span>
+        Palma Lab
+      </span>
 
-      <span class="footer-divider">·</span>
+      <span class="footer-divider">
+        ·
+      </span>
 
       <a
         href="https://www.uwyo.edu/molecbio/index.html"
@@ -91,7 +341,9 @@
         Department of Molecular Biology
       </a>
 
-      <span class="footer-divider">·</span>
+      <span class="footer-divider">
+        ·
+      </span>
 
       <a
         href="https://www.uwyo.edu/soc/index.html"
@@ -100,9 +352,13 @@
         School of Computing
       </a>
 
-      <span class="footer-divider">·</span>
+      <span class="footer-divider">
+        ·
+      </span>
 
-      <span>University of Wyoming</span>
+      <span>
+        University of Wyoming
+      </span>
 
     </div>
 
