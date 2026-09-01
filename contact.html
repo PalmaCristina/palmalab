@@ -9,76 +9,93 @@
 
   <link rel="stylesheet" href="css/style.css">
 
- <style>
+  <style>
 
-  .directions-link {
-    color: #6b2d2d;
-    font-weight: 600;
-    text-decoration: none;
-  }
-
-  .directions-link:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-
-
-  /* =========================================================
-     CONTACT BUILDING IMAGE
-     ========================================================= */
-
-  .contact-hero-image {
-    width: 100%;
-    height: 360px;
-
-    overflow: hidden;
-
-    background: #f7f7f5;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .contact-hero-image a {
-    display: flex;
-
-    width: 100%;
-    height: 100%;
-
-    align-items: center;
-    justify-content: center;
-
-    text-decoration: none;
-  }
-
-  .contact-hero-image img {
-    display: block;
-
-    width: auto !important;
-    height: 100% !important;
-
-    max-width: 100%;
-
-    object-fit: contain !important;
-    object-position: center !important;
-  }
-
-  .contact-hero-image a:focus-visible {
-    outline: 3px solid #ffc425;
-    outline-offset: 4px;
-  }
-
-
-  @media (max-width: 700px) {
+    /* =========================================================
+       CONTACT BUILDING IMAGE
+       ========================================================= */
 
     .contact-hero-image {
-      height: 240px;
+      width: 100%;
+      height: auto;
+
+      margin: 0 auto;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: transparent;
+      overflow: visible;
     }
 
-  }
+    .contact-hero-image a {
+      display: block;
 
-</style>
+      width: auto;
+      height: auto;
+
+      text-decoration: none;
+
+      transition: opacity 0.2s ease;
+    }
+
+    .contact-hero-image a:hover {
+      opacity: 0.94;
+    }
+
+    .contact-hero-image a:focus-visible {
+      outline: 3px solid #ffc425;
+      outline-offset: 4px;
+    }
+
+    .contact-hero-image img {
+      display: block;
+
+      width: auto !important;
+      height: auto !important;
+
+      max-width: 100% !important;
+      max-height: 450px !important;
+
+      object-fit: contain !important;
+      object-position: center !important;
+
+      margin: 0 auto;
+    }
+
+
+    /* =========================================================
+       DIRECTIONS LINK
+       ========================================================= */
+
+    .directions-link {
+      color: #6b2d2d;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .directions-link:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
+    @media (max-width: 700px) {
+
+      .contact-hero-image img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+      }
+
+    }
+
+  </style>
 
 </head>
 
@@ -315,7 +332,9 @@
     <div class="footer-main-row">
 
 
-      <!-- SOCIAL ICONS -->
+      <!-- =====================================================
+           SOCIAL ICONS
+           ===================================================== -->
 
       <div class="footer-social">
 
@@ -329,7 +348,9 @@
           aria-label="Cristina Palma on Google Scholar"
           title="Google Scholar">
 
-          <svg viewBox="0 0 24 24" aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true">
 
             <path
               fill="currentColor"
@@ -351,7 +372,9 @@
           aria-label="Cristina Palma on ORCID"
           title="ORCID">
 
-          <svg viewBox="0 0 24 24" aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true">
 
             <circle
               cx="12"
@@ -368,7 +391,9 @@
               font-family="Arial, Helvetica, sans-serif"
               font-size="10"
               font-weight="600">
+
               iD
+
             </text>
 
           </svg>
@@ -411,7 +436,9 @@
           aria-label="Palma Lab on YouTube"
           title="YouTube">
 
-          <svg viewBox="0 0 24 24" aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true">
 
             <path
               fill="currentColor"
@@ -459,43 +486,57 @@
 
 
 
-      <!-- INSTITUTIONAL INFORMATION -->
+      <!-- =====================================================
+           INSTITUTIONAL INFORMATION
+           ===================================================== -->
 
       <div class="footer-info">
+
 
         <span>
           Palma Lab
         </span>
 
+
         <span class="footer-divider">
           ·
         </span>
+
 
         <a
           href="https://www.uwyo.edu/molecbio/index.html"
           target="_blank"
           rel="noopener noreferrer">
+
           Department of Molecular Biology
+
         </a>
+
 
         <span class="footer-divider">
           ·
         </span>
+
 
         <a
           href="https://www.uwyo.edu/soc/index.html"
           target="_blank"
           rel="noopener noreferrer">
+
           School of Computing
+
         </a>
+
 
         <span class="footer-divider">
           ·
         </span>
 
+
         <span>
           University of Wyoming
         </span>
+
 
       </div>
 
