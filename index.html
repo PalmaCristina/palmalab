@@ -20,6 +20,7 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 85px var(--page-padding) 75px;
+      box-sizing: border-box;
     }
 
     .home-hero-grid {
@@ -142,13 +143,14 @@
 
     /* =========================================================
        FOOTER
-       ICONS + TEXT TOGETHER ON LEFT
        ========================================================= */
 
     .footer-main-row {
       width: 100%;
       max-width: var(--max-width);
       margin: 0 auto;
+
+      box-sizing: border-box;
 
       display: flex;
       align-items: center;
@@ -172,9 +174,12 @@
       align-items: center;
       justify-content: flex-start;
 
-      flex-shrink: 0;
+      flex: 0 0 auto;
 
       gap: 13px;
+
+      margin: 0;
+      padding: 0;
     }
 
     .footer-social a {
@@ -184,6 +189,8 @@
 
       width: 23px;
       height: 23px;
+
+      flex: 0 0 23px;
 
       color: var(--brown-dark);
       text-decoration: none;
@@ -223,15 +230,25 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
+      flex-wrap: wrap;
 
-      flex-wrap: nowrap;
+      flex: 0 1 auto;
+      min-width: 0;
+
+      margin: 0;
+      padding: 0;
 
       color: var(--text-light);
 
       font-size: 0.86rem;
       line-height: 1.5;
 
-      white-space: nowrap;
+      text-align: left;
+    }
+
+    .footer-info span,
+    .footer-info a {
+      flex-shrink: 0;
     }
 
     .footer-info a {
@@ -272,20 +289,11 @@
         margin-top: 0;
       }
 
-    }
-
-
-    @media (max-width: 850px) {
-
       .footer-main-row {
+        align-items: flex-start;
         flex-wrap: wrap;
         gap: 14px 22px;
         padding-top: 24px;
-      }
-
-      .footer-info {
-        flex-wrap: wrap;
-        white-space: normal;
       }
 
     }
@@ -461,6 +469,7 @@
 
   <footer>
 
+
     <div class="footer-main-row">
 
 
@@ -605,13 +614,12 @@
 
         </a>
 
-
       </div>
 
 
 
       <!-- =====================================================
-           INSTITUTIONAL TEXT
+           INSTITUTIONAL INFORMATION
            ===================================================== -->
 
       <div class="footer-info">
