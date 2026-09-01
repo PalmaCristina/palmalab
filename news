@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>News | Palma Lab</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/palma-lab-logo.png" alt="Palma Lab">
+        </a>
+      </div>
+
+      <nav>
+        <a href="research.html">Research</a>
+        <a href="people.html">Team</a>
+        <a href="publications.html">Publications</a>
+        <a class="active" href="news.html">News</a>
+        <a href="join.html">Join Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="internal/">Internal</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main class="page news-page">
+
+    <section class="news-list">
+
+      <article class="news-item">
+
+        <div class="news-date">
+          October 2026
+        </div>
+
+        <div class="news-content">
+          <h2>Palma Lab opens at the University of Wyoming</h2>
+
+          <p>
+            The Palma Lab officially opens its doors at the University of
+            Wyoming. We are excited to start building the team!
+          </p>
+        </div>
+
+      </article>
+
+
+      <!-- ADD FUTURE NEWS ITEMS ABOVE THIS LINE -->
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <div class="footer-content">
+
+      <span>Palma Lab</span>
+
+      <span class="footer-divider">·</span>
+
+      <a
+        href="https://www.uwyo.edu/molecbio/index.html"
+        target="_blank"
+        rel="noopener noreferrer">
+        Department of Molecular Biology
+      </a>
+
+      <span class="footer-divider">·</span>
+
+      <a
+        href="https://www.uwyo.edu/soc/index.html"
+        target="_blank"
+        rel="noopener noreferrer">
+        School of Computing
+      </a>
+
+      <span class="footer-divider">·</span>
+
+      <span>University of Wyoming</span>
+
+    </div>
+
+
+    <div class="footer-mountains">
+      <img
+        src="images/mountains-footer.png"
+        alt=""
+        aria-hidden="true">
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
