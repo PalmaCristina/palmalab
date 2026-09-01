@@ -141,6 +141,47 @@
 
 
     /* =========================================================
+       ACTIVE RESOURCE
+       ========================================================= */
+
+    .internal-card-link {
+      display: block;
+
+      color: inherit;
+
+      text-decoration: none;
+
+      transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .internal-card-link:hover {
+      transform: translateY(-2px);
+
+      border-color: var(--gold);
+
+      box-shadow: 0 8px 22px rgba(73, 47, 36, 0.08);
+    }
+
+    .internal-card-link:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .internal-card-link .internal-status {
+      color: var(--brown);
+    }
+
+    .internal-card-link:hover .internal-status {
+      text-decoration: underline;
+      text-decoration-color: var(--gold);
+      text-underline-offset: 4px;
+    }
+
+
+    /* =========================================================
        MOBILE
        ========================================================= */
 
@@ -292,7 +333,11 @@
 
       <!-- LAB CALENDAR -->
 
-      <article class="internal-card">
+      <a
+        class="internal-card internal-card-link"
+        href="https://calendar.google.com/calendar/u/0?cid=MmEwNmE1NTRjNGVkYjQ5MDExMTIyYWExNzdkNDhiNGEzZWUxYTg3Y2JhMjdlY2JjMTg0OWQwZjQ2ZjJlNDYxN0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
+        target="_blank"
+        rel="noopener noreferrer">
 
         <h2>
           Lab Calendar
@@ -303,10 +348,10 @@
         </p>
 
         <span class="internal-status">
-          Coming soon
+          Open calendar →
         </span>
 
-      </article>
+      </a>
 
 
 
