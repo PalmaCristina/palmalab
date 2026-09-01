@@ -12,154 +12,290 @@
   <style>
 
     /* =========================================================
-       HOME + LATEST NEWS
+       HOME PAGE
        ========================================================= */
 
-    .home-hero {
+    .home-page {
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 85px var(--page-padding) 75px;
+      padding: 70px var(--page-padding) 65px;
     }
 
-    .home-hero-grid {
+    .home-layout {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 270px;
-      gap: 70px;
+      grid-template-columns: minmax(0, 1fr) 285px;
+      gap: 55px;
       align-items: start;
     }
+
+
+    /* =========================================================
+       MAIN HOME CONTENT
+       ========================================================= */
 
     .home-main {
       min-width: 0;
     }
 
     .home-affiliation {
-      margin: 0 0 24px;
+      margin: 0 0 20px;
+
       color: var(--brown);
-      font-size: 0.82rem;
+
+      font-size: 0.78rem;
+      line-height: 1.4;
       font-weight: 600;
-      letter-spacing: 0.08em;
+
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
     }
 
     .home-main h1 {
-      max-width: 850px;
-      margin: 0 0 25px;
+      max-width: 1000px;
+
+      margin: 0 0 28px;
+
       color: var(--brown-dark);
+
       font-size: clamp(1.8rem, 2.7vw, 2.8rem);
       line-height: 1.12;
       letter-spacing: -0.025em;
+      font-weight: 600;
     }
 
     .home-description {
-      max-width: 780px;
-      margin: 0 0 30px;
+      max-width: 760px;
+
+      margin: 0 0 34px;
+
       color: var(--text-mid);
+
       font-size: 1rem;
-      line-height: 1.75;
+      line-height: 1.8;
     }
+
+
+    /* =========================================================
+       HOME BUTTONS
+       ========================================================= */
 
     .home-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 14px;
+    }
+
+    .home-actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 42px;
+
+      padding: 10px 18px;
+
+      border: 1px solid var(--brown);
+
+      font-size: 0.9rem;
+      font-weight: 600;
+
+      text-decoration: none;
+
+      transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .home-actions .primary-action {
+      background: var(--brown);
+      color: #ffffff;
+    }
+
+    .home-actions .primary-action:hover {
+      background: var(--brown-dark);
+      border-color: var(--brown-dark);
+    }
+
+    .home-actions .secondary-action {
+      background: #ffffff;
+      color: var(--brown);
+    }
+
+    .home-actions .secondary-action:hover {
+      background: #fffaf0;
+      border-color: var(--gold);
     }
 
 
     /* =========================================================
-       LATEST NEWS CARD
+       HOME SIDEBAR
        ========================================================= */
 
-    .latest-news {
-      position: relative;
-      margin-top: 7px;
-      padding: 22px 22px 21px;
-      border: 1px solid var(--border);
-      background: #fff;
-    }
-
-    .latest-news::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
+    .home-sidebar {
       width: 100%;
-      height: 3px;
-      background: var(--gold);
+
+      border: 1px solid var(--border);
+
+      background: #ffffff;
+
+      padding: 24px 22px;
     }
 
-    .latest-news-label {
-      margin: 0 0 18px;
+    .sidebar-section + .sidebar-section {
+      margin-top: 28px;
+      padding-top: 24px;
+
+      border-top: 1px solid var(--border);
+    }
+
+    .sidebar-label {
+      margin: 0 0 13px;
+
       color: var(--brown);
-      font-size: 0.72rem;
+
+      font-size: 0.74rem;
+      line-height: 1.3;
       font-weight: 700;
-      letter-spacing: 0.12em;
+
+      letter-spacing: 0.1em;
       text-transform: uppercase;
     }
 
-    .latest-news-date {
-      margin: 0 0 7px;
+    .sidebar-title {
+      margin: 0 0 11px;
+
+      color: var(--brown-dark);
+
+      font-size: 1.15rem;
+      line-height: 1.3;
+      font-weight: 600;
+    }
+
+    .sidebar-text {
+      margin: 0;
+
       color: var(--text-mid);
-      font-size: 0.78rem;
+
+      font-size: 0.88rem;
+      line-height: 1.65;
+    }
+
+    .sidebar-date {
+      margin: 0 0 6px;
+
+      color: var(--text-light);
+
+      font-size: 0.76rem;
       line-height: 1.4;
     }
 
-    .latest-news h2 {
-      margin: 0 0 18px;
+    .sidebar-news-link {
       color: var(--brown-dark);
-      font-size: 1.05rem;
-      font-weight: 600;
-      line-height: 1.35;
+      text-decoration: none;
     }
 
-    .latest-news-link {
+    .sidebar-news-link:hover {
       color: var(--brown);
+    }
+
+    .sidebar-more {
+      display: inline-block;
+
+      margin-top: 16px;
+
+      color: var(--brown);
+
       font-size: 0.84rem;
       font-weight: 600;
+
       text-decoration: none;
     }
 
-    .latest-news-link:hover {
-      text-decoration: underline;
-      text-decoration-color: var(--gold);
-      text-underline-offset: 4px;
-    }
-
-    .latest-news-all {
-      display: block;
-      margin-top: 20px;
-      padding-top: 15px;
-      border-top: 1px solid var(--border);
-      color: var(--text-mid);
-      font-size: 0.78rem;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .latest-news-all:hover {
-      color: var(--brown);
+    .sidebar-more:hover {
+      color: var(--gold-dark);
     }
 
 
     /* =========================================================
-       MOBILE
+       FOOTER SOCIAL ICONS
+       ========================================================= */
+
+    .footer-social {
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 23px;
+
+      padding: 28px var(--page-padding) 4px;
+
+      position: relative;
+      z-index: 3;
+    }
+
+    .footer-social a,
+    .footer-social .social-disabled {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 30px;
+      height: 30px;
+
+      color: var(--brown-dark);
+      text-decoration: none;
+    }
+
+    .footer-social svg {
+      display: block;
+
+      width: 25px;
+      height: 25px;
+    }
+
+    .footer-social a {
+      transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .footer-social a:hover {
+      color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .footer-social a:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 5px;
+    }
+
+    .footer-social .social-disabled {
+      cursor: default;
+    }
+
+    .footer-social .linkedin-icon {
+      width: 21px;
+      height: 21px;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
        ========================================================= */
 
     @media (max-width: 850px) {
 
-      .home-hero {
-        padding-top: 60px;
-        padding-bottom: 55px;
-      }
-
-      .home-hero-grid {
+      .home-layout {
         grid-template-columns: 1fr;
-        gap: 45px;
+        gap: 50px;
       }
 
-      .latest-news {
-        width: 100%;
-        max-width: 450px;
-        margin-top: 0;
+      .home-sidebar {
+        max-width: 520px;
       }
 
     }
@@ -167,16 +303,41 @@
 
     @media (max-width: 650px) {
 
+      .home-page {
+        padding-top: 50px;
+        padding-bottom: 55px;
+      }
+
       .home-main h1 {
         font-size: 2rem;
       }
 
       .home-description {
-        font-size: 0.95rem;
+        font-size: 0.94rem;
+        line-height: 1.75;
       }
 
-      .latest-news {
-        padding: 20px;
+      .home-actions {
+        gap: 10px;
+      }
+
+      .home-sidebar {
+        padding: 21px 19px;
+      }
+
+      .footer-social {
+        gap: 19px;
+        padding-top: 24px;
+      }
+
+      .footer-social svg {
+        width: 23px;
+        height: 23px;
+      }
+
+      .footer-social .linkedin-icon {
+        width: 20px;
+        height: 20px;
       }
 
     }
@@ -188,6 +349,11 @@
 
 <body>
 
+
+  <!-- =========================================================
+       HEADER
+       ========================================================= -->
+
   <header>
 
     <div class="header-inner">
@@ -195,7 +361,9 @@
       <div class="logo">
 
         <a href="index.html">
-          <img src="images/palma-lab-logo.png" alt="Palma Lab">
+          <img
+            src="images/palma-lab-logo.png"
+            alt="Palma Lab">
         </a>
 
       </div>
@@ -203,19 +371,33 @@
 
       <nav>
 
-        <a href="research.html">Research</a>
+        <a href="research.html">
+          Research
+        </a>
 
-        <a href="people.html">Team</a>
+        <a href="people.html">
+          Team
+        </a>
 
-        <a href="publications.html">Publications</a>
+        <a href="publications.html">
+          Publications
+        </a>
 
-        <a href="news.html">News</a>
+        <a href="news.html">
+          News
+        </a>
 
-        <a href="join.html">Join Us</a>
+        <a href="join.html">
+          Join Us
+        </a>
 
-        <a href="contact.html">Contact</a>
+        <a href="contact.html">
+          Contact
+        </a>
 
-        <a href="internal/">Internal</a>
+        <a href="internal/">
+          Internal
+        </a>
 
       </nav>
 
@@ -225,104 +407,302 @@
 
 
 
-  <main>
+  <!-- =========================================================
+       HOME
+       ========================================================= -->
 
-    <section class="home-hero">
+  <main class="home-page">
 
-      <div class="home-hero-grid">
+    <div class="home-layout">
 
 
-        <!-- =====================================================
-             MAIN HOMEPAGE TEXT
-             ===================================================== -->
+      <!-- =====================================================
+           MAIN CONTENT
+           ===================================================== -->
 
-        <div class="home-main">
+      <section class="home-main">
 
-          <p class="home-affiliation">
-            University of Wyoming · Department of Molecular Biology &amp; School of Computing
+        <p class="home-affiliation">
+          University of Wyoming
+        </p>
+
+        <h1>
+          Quantitative systems biology of microbial stress response
+          and adaptation
+        </h1>
+
+        <p class="home-description">
+          We study how microorganisms sense environmental changes and
+          reorganize gene expression to survive stress. By combining
+          mathematical models of gene regulatory networks with quantitative
+          experiments and synthetic biology, we aim to uncover the regulatory
+          mechanisms that control microbial adaptation and develop predictive
+          models of cellular behavior.
+        </p>
+
+
+        <div class="home-actions">
+
+          <a
+            class="primary-action"
+            href="research.html">
+            Explore Our Research
+          </a>
+
+          <a
+            class="secondary-action"
+            href="join.html">
+            Join the Lab
+          </a>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- =====================================================
+           RIGHT SIDEBAR
+           ===================================================== -->
+
+      <aside class="home-sidebar">
+
+
+        <!-- LATEST UPDATES -->
+
+        <div class="sidebar-section">
+
+          <p class="sidebar-label">
+            Latest Updates
           </p>
 
+          <h2 class="sidebar-title">
+            We are recruiting
+          </h2>
 
-          <h1>
-            Understanding how microorganisms sense, respond to,
-            and adapt to changing environments.
-          </h1>
-
-
-          <p class="home-description">
-            The Palma Lab combines mathematical and computational modeling,
-            quantitative experiments, and synthetic biology to uncover the
-            regulatory mechanisms that control microbial stress responses
-            and adaptation.
+          <p class="sidebar-text">
+            We welcome inquiries from graduate students, postdoctoral
+            researchers, undergraduate students, and rotation students
+            interested in quantitative and experimental approaches to
+            microbial biology.
           </p>
 
-
-          <div class="home-actions">
-
-            <a
-              class="button primary-button"
-              href="research.html">
-              Explore Our Research
-            </a>
-
-            <a
-              class="button"
-              href="join.html">
-              Join the Lab
-            </a>
-
-          </div>
+          <a
+            class="sidebar-more"
+            href="join.html">
+            View opportunities →
+          </a>
 
         </div>
 
 
 
-        <!-- =====================================================
-             LATEST NEWS
-             ===================================================== -->
+        <!-- NEWS -->
 
-        <aside class="latest-news">
+        <div class="sidebar-section">
 
-          <p class="latest-news-label">
-            Latest News
+          <p class="sidebar-label">
+            News
           </p>
 
-
-          <p class="latest-news-date">
+          <p class="sidebar-date">
             15 October 2026
           </p>
 
+          <h2 class="sidebar-title">
 
-          <h2>
-            Palma Lab opens at the University of Wyoming
+            <a
+              class="sidebar-news-link"
+              href="news.html#15-october-2026">
+              Palma Lab opens at the University of Wyoming
+            </a>
+
           </h2>
 
+          <p class="sidebar-text">
+            The Palma Lab officially opens its doors at the University of
+            Wyoming. We are excited to start building the team!
+          </p>
 
           <a
-            class="latest-news-link"
-            href="news.html#15-october-2026">
-            Read more →
-          </a>
-
-
-          <a
-            class="latest-news-all"
+            class="sidebar-more"
             href="news.html">
-            View all news →
+            See more news →
           </a>
 
-        </aside>
+        </div>
 
 
-      </div>
+      </aside>
 
-    </section>
+
+    </div>
 
   </main>
 
 
 
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
   <footer>
+
+
+    <!-- =====================================================
+         SOCIAL / PROFILE ICONS
+         ===================================================== -->
+
+    <div class="footer-social">
+
+
+      <!-- GOOGLE SCHOLAR -->
+
+      <a
+        href="https://scholar.google.com/citations?user=hZ1ScywAAAAJ&hl=en"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Cristina Palma on Google Scholar"
+        title="Google Scholar">
+
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true">
+
+          <path
+            fill="currentColor"
+            d="M12 2L1 8l11 6 9-4.91V17h2V8L12 2zm-6.5 9.18V16c0 2.21 2.91 4 6.5 4s6.5-1.79 6.5-4v-4.82L12 14.73 5.5 11.18z">
+          </path>
+
+        </svg>
+
+      </a>
+
+
+
+      <!-- ORCID -->
+
+      <a
+        href="https://orcid.org/0000-0002-0390-1440"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Cristina Palma on ORCID"
+        title="ORCID">
+
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true">
+
+          <circle
+            cx="12"
+            cy="12"
+            r="10"
+            fill="currentColor">
+          </circle>
+
+          <text
+            x="12"
+            y="15.7"
+            text-anchor="middle"
+            fill="white"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="10"
+            font-weight="600">
+            iD
+          </text>
+
+        </svg>
+
+      </a>
+
+
+
+      <!-- LINKEDIN -->
+
+      <a
+        href="https://www.linkedin.com/in/cristina-palma-312704156/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Cristina Palma on LinkedIn"
+        title="LinkedIn">
+
+        <svg
+          class="linkedin-icon"
+          viewBox="0 0 24 24"
+          aria-hidden="true">
+
+          <path
+            fill="currentColor"
+            d="M5.34 3.5A2.34 2.34 0 1 1 .66 3.5a2.34 2.34 0 0 1 4.68 0ZM1 8h4.7v15H1V8Zm7.6 0h4.5v2.05h.06c.63-1.2 2.17-2.46 4.47-2.46C22.4 7.59 23 10.73 23 14.81V23h-4.69v-7.25c0-1.73-.03-3.95-2.41-3.95-2.41 0-2.78 1.88-2.78 3.82V23H8.6V8Z">
+          </path>
+
+        </svg>
+
+      </a>
+
+
+
+      <!-- YOUTUBE
+           NOT CLICKABLE YET -->
+
+      <span
+        class="social-disabled"
+        aria-label="Palma Lab YouTube coming soon"
+        title="YouTube">
+
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true">
+
+          <path
+            fill="currentColor"
+            d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z">
+          </path>
+
+        </svg>
+
+      </span>
+
+
+
+      <!-- EMAIL -->
+
+      <a
+        href="mailto:csantosd@uwyo.edu"
+        aria-label="Email Cristina Palma"
+        title="Email">
+
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round">
+
+          <rect
+            x="3"
+            y="5"
+            width="18"
+            height="14"
+            rx="1.5">
+          </rect>
+
+          <path d="M4 7l8 6 8-6"></path>
+
+        </svg>
+
+      </a>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         INSTITUTIONAL LINKS
+         ===================================================== -->
 
     <div class="footer-content">
 
@@ -363,6 +743,11 @@
     </div>
 
 
+
+    <!-- =====================================================
+         MOUNTAINS
+         ===================================================== -->
+
     <div class="footer-mountains">
 
       <img
@@ -372,7 +757,9 @@
 
     </div>
 
+
   </footer>
+
 
 </body>
 
