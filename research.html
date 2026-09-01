@@ -17,22 +17,72 @@
 
     .research-page {
       width: 100%;
-      max-width: 1050px;
+      max-width: 1080px;
       margin: 0 auto;
       padding: 70px var(--page-padding) 70px;
     }
 
-    .research-lead {
-      max-width: 820px;
-      margin: 0 0 48px;
+
+    /* =========================================================
+       OPENING RESEARCH STATEMENT
+       ========================================================= */
+
+    .research-opening {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+      gap: 60px;
+      align-items: center;
+      margin-bottom: 70px;
+    }
+
+    .research-opening-text {
+      max-width: 700px;
+    }
+
+    .research-opening-text h1 {
+      margin: 0 0 22px;
+      color: var(--brown-dark);
+      font-size: 2rem;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      font-weight: 600;
+    }
+
+    .research-opening-text p {
+      margin: 0;
       color: var(--text-mid);
       font-size: 1rem;
-      line-height: 1.75;
+      line-height: 1.78;
     }
 
 
     /* =========================================================
-       EXPANDABLE RESEARCH AREAS
+       OPENING FIGURE
+       ========================================================= */
+
+    .research-opening-figure {
+      margin: 0;
+      text-align: center;
+    }
+
+    .research-opening-figure img {
+      display: block;
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .research-opening-figure figcaption {
+      margin-top: 13px;
+      color: var(--text-mid);
+      font-size: 0.78rem;
+      line-height: 1.5;
+    }
+
+
+    /* =========================================================
+       RESEARCH AREAS
        ========================================================= */
 
     .research-list {
@@ -187,6 +237,25 @@
        MOBILE
        ========================================================= */
 
+    @media (max-width: 800px) {
+
+      .research-opening {
+        grid-template-columns: 1fr;
+        gap: 38px;
+        align-items: start;
+      }
+
+      .research-opening-text {
+        max-width: 760px;
+      }
+
+      .research-opening-figure {
+        max-width: 420px;
+      }
+
+    }
+
+
     @media (max-width: 650px) {
 
       .research-page {
@@ -194,9 +263,23 @@
         padding-bottom: 55px;
       }
 
-      .research-lead {
-        margin-bottom: 35px;
+      .research-opening {
+        margin-bottom: 50px;
+        gap: 30px;
+      }
+
+      .research-opening-text h1 {
+        font-size: 1.65rem;
+        margin-bottom: 18px;
+      }
+
+      .research-opening-text p {
         font-size: 0.94rem;
+        line-height: 1.72;
+      }
+
+      .research-opening-figure img {
+        max-width: 320px;
       }
 
       .research-item summary {
@@ -280,18 +363,52 @@
   <main class="research-page">
 
 
-    <!-- Intro -->
+    <!-- =====================================================
+         OPENING STATEMENT
+         ===================================================== -->
 
-    <p class="research-lead">
-      We study how microorganisms sense, respond to, and adapt to
-      environmental stress by combining mathematical modeling,
-      quantitative experiments, systems biology, and synthetic biology.
-    </p>
+    <section class="research-opening">
+
+      <div class="research-opening-text">
+
+        <h1>
+          How do microorganisms make decisions under stress?
+        </h1>
+
+        <p>
+          Microbial cells integrate multiple layers of gene regulation to
+          sense environmental changes and mount appropriate responses.
+          We study how transcription factors, their temporal dynamics,
+          DNA topology, and other regulatory mechanisms interact to control
+          gene expression and microbial adaptation. By combining quantitative
+          experiments with stochastic and deterministic modeling, we aim to
+          uncover these mechanisms and predict how cells respond to changing
+          environments.
+        </p>
+
+      </div>
 
 
-    <!-- =========================
-         RESEARCH AREAS
-         ========================= -->
+      <figure class="research-opening-figure">
+
+        <img
+          src="images/research-regulation.png"
+          alt="Diagram illustrating multiple mechanisms of microbial gene regulation">
+
+        <figcaption>
+          Multiple regulatory mechanisms shape microbial stress responses
+          and adaptation.
+        </figcaption>
+
+      </figure>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EXPANDABLE RESEARCH AREAS
+         ===================================================== -->
 
     <section class="research-list">
 
@@ -318,6 +435,7 @@
           <span class="research-toggle" aria-hidden="true"></span>
 
         </summary>
+
 
         <div class="research-detail">
 
@@ -362,6 +480,7 @@
 
         </summary>
 
+
         <div class="research-detail">
 
           <p>
@@ -404,6 +523,7 @@
           <span class="research-toggle" aria-hidden="true"></span>
 
         </summary>
+
 
         <div class="research-detail">
 
@@ -448,6 +568,7 @@
 
         </summary>
 
+
         <div class="research-detail">
 
           <p>
@@ -489,6 +610,7 @@
           <span class="research-toggle" aria-hidden="true"></span>
 
         </summary>
+
 
         <div class="research-detail">
 
