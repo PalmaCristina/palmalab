@@ -1,624 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Research | Palma Lab</title>
-
-  <link rel="stylesheet" href="css/style.css">
-
-  <style>
-
-    /* =========================================================
-       RESEARCH PAGE
-       ========================================================= */
-
-    .research-page {
-      width: 100%;
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 70px var(--page-padding) 70px;
-    }
-
-
-    /* =========================================================
-       OPENING RESEARCH STATEMENT
-       ========================================================= */
-
-    .research-opening {
-      display: grid;
-      grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
-      gap: 60px;
-      align-items: center;
-      margin-bottom: 70px;
-    }
-
-    .research-opening-text {
-      max-width: 700px;
-    }
-
-    .research-opening-text h1 {
-      margin: 0 0 22px;
-      color: var(--brown-dark);
-      font-size: 2rem;
-      line-height: 1.2;
-      letter-spacing: -0.02em;
-      font-weight: 600;
-    }
-
-    .research-opening-text p {
-      margin: 0;
-      color: var(--text-mid);
-      font-size: 1rem;
-      line-height: 1.78;
-    }
-
-
-    /* =========================================================
-       OPENING FIGURE
-       ========================================================= */
-
-    .research-opening-figure {
-      margin: 0;
-      text-align: center;
-    }
-
-    .research-opening-figure img {
-      display: block;
-      width: 100%;
-      max-width: 360px;
-      height: auto;
-      margin: 0 auto;
-    }
-
-    .research-opening-figure figcaption {
-      margin-top: 13px;
-      color: var(--text-mid);
-      font-size: 0.78rem;
-      line-height: 1.5;
-    }
-
-
-    /* =========================================================
-       EXPANDABLE RESEARCH AREAS
-       ========================================================= */
-
-    .research-list {
-      width: 100%;
-      border-top: 1px solid var(--border);
-    }
-
-    .research-item {
-      border-bottom: 1px solid var(--border);
-    }
-
-    .research-item summary {
-      position: relative;
-      display: block;
-      padding: 28px 58px 28px 0;
-      cursor: pointer;
-      list-style: none;
-    }
-
-    .research-item summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .research-item summary::marker {
-      display: none;
-    }
-
-    .research-item summary:hover h2 {
-      color: var(--brown);
-    }
-
-    .research-item summary:focus-visible {
-      outline: 2px solid var(--gold);
-      outline-offset: 5px;
-    }
-
-    .research-summary-text {
-      max-width: 820px;
-    }
-
-    .research-item h2 {
-      margin: 0 0 8px;
-      color: var(--brown-dark);
-      font-size: 1.35rem;
-      line-height: 1.3;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-
-    .research-preview {
-      margin: 0;
-      color: var(--text-mid);
-      font-size: 0.94rem;
-      line-height: 1.65;
-    }
-
-
-    /* =========================================================
-       PLUS / MINUS
-       ========================================================= */
-
-    .research-toggle {
-      position: absolute;
-      top: 29px;
-      right: 4px;
-      width: 28px;
-      height: 28px;
-    }
-
-    .research-toggle::before,
-    .research-toggle::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      background: var(--gold);
-      transform: translate(-50%, -50%);
-      transition: transform 0.2s ease;
-    }
-
-    .research-toggle::before {
-      width: 18px;
-      height: 2px;
-    }
-
-    .research-toggle::after {
-      width: 2px;
-      height: 18px;
-    }
-
-    .research-item[open] .research-toggle::after {
-      transform: translate(-50%, -50%) rotate(90deg);
-    }
-
-
-    /* =========================================================
-       EXPANDED CONTENT
-       ========================================================= */
-
-    .research-detail {
-      max-width: 850px;
-      padding: 0 40px 32px 0;
-    }
-
-    .research-detail p {
-      margin: 0 0 16px;
-      color: var(--text-mid);
-      font-size: 0.96rem;
-      line-height: 1.75;
-    }
-
-    .research-detail p:last-child {
-      margin-bottom: 0;
-    }
-
-    .research-item[open] {
-      background: #fffdf8;
-    }
-
-    .research-item[open] summary {
-      padding-left: 20px;
-      padding-right: 68px;
-    }
-
-    .research-item[open] .research-detail {
-      padding-left: 20px;
-    }
-
-
-    /* =========================================================
-       MOBILE
-       ========================================================= */
-
-    @media (max-width: 800px) {
-
-      .research-opening {
-        grid-template-columns: 1fr;
-        gap: 38px;
-        align-items: start;
-      }
-
-      .research-opening-text {
-        max-width: 760px;
-      }
-
-      .research-opening-figure {
-        max-width: 420px;
-      }
-
-    }
-
+<footer>
 
-    @media (max-width: 650px) {
-
-      .research-page {
-        padding-top: 50px;
-        padding-bottom: 55px;
-      }
+  <!-- SOCIAL / PROFILE LINKS -->
 
-      .research-opening {
-        margin-bottom: 50px;
-        gap: 30px;
-      }
+  <div class="footer-social">
 
-      .research-opening-text h1 {
-        font-size: 1.65rem;
-        margin-bottom: 18px;
-      }
+    <!-- Google Scholar -->
+    <a
+      href="https://scholar.google.com/citations?user=hZ1ScywAAAAJ&hl=en"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Google Scholar"
+      title="Google Scholar">
 
-      .research-opening-text p {
-        font-size: 0.94rem;
-        line-height: 1.72;
-      }
+      <i class="ai ai-google-scholar" aria-hidden="true"></i>
 
-      .research-opening-figure img {
-        max-width: 320px;
-      }
+    </a>
 
-      .research-item summary {
-        padding: 23px 48px 23px 0;
-      }
 
-      .research-item h2 {
-        font-size: 1.15rem;
-      }
+    <!-- LinkedIn -->
+    <span
+      class="social-placeholder"
+      aria-label="Palma Lab LinkedIn coming soon"
+      title="Palma Lab LinkedIn">
 
-      .research-preview {
-        font-size: 0.9rem;
-      }
+      <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
 
-      .research-toggle {
-        top: 24px;
-      }
+    </span>
 
-      .research-item[open] summary {
-        padding-left: 15px;
-        padding-right: 52px;
-      }
 
-      .research-item[open] .research-detail {
-        padding-left: 15px;
-      }
+    <!-- YouTube -->
+    <span
+      class="social-placeholder"
+      aria-label="Palma Lab YouTube coming soon"
+      title="Palma Lab YouTube">
 
-      .research-detail {
-        padding-right: 15px;
-        padding-bottom: 27px;
-      }
+      <i class="fa-brands fa-youtube" aria-hidden="true"></i>
 
-      .research-detail p {
-        font-size: 0.91rem;
-      }
+    </span>
 
-    }
 
-  </style>
+    <!-- GitHub -->
+    <span
+      class="social-placeholder"
+      aria-label="Palma Lab GitHub coming soon"
+      title="Palma Lab GitHub">
 
-</head>
+      <i class="fa-brands fa-github" aria-hidden="true"></i>
 
+    </span>
 
-<body>
+  </div>
 
 
-  <!-- =========================
-       HEADER
-       ========================= -->
+  <!-- INSTITUTIONAL LINKS -->
 
-  <header>
+  <div class="footer-content">
 
-    <div class="header-inner">
+    <span>Palma Lab</span>
 
-      <div class="logo">
-        <a href="index.html">
-          <img src="images/palma-lab-logo.png" alt="Palma Lab">
-        </a>
-      </div>
+    <span class="footer-divider">·</span>
 
-      <nav>
-        <a class="active" href="research.html">Research</a>
-        <a href="people.html">Team</a>
-        <a href="publications.html">Publications</a>
-        <a href="news.html">News</a>
-        <a href="join.html">Join Us</a>
-        <a href="contact.html">Contact</a>
-        <a href="internal/">Internal</a>
-      </nav>
+    <a
+      href="https://www.uwyo.edu/molecbio/index.html"
+      target="_blank"
+      rel="noopener noreferrer">
+      Department of Molecular Biology
+    </a>
 
-    </div>
+    <span class="footer-divider">·</span>
 
-  </header>
+    <a
+      href="https://www.uwyo.edu/soc/index.html"
+      target="_blank"
+      rel="noopener noreferrer">
+      School of Computing
+    </a>
 
+    <span class="footer-divider">·</span>
 
-  <!-- =========================
-       RESEARCH PAGE
-       ========================= -->
+    <span>University of Wyoming</span>
 
-  <main class="research-page">
+  </div>
 
 
-    <!-- =====================================================
-         OPENING STATEMENT
-         ===================================================== -->
+  <!-- MOUNTAINS -->
 
-    <section class="research-opening">
+  <div class="footer-mountains">
 
-      <div class="research-opening-text">
+    <img
+      src="images/mountains-footer.png"
+      alt=""
+      aria-hidden="true">
 
-        <h1>
-          How do microorganisms make decisions under stress?
-        </h1>
+  </div>
 
-        <p>
-          Microbial cells integrate multiple layers of gene regulation to
-          sense environmental changes and mount appropriate responses.
-          We study how transcription factors, their temporal dynamics,
-          DNA topology, and other regulatory mechanisms interact to control
-          gene expression and microbial adaptation. By combining quantitative
-          experiments with stochastic and deterministic modeling, we aim to
-          uncover these mechanisms and predict how cells respond to changing
-          environments.
-        </p>
-
-      </div>
-
-
-      <figure class="research-opening-figure">
-
-        <img
-          src="images/research-regulation.jpg"
-          alt="Diagram illustrating multiple mechanisms of microbial gene regulation">
-
-        <figcaption>
-          Multiple regulatory mechanisms shape microbial stress responses
-          and adaptation.
-        </figcaption>
-
-      </figure>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         EXPANDABLE RESEARCH AREAS
-         ===================================================== -->
-
-    <section class="research-list">
-
-
-      <!-- Research Area 1 -->
-
-      <details class="research-item">
-
-        <summary>
-
-          <div class="research-summary-text">
-
-            <h2>
-              Microbial Stress Sensing, Response &amp; Adaptation
-            </h2>
-
-            <p class="research-preview">
-              How microorganisms detect environmental stress and coordinate
-              adaptive responses.
-            </p>
-
-          </div>
-
-          <span class="research-toggle" aria-hidden="true"></span>
-
-        </summary>
-
-
-        <div class="research-detail">
-
-          <p>
-            Microorganisms constantly experience changing environments.
-            To survive, they must sense stress, process information, and
-            reorganize gene expression in ways that preserve cellular function.
-          </p>
-
-          <p>
-            We investigate the regulatory mechanisms that allow microbial cells
-            to detect stress and coordinate adaptive responses across multiple
-            molecular pathways and timescales.
-          </p>
-
-        </div>
-
-      </details>
-
-
-
-      <!-- Research Area 2 -->
-
-      <details class="research-item">
-
-        <summary>
-
-          <div class="research-summary-text">
-
-            <h2>
-              Dynamics of Gene Regulatory Networks
-            </h2>
-
-            <p class="research-preview">
-              Understanding how network architecture and temporal dynamics
-              shape cellular behavior.
-            </p>
-
-          </div>
-
-          <span class="research-toggle" aria-hidden="true"></span>
-
-        </summary>
-
-
-        <div class="research-detail">
-
-          <p>
-            Gene regulatory networks are dynamic systems rather than static
-            wiring diagrams. Their temporal behavior can determine whether a
-            cell adapts, changes phenotype, or loses viability.
-          </p>
-
-          <p>
-            We use deterministic and stochastic mathematical models to
-            understand how network architecture, feedback, molecular noise,
-            and timescale separation shape regulatory dynamics.
-          </p>
-
-        </div>
-
-      </details>
-
-
-
-      <!-- Research Area 3 -->
-
-      <details class="research-item">
-
-        <summary>
-
-          <div class="research-summary-text">
-
-            <h2>
-              Predictive &amp; Quantitative Systems Biology
-            </h2>
-
-            <p class="research-preview">
-              Integrating mathematical models and quantitative experiments
-              to generate testable predictions.
-            </p>
-
-          </div>
-
-          <span class="research-toggle" aria-hidden="true"></span>
-
-        </summary>
-
-
-        <div class="research-detail">
-
-          <p>
-            Our goal is to develop models that do more than explain existing
-            observations. We aim to build quantitative frameworks that generate
-            experimentally testable predictions about cellular behavior.
-          </p>
-
-          <p>
-            Experimental measurements are used to constrain model parameters,
-            distinguish alternative mechanisms, and iteratively improve our
-            understanding of biological regulation.
-          </p>
-
-        </div>
-
-      </details>
-
-
-
-      <!-- Research Area 4 -->
-
-      <details class="research-item">
-
-        <summary>
-
-          <div class="research-summary-text">
-
-            <h2>
-              Synthetic Biology as a Tool to Understand Regulation
-            </h2>
-
-            <p class="research-preview">
-              Using engineered perturbations to test regulatory mechanisms
-              and model predictions.
-            </p>
-
-          </div>
-
-          <span class="research-toggle" aria-hidden="true"></span>
-
-        </summary>
-
-
-        <div class="research-detail">
-
-          <p>
-            Synthetic biology provides a powerful way to perturb regulatory
-            systems in controlled and interpretable ways.
-          </p>
-
-          <p>
-            By modifying network architecture, feedback strength, gene dosage,
-            and regulatory interactions, we can directly test mechanistic
-            predictions and uncover the design principles that govern natural
-            biological systems.
-          </p>
-
-        </div>
-
-      </details>
-
-
-    </section>
-
-
-  </main>
-
-
-  <!-- =========================
-       FOOTER
-       ========================= -->
-
-  <footer>
-
-    <div class="footer-content">
-
-      <span>Palma Lab</span>
-
-      <span class="footer-divider">·</span>
-
-      <a
-        href="https://www.uwyo.edu/molecbio/index.html"
-        target="_blank"
-        rel="noopener noreferrer">
-        Department of Molecular Biology
-      </a>
-
-      <span class="footer-divider">·</span>
-
-      <a
-        href="https://www.uwyo.edu/soc/index.html"
-        target="_blank"
-        rel="noopener noreferrer">
-        School of Computing
-      </a>
-
-      <span class="footer-divider">·</span>
-
-      <span>University of Wyoming</span>
-
-    </div>
-
-
-    <div class="footer-mountains">
-
-      <img
-        src="images/mountains-footer.png"
-        alt=""
-        aria-hidden="true">
-
-    </div>
-
-  </footer>
-
-
-</body>
-
-</html>
+</footer>
