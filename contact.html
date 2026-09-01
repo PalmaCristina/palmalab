@@ -25,9 +25,12 @@
     }
 
     .contact-hero-image a {
+      position: relative;
+
       display: block;
       width: 100%;
       height: 100%;
+
       text-decoration: none;
     }
 
@@ -38,11 +41,6 @@
       height: 100% !important;
 
       object-fit: cover !important;
-
-      /*
-        Move the crop slightly downward so more of the
-        building is visible and less empty sky dominates.
-      */
       object-position: center 62% !important;
 
       transition:
@@ -58,6 +56,36 @@
     .contact-hero-image a:focus-visible {
       outline: 3px solid #ffc425;
       outline-offset: 4px;
+    }
+
+
+    /* =========================================================
+       CLICK HERE LABEL
+       ========================================================= */
+
+    .contact-image-label {
+      position: absolute;
+
+      top: 20px;
+      left: 22px;
+
+      z-index: 2;
+
+      color: #ffffff;
+
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+
+      text-shadow:
+        0 1px 5px rgba(0, 0, 0, 0.65),
+        0 1px 12px rgba(0, 0, 0, 0.25);
+
+      transition: transform 0.2s ease;
+    }
+
+    .contact-hero-image a:hover .contact-image-label {
+      transform: translateX(3px);
     }
 
 
@@ -92,11 +120,19 @@
         object-position: center 58% !important;
       }
 
+      .contact-image-label {
+        top: 16px;
+        left: 17px;
+
+        font-size: 0.76rem;
+      }
+
     }
 
   </style>
 
 </head>
+
 
 <body>
 
@@ -169,7 +205,9 @@
   <main class="contact-page">
 
 
-    <!-- SCIENCE INITIATIVE BUILDING -->
+    <!-- =======================================================
+         SCIENCE INITIATIVE BUILDING
+         ======================================================= -->
 
     <section class="contact-hero-image">
 
@@ -184,13 +222,19 @@
           src="images/contact-photo.jpg"
           alt="Science Initiative Building at the University of Wyoming">
 
+        <span class="contact-image-label">
+          Click here →
+        </span>
+
       </a>
 
     </section>
 
 
 
-    <!-- CONTACT INFORMATION -->
+    <!-- =======================================================
+         CONTACT INFORMATION
+         ======================================================= -->
 
     <section class="contact-grid">
 
@@ -231,6 +275,7 @@
 
         </p>
 
+
         <p>
 
           Email:
@@ -253,6 +298,7 @@
           Getting here
         </h2>
 
+
         <p>
 
           <a
@@ -266,6 +312,7 @@
           </a>
 
         </p>
+
 
         <p>
 
@@ -289,11 +336,15 @@
           Join the lab
         </h2>
 
+
         <p>
+
           We welcome inquiries from students and researchers interested
           in quantitative, computational, and experimental approaches
           to microbial biology.
+
         </p>
+
 
         <a href="join.html">
           View opportunities →
@@ -315,7 +366,13 @@
 
   <footer>
 
+
     <div class="footer-main-row">
+
+
+      <!-- =====================================================
+           SOCIAL ICONS
+           ===================================================== -->
 
       <div class="footer-social">
 
@@ -329,7 +386,9 @@
           aria-label="Cristina Palma on Google Scholar"
           title="Google Scholar">
 
-          <svg viewBox="0 0 24 24" aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true">
 
             <path
               fill="currentColor"
@@ -351,7 +410,9 @@
           aria-label="Cristina Palma on ORCID"
           title="ORCID">
 
-          <svg viewBox="0 0 24 24" aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true">
 
             <circle
               cx="12"
@@ -368,7 +429,9 @@
               font-family="Arial, Helvetica, sans-serif"
               font-size="10"
               font-weight="600">
+
               iD
+
             </text>
 
           </svg>
@@ -411,7 +474,9 @@
           aria-label="Palma Lab on YouTube"
           title="YouTube">
 
-          <svg viewBox="0 0 24 24" aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true">
 
             <path
               fill="currentColor"
@@ -459,15 +524,22 @@
 
 
 
+      <!-- =====================================================
+           INSTITUTIONAL INFORMATION
+           ===================================================== -->
+
       <div class="footer-info">
+
 
         <span>
           Palma Lab
         </span>
 
+
         <span class="footer-divider">
           ·
         </span>
+
 
         <a
           href="https://www.uwyo.edu/molecbio/index.html"
@@ -478,9 +550,11 @@
 
         </a>
 
+
         <span class="footer-divider">
           ·
         </span>
+
 
         <a
           href="https://www.uwyo.edu/soc/index.html"
@@ -491,19 +565,27 @@
 
         </a>
 
+
         <span class="footer-divider">
           ·
         </span>
+
 
         <span>
           University of Wyoming
         </span>
 
+
       </div>
+
 
     </div>
 
 
+
+    <!-- =======================================================
+         MOUNTAINS
+         ======================================================= -->
 
     <div class="footer-mountains">
 
@@ -513,6 +595,7 @@
         aria-hidden="true">
 
     </div>
+
 
   </footer>
 
