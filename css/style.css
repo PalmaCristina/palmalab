@@ -137,7 +137,8 @@ nav a.active {
   font-weight: 600;
 }
 
-nav a.active::after {
+nav a.active::after,
+nav a:hover::after {
   content: "";
 
   position: absolute;
@@ -962,7 +963,8 @@ footer {
     padding: 5px 0 8px;
   }
 
-  nav a.active::after {
+  nav a.active::after,
+nav a:hover::after {
     bottom: 2px;
   }
 
