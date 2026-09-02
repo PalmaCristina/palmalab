@@ -18,17 +18,8 @@
     .people-page {
       max-width: 1050px;
       margin: 0 auto;
-      padding: 60px var(--page-padding) 70px;
+      padding: 65px var(--page-padding) 80px;
       box-sizing: border-box;
-    }
-
-    .people-section-title {
-      margin: 0 0 32px;
-
-      color: var(--brown-dark);
-
-      font-size: 1.55rem;
-      font-weight: 600;
     }
 
 
@@ -38,12 +29,11 @@
 
     .people-grid {
       display: grid;
-
       grid-template-columns: repeat(2, minmax(0, 1fr));
 
       gap: 54px 80px;
 
-      margin-bottom: 72px;
+      margin-bottom: 75px;
     }
 
 
@@ -103,7 +93,6 @@
       color: var(--brown);
 
       font-size: 0.95rem;
-
       font-weight: 600;
     }
 
@@ -124,19 +113,25 @@
 
     .person-email a:hover {
       text-decoration: underline;
-
       text-decoration-color: var(--gold);
-
       text-underline-offset: 4px;
     }
 
 
     /* =========================================================
-       RECRUITING
+       JOIN THE TEAM CARD
        ========================================================= */
 
     .people-recruiting {
-      padding-top: 8px;
+      max-width: 760px;
+
+      padding: 32px 36px;
+
+      background: #faf7f1;
+
+      border-left: 5px solid var(--gold);
+
+      box-sizing: border-box;
     }
 
     .people-recruiting h2 {
@@ -144,18 +139,25 @@
 
       color: var(--brown-dark);
 
-      font-size: 1.55rem;
+      font-size: 1.45rem;
+      line-height: 1.3;
+
       font-weight: 600;
     }
 
     .people-recruiting p {
-      max-width: 690px;
+      max-width: 650px;
 
-      margin: 0 0 24px;
+      margin: 0 0 22px;
 
       color: var(--text-mid);
 
+      font-size: 0.95rem;
       line-height: 1.7;
+    }
+
+    .people-recruiting .button {
+      display: inline-block;
     }
 
 
@@ -206,7 +208,7 @@
 
         gap: 42px;
 
-        margin-bottom: 58px;
+        margin-bottom: 55px;
       }
 
       .person {
@@ -238,6 +240,10 @@
 
       .person-info p {
         font-size: 0.85rem;
+      }
+
+      .people-recruiting {
+        padding: 27px 28px;
       }
 
     }
@@ -348,6 +354,9 @@
   <main class="people-page">
 
 
+    <!-- =======================================================
+         PEOPLE
+         ======================================================= -->
 
     <section class="people-grid">
 
@@ -380,7 +389,7 @@
 
           <p>
             Assistant Professor<br>
-            Dept. of Molecular Biology<br>
+            Department of Molecular Biology<br>
             School of Computing<br>
             University of Wyoming
           </p>
