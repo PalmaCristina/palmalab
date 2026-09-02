@@ -23,7 +23,7 @@
     }
 
     .people-section-title {
-      margin: 0 0 28px;
+      margin: 0 0 32px;
 
       color: var(--brown-dark);
 
@@ -41,34 +41,30 @@
 
       grid-template-columns: repeat(2, minmax(0, 1fr));
 
-      gap: 28px;
+      gap: 54px 80px;
 
-      margin-bottom: 65px;
+      margin-bottom: 72px;
     }
 
 
     /* =========================================================
-       PERSON CARD
+       PERSON
        ========================================================= */
 
-    .person-card {
-      background: #fffdf8;
+    .person {
+      display: flex;
+      align-items: flex-start;
 
-      border: 1px solid #e6dccb;
-      border-top: 4px solid var(--gold);
-
-      padding: 24px;
-
-      box-sizing: border-box;
+      gap: 24px;
     }
 
     .person-photo {
-      width: 100%;
-      aspect-ratio: 1 / 1;
+      flex: 0 0 165px;
+
+      width: 165px;
+      height: 165px;
 
       overflow: hidden;
-
-      margin-bottom: 20px;
 
       background: #f5f3ef;
     }
@@ -76,38 +72,48 @@
     .person-photo img {
       display: block;
 
-      width: 100% !important;
-      height: 100% !important;
+      width: 165px !important;
+      height: 165px !important;
+
+      max-width: 165px !important;
+      max-height: 165px !important;
 
       object-fit: cover !important;
       object-position: center !important;
     }
 
+    .person-info {
+      padding-top: 4px;
+    }
+
     .person-info h3 {
-      margin: 0 0 7px;
+      margin: 0 0 6px;
 
       color: var(--brown-dark);
 
-      font-size: 1.35rem;
+      font-size: 1.32rem;
       line-height: 1.3;
 
       font-weight: 600;
     }
 
     .person-role {
-      margin: 0 0 14px;
+      margin: 0 0 12px;
 
       color: var(--brown);
+
+      font-size: 0.95rem;
 
       font-weight: 600;
     }
 
     .person-info p {
-      margin: 0 0 12px;
+      margin: 0 0 11px;
 
       color: var(--text-mid);
 
-      line-height: 1.65;
+      font-size: 0.9rem;
+      line-height: 1.6;
     }
 
     .person-email a {
@@ -130,7 +136,7 @@
        ========================================================= */
 
     .people-recruiting {
-      padding-top: 10px;
+      padding-top: 8px;
     }
 
     .people-recruiting h2 {
@@ -154,6 +160,38 @@
 
 
     /* =========================================================
+       TABLET
+       ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .people-grid {
+        gap: 46px 50px;
+      }
+
+      .person {
+        gap: 20px;
+      }
+
+      .person-photo {
+        flex-basis: 145px;
+
+        width: 145px;
+        height: 145px;
+      }
+
+      .person-photo img {
+        width: 145px !important;
+        height: 145px !important;
+
+        max-width: 145px !important;
+        max-height: 145px !important;
+      }
+
+    }
+
+
+    /* =========================================================
        MOBILE
        ========================================================= */
 
@@ -166,9 +204,70 @@
       .people-grid {
         grid-template-columns: 1fr;
 
-        gap: 22px;
+        gap: 42px;
 
-        margin-bottom: 50px;
+        margin-bottom: 58px;
+      }
+
+      .person {
+        gap: 20px;
+      }
+
+      .person-photo {
+        flex-basis: 135px;
+
+        width: 135px;
+        height: 135px;
+      }
+
+      .person-photo img {
+        width: 135px !important;
+        height: 135px !important;
+
+        max-width: 135px !important;
+        max-height: 135px !important;
+      }
+
+      .person-info h3 {
+        font-size: 1.18rem;
+      }
+
+      .person-role {
+        font-size: 0.9rem;
+      }
+
+      .person-info p {
+        font-size: 0.85rem;
+      }
+
+    }
+
+
+    /* =========================================================
+       SMALL MOBILE
+       ========================================================= */
+
+    @media (max-width: 480px) {
+
+      .person {
+        flex-direction: column;
+
+        gap: 16px;
+      }
+
+      .person-photo {
+        flex-basis: auto;
+
+        width: 145px;
+        height: 145px;
+      }
+
+      .person-photo img {
+        width: 145px !important;
+        height: 145px !important;
+
+        max-width: 145px !important;
+        max-height: 145px !important;
       }
 
     }
@@ -261,7 +360,8 @@
            CRISTINA PALMA
            ===================================================== -->
 
-      <article class="person-card">
+      <article class="person">
+
 
         <div class="person-photo">
 
@@ -299,6 +399,7 @@
 
         </div>
 
+
       </article>
 
 
@@ -307,7 +408,8 @@
            MISSY STUART
            ===================================================== -->
 
-      <article class="person-card">
+      <article class="person">
+
 
         <div class="person-photo">
 
@@ -337,6 +439,7 @@
           </p>
 
         </div>
+
 
       </article>
 
@@ -380,11 +483,15 @@
 
   <footer>
 
+
     <div class="footer-main-row">
+
 
       <div class="footer-social">
 
+
         <!-- GOOGLE SCHOLAR -->
+
         <a
           href="https://scholar.google.com/citations?user=hZ1ScywAAAAJ&hl=en"
           target="_blank"
@@ -392,17 +499,23 @@
           aria-label="Cristina Palma on Google Scholar"
           title="Google Scholar">
 
-          <svg viewBox="0 0 24 24" aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true">
+
             <path
               fill="currentColor"
               d="M12 2L1 8l11 6 9-4.91V17h2V8L12 2zm-6.5 9.18V16c0 2.21 2.91 4 6.5 4s6.5-1.79 6.5-4v-4.82L12 14.73 5.5 11.18z">
             </path>
+
           </svg>
 
         </a>
 
 
+
         <!-- ORCID -->
+
         <a
           href="https://orcid.org/0000-0002-0390-1440"
           target="_blank"
@@ -410,7 +523,10 @@
           aria-label="Cristina Palma on ORCID"
           title="ORCID">
 
-          <svg viewBox="0 0 24 24" aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true">
+
             <circle
               cx="12"
               cy="12"
@@ -428,12 +544,15 @@
               font-weight="600">
               iD
             </text>
+
           </svg>
 
         </a>
 
 
+
         <!-- LINKEDIN -->
+
         <a
           href="https://www.linkedin.com/in/cristina-palma-312704156/"
           target="_blank"
@@ -456,7 +575,9 @@
         </a>
 
 
+
         <!-- YOUTUBE -->
+
         <a
           href="https://www.youtube.com/@PalmaLabWyo"
           target="_blank"
@@ -464,17 +585,23 @@
           aria-label="Palma Lab on YouTube"
           title="YouTube">
 
-          <svg viewBox="0 0 24 24" aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true">
+
             <path
               fill="currentColor"
               d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z">
             </path>
+
           </svg>
 
         </a>
 
 
+
         <!-- EMAIL -->
+
         <a
           href="mailto:csantosd@uwyo.edu"
           aria-label="Email Cristina Palma"
@@ -503,8 +630,12 @@
 
         </a>
 
+
       </div>
 
+
+
+      <!-- INSTITUTIONAL INFORMATION -->
 
       <div class="footer-info">
 
@@ -544,8 +675,12 @@
 
       </div>
 
+
     </div>
 
+
+
+    <!-- MOUNTAINS -->
 
     <div class="footer-mountains">
 
@@ -555,6 +690,7 @@
         aria-hidden="true">
 
     </div>
+
 
   </footer>
 
