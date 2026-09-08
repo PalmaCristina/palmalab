@@ -25,12 +25,7 @@
     .research-page {
       max-width: 1120px;
       margin: 0 auto;
-
-      padding:
-        52px
-        var(--page-padding)
-        90px;
-
+      padding: 52px var(--page-padding) 90px;
       box-sizing: border-box;
     }
 
@@ -40,15 +35,9 @@
        ========================================================= */
 
     .research-panel {
-      background:
-        linear-gradient(
-          135deg,
-          rgba(255, 252, 247, 0.98),
-          rgba(249, 245, 238, 0.92)
-        );
+      background: #ffffff;
 
-      border: 1px solid #eee4d7;
-
+      border: 1px solid #e7ddd5;
       border-radius: 16px;
 
       box-sizing: border-box;
@@ -75,7 +64,6 @@
       font-weight: 700;
 
       letter-spacing: 0.14em;
-
       text-transform: uppercase;
     }
 
@@ -89,7 +77,6 @@
     }
 
 
-
     /* =========================================================
        VISION FLIP SECTION
        ========================================================= */
@@ -98,40 +85,56 @@
       margin-bottom: 38px;
     }
 
-
     .vision-flip {
       position: relative;
 
       width: 100%;
 
-      min-height: 410px;
+      aspect-ratio: 16 / 8.6;
 
-      perspective: 1600px;
+      perspective: 1500px;
+
+      cursor: pointer;
+
+      outline: none;
     }
-
 
     .vision-flip-inner {
       position: relative;
 
       width: 100%;
-      min-height: 410px;
+      height: 100%;
+
+      transition: transform 0.75s cubic-bezier(.22, .61, .36, 1);
 
       transform-style: preserve-3d;
-
-      transition:
-        transform 0.75s
-        cubic-bezier(0.2, 0.7, 0.2, 1);
     }
 
 
-    .vision-flip.is-flipped
-    .vision-flip-inner {
+    /* =========================================================
+       HOVER FLIP
+       ========================================================= */
+
+    @media (hover: hover) and (pointer: fine) {
+
+      .vision-flip:hover .vision-flip-inner {
+        transform: rotateY(180deg);
+      }
+
+    }
+
+
+    /* =========================================================
+       CLICK / TAP FLIP
+       ========================================================= */
+
+    .vision-flip.is-flipped .vision-flip-inner {
       transform: rotateY(180deg);
     }
 
 
     /* =========================================================
-       BOTH SIDES
+       VISION FRONT / BACK
        ========================================================= */
 
     .vision-face {
@@ -140,32 +143,24 @@
       inset: 0;
 
       width: 100%;
-      min-height: 410px;
+      height: 100%;
 
       overflow: hidden;
 
-      border: 1px solid #eadfce;
+      border: 1px solid #e7ddd5;
+      border-radius: 16px;
 
-      border-radius: 18px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #fffdf9 0%,
-          #f9f4eb 100%
-        );
+      background: #ffffff;
 
       backface-visibility: hidden;
       -webkit-backface-visibility: hidden;
 
       box-sizing: border-box;
-
-      cursor: pointer;
     }
 
 
     /* =========================================================
-       FRONT OF VISION
+       VISION FRONT
        ========================================================= */
 
     .vision-front {
@@ -174,169 +169,51 @@
       align-items: center;
       justify-content: center;
 
-      padding: 48px;
+      padding: 0;
 
-      text-align: center;
+      background: #ffffff;
     }
 
+    .vision-front img {
+      display: block;
 
-    .vision-front-content {
-      max-width: 730px;
-    }
+      width: 100%;
+      height: 100%;
 
-
-    .vision-front-label {
-      display: flex;
-
-      align-items: center;
-      justify-content: center;
-
-      gap: 18px;
-
-      margin: 0 0 23px;
-
-      color: #492f24;
-
-      font-size: 0.82rem;
-
-      font-weight: 700;
-
-      letter-spacing: 0.16em;
-
-      text-transform: uppercase;
-    }
-
-
-    .vision-front-label::before,
-    .vision-front-label::after {
-      content: "";
-
-      width: 90px;
-      height: 2px;
-
-      background: #ffc425;
-    }
-
-
-    .vision-front h1 {
-      margin: 0 0 18px;
-
-      color: #492f24;
-
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-      font-size:
-        clamp(
-          2.7rem,
-          6vw,
-          4.5rem
-        );
-
-      line-height: 1.05;
-
-      font-weight: 400;
-    }
-
-
-    .vision-front p {
-      margin: 0 auto;
-
-      color: #75665d;
-
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-      font-size: 1.02rem;
-
-      line-height: 1.6;
-
-      font-style: italic;
+      object-fit: contain;
     }
 
 
     /* =========================================================
-       TAP TO REVEAL
+       VISION HINT
        ========================================================= */
 
-    .vision-reveal {
-      display: inline-flex;
+    .vision-hint {
+      position: absolute;
 
-      align-items: center;
+      right: 18px;
+      bottom: 16px;
 
-      gap: 9px;
+      z-index: 3;
 
-      margin-top: 31px;
+      padding: 7px 11px;
 
-      padding:
-        10px
-        17px;
+      border: 1px solid #e7ddd5;
+      border-radius: 20px;
+
+      background: rgba(255, 255, 255, 0.92);
 
       color: #492f24;
 
-      border:
-        1px solid
-        rgba(73, 47, 36, 0.22);
+      font-size: 0.7rem;
+      font-weight: 650;
 
-      border-radius: 999px;
-
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-      font-size: 0.75rem;
-
-      font-style: normal;
-
-      font-weight: 700;
-
-      letter-spacing: 0.08em;
-
-      text-transform: uppercase;
-
-      transition:
-        border-color 0.2s ease,
-        background 0.2s ease,
-        transform 0.2s ease;
+      letter-spacing: 0.04em;
     }
-
-
-    @media (hover: hover) {
-
-      .vision-face:hover
-      .vision-reveal {
-        border-color: #ffc425;
-
-        background:
-          rgba(
-            255,
-            196,
-            37,
-            0.08
-          );
-
-        transform:
-          translateY(-2px);
-      }
-
-    }
-
-
-    .vision-reveal-arrow {
-      color: #c88700;
-
-      font-size: 1rem;
-    }
-
 
 
     /* =========================================================
-       BACK OF VISION
+       VISION BACK
        ========================================================= */
 
     .vision-back {
@@ -345,102 +222,75 @@
       align-items: center;
       justify-content: center;
 
-      padding: 25px;
-
-      transform:
-        rotateY(180deg);
+      padding: 55px 70px;
 
       background: #ffffff;
+
+      transform: rotateY(180deg);
     }
 
+    .vision-back-content {
+      max-width: 860px;
 
-    .vision-back img {
-      display: block;
-
-      width: 100%;
-      height: auto;
-
-      max-height: 520px;
-
-      object-fit: contain;
+      text-align: center;
     }
 
-
-    /* =========================================================
-       FLIP-BACK LABEL
-       ========================================================= */
-
-    .vision-back-label {
-      position: absolute;
-
-      top: 17px;
-      right: 20px;
-
-      z-index: 2;
-
-      display: inline-flex;
+    .vision-back-title {
+      display: flex;
 
       align-items: center;
+      justify-content: center;
 
-      gap: 7px;
+      gap: 18px;
 
-      padding:
-        7px
-        11px;
-
-      background:
-        rgba(
-          255,
-          255,
-          255,
-          0.92
-        );
-
-      border:
-        1px solid
-        #e8ded0;
-
-      border-radius: 999px;
+      margin: 0 0 27px;
 
       color: #492f24;
 
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-      font-size: 0.68rem;
-
+      font-size: 0.82rem;
       font-weight: 700;
 
-      letter-spacing: 0.06em;
-
+      letter-spacing: 0.16em;
       text-transform: uppercase;
     }
 
+    .vision-back-title::before,
+    .vision-back-title::after {
+      content: "";
 
-    /* =========================================================
-       ACCESSIBILITY
-       ========================================================= */
+      width: 95px;
+      height: 2px;
 
-    .vision-face:focus-visible {
-      outline: 3px solid #ffc425;
-
-      outline-offset: 4px;
+      background: #ffc425;
     }
 
+    .vision-back-text {
+      margin: 0;
 
-    @media (
-      prefers-reduced-motion:
-      reduce
-    ) {
+      color: #2f211a;
 
-      .vision-flip-inner {
-        transition: none;
-      }
+      font-family: Georgia, "Times New Roman", serif;
 
+      font-size: clamp(1.65rem, 3vw, 2.5rem);
+      line-height: 1.45;
+
+      font-weight: 400;
     }
 
+    .vision-back-text strong {
+      color: #c88700;
+
+      font-weight: 600;
+    }
+
+    .vision-back-small {
+      margin: 27px 0 0;
+
+      color: #806f65;
+
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
 
 
     /* =========================================================
@@ -450,42 +300,26 @@
     .central-question {
       margin-bottom: 48px;
 
-      padding:
-        34px
-        38px
-        35px;
-    }
+      padding: 34px 38px 35px;
 
+      background: #ffffff;
+    }
 
     .central-question h1 {
       max-width: 1000px;
 
-      margin:
-        0
-        0
-        31px;
+      margin: 0 0 31px;
 
       color: #3b241c;
 
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+      font-family: Georgia, "Times New Roman", serif;
 
-      font-size:
-        clamp(
-          2rem,
-          3.4vw,
-          3rem
-        );
-
+      font-size: clamp(2rem, 3.4vw, 3rem);
       line-height: 1.18;
 
       font-weight: 400;
-
       font-style: italic;
     }
-
 
 
     /* =========================================================
@@ -493,12 +327,10 @@
        ========================================================= */
 
     .central-question-figure {
-      margin:
-        0
-        0
-        27px;
-    }
+      margin: 0 0 27px;
 
+      background: #ffffff;
+    }
 
     .central-question-figure img {
       display: block;
@@ -507,8 +339,9 @@
       height: auto;
 
       margin: 0 auto;
-    }
 
+      background: #ffffff;
+    }
 
 
     /* =========================================================
@@ -519,24 +352,19 @@
       max-width: 980px;
     }
 
-
     .central-intro p {
       margin: 0;
 
       color: #4d433d;
 
       font-size: 1rem;
-
       line-height: 1.75;
     }
 
-
     .central-intro strong {
       color: #492f24;
-
       font-weight: 650;
     }
-
 
 
     /* =========================================================
@@ -547,7 +375,6 @@
       margin-bottom: 50px;
     }
 
-
     .mechanisms-heading {
       display: flex;
 
@@ -556,21 +383,15 @@
 
       gap: 30px;
 
-      margin:
-        0
-        8px
-        18px;
+      margin: 0 8px 18px;
     }
-
 
     .mechanisms-heading-left {
       flex: 1;
     }
 
-
     .mechanisms-heading h2 {
       display: flex;
-
       align-items: center;
 
       gap: 16px;
@@ -580,16 +401,13 @@
       color: #492f24;
 
       font-size: 1rem;
-
       line-height: 1.2;
 
       font-weight: 700;
 
       letter-spacing: 0.14em;
-
       text-transform: uppercase;
     }
-
 
     .mechanisms-heading h2::after {
       content: "";
@@ -600,24 +418,18 @@
       background: #ffc425;
     }
 
-
     .mechanisms-tagline {
       margin: 0;
 
       color: #735e51;
 
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+      font-family: Georgia, "Times New Roman", serif;
 
       font-size: 0.94rem;
-
       font-style: italic;
 
       white-space: nowrap;
     }
-
 
 
     /* =========================================================
@@ -629,43 +441,26 @@
 
       overflow: hidden;
 
-      background:
-        linear-gradient(
-          110deg,
-          #fffdf9 0%,
-          #faf6ef 100%
-        );
+      background: #ffffff;
 
-      border:
-        1px solid
-        #e8ddcf;
-
-      border-radius: 15px;
+      border: 1px solid #e7ddd5;
+      border-radius: 14px;
 
       transition:
         border-color 0.2s ease,
         box-shadow 0.2s ease;
     }
 
-
     .mechanism:hover {
-      border-color: #dfcba9;
+      border-color: #d8c3ad;
     }
-
 
     .mechanism[open] {
-      border-color: #e3c78f;
+      border-color: #d8b86d;
 
       box-shadow:
-        0 8px 28px
-        rgba(
-          73,
-          47,
-          36,
-          0.06
-        );
+        0 7px 22px rgba(73, 47, 36, 0.05);
     }
-
 
 
     /* =========================================================
@@ -675,38 +470,30 @@
     .mechanism summary {
       display: grid;
 
-      grid-template-columns:
-        auto
-        1fr
-        auto;
+      grid-template-columns: auto 1fr auto;
 
       gap: 21px;
 
       align-items: center;
 
-      padding:
-        17px
-        22px;
+      padding: 17px 22px;
 
       cursor: pointer;
 
       list-style: none;
 
       user-select: none;
+
+      background: #ffffff;
     }
 
-
-    .mechanism
-    summary::-webkit-details-marker {
+    .mechanism summary::-webkit-details-marker {
       display: none;
     }
 
-
-    .mechanism
-    summary::marker {
+    .mechanism summary::marker {
       content: "";
     }
-
 
 
     /* =========================================================
@@ -722,30 +509,19 @@
       width: 55px;
       height: 55px;
 
-      flex:
-        0
-        0
-        55px;
+      flex: 0 0 55px;
 
       border-radius: 50%;
 
-      background:
-        linear-gradient(
-          135deg,
-          #ffc425,
-          #cf8500
-        );
+      background: #ffc425;
 
-      color: #fff;
+      color: #492f24;
 
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+      font-family: Georgia, "Times New Roman", serif;
 
       font-size: 1.15rem;
+      font-weight: 600;
     }
-
 
 
     /* =========================================================
@@ -753,43 +529,30 @@
        ========================================================= */
 
     .mechanism-summary-text h3 {
-      margin:
-        0
-        0
-        3px;
+      margin: 0 0 3px;
 
       color: #2f211a;
 
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+      font-family: Georgia, "Times New Roman", serif;
 
       font-size: 1.42rem;
-
       line-height: 1.25;
 
       font-weight: 600;
     }
-
 
     .mechanism-summary-text p {
       margin: 0;
 
       color: #75665d;
 
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+      font-family: Georgia, "Times New Roman", serif;
 
       font-size: 0.92rem;
-
       line-height: 1.4;
 
       font-style: italic;
     }
-
 
 
     /* =========================================================
@@ -802,12 +565,8 @@
       width: 25px;
       height: 25px;
 
-      flex:
-        0
-        0
-        25px;
+      flex: 0 0 25px;
     }
-
 
     .accordion-symbol::before,
     .accordion-symbol::after {
@@ -824,32 +583,23 @@
       background: #492f24;
 
       transform:
-        translate(
-          -50%,
-          -50%
-        );
+        translate(-50%, -50%);
 
       transition:
         transform 0.2s ease,
         opacity 0.2s ease;
     }
 
-
     .accordion-symbol::after {
       transform:
-        translate(
-          -50%,
-          -50%
-        )
+        translate(-50%, -50%)
         rotate(90deg);
     }
-
 
     .mechanism[open]
     .accordion-symbol::after {
       opacity: 0;
     }
-
 
 
     /* =========================================================
@@ -860,45 +610,30 @@
       display: grid;
 
       grid-template-columns:
-        minmax(
-          0,
-          1.04fr
-        )
-        minmax(
-          330px,
-          0.96fr
-        );
+        minmax(0, 1.04fr)
+        minmax(330px, 0.96fr);
 
       gap: 48px;
 
       align-items: center;
 
       padding:
-        14px
-        28px
-        30px
-        82px;
-    }
+        14px 28px
+        30px 82px;
 
+      background: #ffffff;
+    }
 
     .mechanism-content.reverse {
       grid-template-columns:
-        minmax(
-          330px,
-          0.96fr
-        )
-        minmax(
-          0,
-          1.04fr
-        );
+        minmax(330px, 0.96fr)
+        minmax(0, 1.04fr);
     }
-
 
     .mechanism-content.reverse
     .mechanism-image {
       order: 1;
     }
-
 
     .mechanism-content.reverse
     .mechanism-copy {
@@ -906,40 +641,30 @@
     }
 
 
-
     /* =========================================================
        ACCORDION TEXT
        ========================================================= */
 
     .mechanism-copy p {
-      margin:
-        0
-        0
-        15px;
+      margin: 0 0 15px;
 
       color: #4d433d;
 
       font-size: 0.92rem;
-
       line-height: 1.7;
     }
-
 
     .mechanism-copy strong {
       color: #492f24;
     }
 
-
     .mechanism-focus {
-      margin-top:
-        20px !important;
+      margin-top: 20px !important;
 
-      color:
-        #492f24 !important;
+      color: #492f24 !important;
 
       font-weight: 650;
     }
-
 
 
     /* =========================================================
@@ -953,8 +678,9 @@
       align-items: center;
 
       min-width: 0;
-    }
 
+      background: #ffffff;
+    }
 
     .mechanism-image img {
       display: block;
@@ -963,23 +689,21 @@
       height: auto;
 
       object-fit: contain;
-    }
 
+      background: #ffffff;
+    }
 
     .mechanism-image.tf img {
       max-width: 430px;
     }
 
-
     .mechanism-image.supercoiling img {
       max-width: 520px;
     }
 
-
     .mechanism-image.post img {
       max-width: 410px;
     }
-
 
 
     /* =========================================================
@@ -990,14 +714,8 @@
       display: grid;
 
       grid-template-columns:
-        minmax(
-          0,
-          0.92fr
-        )
-        minmax(
-          420px,
-          1.08fr
-        );
+        minmax(0, 0.92fr)
+        minmax(420px, 1.08fr);
 
       gap: 46px;
 
@@ -1005,11 +723,10 @@
 
       margin-top: 35px;
 
-      padding:
-        30px
-        32px;
-    }
+      padding: 30px 32px;
 
+      background: #ffffff;
+    }
 
     .approach-copy h2 {
       display: flex;
@@ -1018,25 +735,17 @@
 
       gap: 16px;
 
-      margin:
-        0
-        0
-        18px;
+      margin: 0 0 18px;
 
       color: #492f24;
 
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+      font-family: Georgia, "Times New Roman", serif;
 
       font-size: 1.65rem;
-
       line-height: 1.25;
 
       font-weight: 600;
     }
-
 
     .approach-copy h2::after {
       content: "";
@@ -1047,25 +756,22 @@
       background: #ffc425;
     }
 
-
     .approach-copy p {
-      margin:
-        0
-        0
-        15px;
+      margin: 0 0 15px;
 
       color: #4d433d;
 
       font-size: 0.91rem;
-
       line-height: 1.7;
     }
-
 
     .approach-copy strong {
       color: #492f24;
     }
 
+    .approach-image {
+      background: #ffffff;
+    }
 
     .approach-image img {
       display: block;
@@ -1074,8 +780,9 @@
       height: auto;
 
       margin: 0 auto;
-    }
 
+      background: #ffffff;
+    }
 
 
     /* =========================================================
@@ -1086,17 +793,12 @@
       margin-top: 22px;
     }
 
-
     .research-references details {
-      border-top:
-        1px solid
-        #ded5cc;
+      border-top: 1px solid #ded5cc;
+      border-bottom: 1px solid #ded5cc;
 
-      border-bottom:
-        1px solid
-        #ded5cc;
+      background: #ffffff;
     }
-
 
     .research-references summary {
       display: flex;
@@ -1105,68 +807,44 @@
 
       gap: 10px;
 
-      padding:
-        15px
-        7px;
+      padding: 15px 7px;
 
       cursor: pointer;
 
       color: #492f24;
 
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+      font-family: Georgia, "Times New Roman", serif;
 
       font-size: 1rem;
-
       font-weight: 600;
 
       list-style: none;
     }
 
-
-    .research-references
-    summary::-webkit-details-marker {
+    .research-references summary::-webkit-details-marker {
       display: none;
     }
 
-
-    .research-references
-    summary::before {
+    .research-references summary::before {
       content: "▸";
 
       color: #492f24;
 
       font-size: 0.9rem;
 
-      transition:
-        transform
-        0.2s ease;
+      transition: transform 0.2s ease;
     }
 
-
-    .research-references
-    details[open]
+    .research-references details[open]
     summary::before {
-      transform:
-        rotate(90deg);
+      transform: rotate(90deg);
     }
-
 
     .references-list {
-      margin:
-        2px
-        0
-        22px;
+      margin: 2px 0 22px;
 
-      padding:
-        0
-        25px
-        0
-        35px;
+      padding: 0 25px 0 35px;
     }
-
 
     .references-list li {
       margin-bottom: 11px;
@@ -1174,41 +852,34 @@
       color: #71665f;
 
       font-size: 0.76rem;
-
       line-height: 1.55;
     }
-
 
 
     /* =========================================================
        TABLET
        ========================================================= */
 
-    @media (
-      max-width:
-      900px
-    ) {
+    @media (max-width: 900px) {
 
-      .vision-flip,
-      .vision-flip-inner,
-      .vision-face {
-        min-height: 350px;
+      .vision-flip {
+        aspect-ratio: 16 / 10;
       }
 
+      .vision-back {
+        padding: 40px 45px;
+      }
 
       .mechanisms-heading {
         align-items: flex-start;
-
         flex-direction: column;
 
         gap: 8px;
       }
 
-
       .mechanisms-tagline {
         white-space: normal;
       }
-
 
       .mechanism-content,
       .mechanism-content.reverse {
@@ -1217,12 +888,9 @@
         gap: 28px;
 
         padding:
-          10px
-          28px
-          30px
-          28px;
+          10px 28px
+          30px 28px;
       }
-
 
       .mechanism-content.reverse
       .mechanism-image,
@@ -1231,13 +899,11 @@
         order: initial;
       }
 
-
       .approach-section {
         grid-template-columns: 1fr;
 
         gap: 28px;
       }
-
 
       .approach-image {
         max-width: 700px;
@@ -1246,90 +912,66 @@
     }
 
 
-
     /* =========================================================
        MOBILE
        ========================================================= */
 
-    @media (
-      max-width:
-      700px
-    ) {
+    @media (max-width: 700px) {
 
       .research-page {
         padding-top: 38px;
       }
 
-
-      .vision-flip,
-      .vision-flip-inner,
-      .vision-face {
-        min-height: 310px;
+      .vision-flip {
+        aspect-ratio: 4 / 3.7;
       }
 
-
-      .vision-front {
-        padding:
-          36px
-          24px;
+      .vision-back {
+        padding: 28px 22px;
       }
 
+      .vision-back-title {
+        margin-bottom: 18px;
+      }
 
-      .vision-front-label::before,
-      .vision-front-label::after {
+      .vision-back-title::before,
+      .vision-back-title::after {
         width: 45px;
       }
 
-
-      .vision-front h1 {
-        font-size: 2.6rem;
+      .vision-back-text {
+        font-size: 1.35rem;
+        line-height: 1.42;
       }
 
+      .vision-hint {
+        right: 12px;
+        bottom: 11px;
 
-      .vision-front p {
-        font-size: 0.92rem;
+        font-size: 0.62rem;
       }
-
-
-      .vision-back {
-        padding: 12px;
-      }
-
 
       .central-question {
-        padding:
-          26px
-          22px;
+        padding: 26px 22px;
       }
-
 
       .central-question h1 {
         font-size: 1.85rem;
       }
 
-
       .section-kicker::after,
-      .mechanisms-heading
-      h2::after,
-      .approach-copy
-      h2::after {
+      .mechanisms-heading h2::after,
+      .approach-copy h2::after {
         width: 75px;
       }
 
-
       .mechanism summary {
-        grid-template-columns:
-          auto
-          1fr
-          auto;
+        grid-template-columns: auto 1fr auto;
 
         gap: 14px;
 
-        padding:
-          15px
-          15px;
+        padding: 15px;
       }
-
 
       .mechanism-number {
         width: 46px;
@@ -1340,38 +982,28 @@
         font-size: 1rem;
       }
 
-
-      .mechanism-summary-text
-      h3 {
+      .mechanism-summary-text h3 {
         font-size: 1.15rem;
       }
 
-
-      .mechanism-summary-text
-      p {
+      .mechanism-summary-text p {
         font-size: 0.83rem;
       }
-
 
       .mechanism-content,
       .mechanism-content.reverse {
         padding:
-          8px
-          20px
+          8px 20px
           26px;
       }
-
 
       .mechanism-image.tf img,
       .mechanism-image.post img {
         max-width: 350px;
       }
 
-
       .approach-section {
-        padding:
-          26px
-          23px;
+        padding: 26px 23px;
       }
 
     }
@@ -1392,7 +1024,6 @@
   <header>
 
     <div class="header-inner">
-
 
       <div class="logo">
 
@@ -1441,7 +1072,6 @@
 
       </nav>
 
-
     </div>
 
   </header>
@@ -1456,7 +1086,7 @@
 
 
     <!-- =======================================================
-         VISION FLIP
+         VISION FLIP PANEL
          ======================================================= -->
 
     <section class="vision-section">
@@ -1464,7 +1094,11 @@
 
       <div
         class="vision-flip"
-        id="visionFlip">
+        id="visionFlip"
+        tabindex="0"
+        role="button"
+        aria-label="Flip the Vision panel"
+        aria-pressed="false">
 
 
         <div class="vision-flip-inner">
@@ -1472,50 +1106,15 @@
 
           <!-- FRONT -->
 
-          <div
-            class="vision-face vision-front"
-            role="button"
-            tabindex="0"
-            aria-label="Reveal the Palma Lab research vision">
+          <div class="vision-face vision-front">
 
+            <img
+              src="images/Vision.png"
+              alt="Palma Lab vision connecting bacterial stress responses, gene regulatory networks, modeling and synthetic biology">
 
-            <div class="vision-front-content">
-
-
-              <p class="vision-front-label">
-                Palma Lab
-              </p>
-
-
-              <h1>
-                Our Vision
-              </h1>
-
-
-              <p>
-                Connecting microbial stress responses,
-                gene regulatory networks, and predictive
-                systems biology.
-              </p>
-
-
-              <div class="vision-reveal">
-
-                Tap to reveal
-
-                <span
-                  class="vision-reveal-arrow"
-                  aria-hidden="true">
-
-                  ↻
-
-                </span>
-
-              </div>
-
-
-            </div>
-
+            <span class="vision-hint">
+              Hover or tap to reveal →
+            </span>
 
           </div>
 
@@ -1523,23 +1122,44 @@
 
           <!-- BACK -->
 
-          <div
-            class="vision-face vision-back"
-            role="button"
-            tabindex="0"
-            aria-label="Return to the front of the vision panel">
+          <div class="vision-face vision-back">
 
 
-            <span class="vision-back-label">
-
-              ↻ Return
-
-            </span>
+            <div class="vision-back-content">
 
 
-            <img
-              src="images/Vision.png"
-              alt="Palma Lab vision: mapping bacterial stress responses to their underlying gene regulatory networks and uncovering signaling rules and regulatory mechanisms">
+              <div class="vision-back-title">
+                Vision
+              </div>
+
+
+              <p class="vision-back-text">
+
+                Map
+
+                <strong>
+                  bacterial stress responses
+                </strong>
+
+                to their underlying
+
+                <strong>
+                  gene regulatory networks
+                </strong>
+
+                and uncover the signaling rules and regulatory mechanisms
+                that govern when and how each response is triggered.
+
+              </p>
+
+
+              <p class="vision-back-small">
+                Tap again to return to the figure.
+              </p>
+
+
+            </div>
+
 
           </div>
 
@@ -1558,61 +1178,46 @@
          CENTRAL QUESTION
          ======================================================= -->
 
-    <section
-      class="central-question
-             research-panel">
+    <section class="central-question research-panel">
 
 
       <p class="section-kicker">
-
         Central question
-
       </p>
 
 
       <h1>
-
         How do gene regulatory networks (GRNs)
         translate stress signals into cellular responses?
-
       </h1>
 
 
-      <figure
-        class="central-question-figure">
-
+      <figure class="central-question-figure">
 
         <img
           src="images/Central Question.png"
           alt="Bacterial stress sensing, gene regulatory responses and cellular adaptation">
 
-
       </figure>
-
 
 
       <div class="central-intro">
 
-
         <p>
 
-          When bacteria encounter stress, survival depends
-          on their ability to sense environmental changes
-          and appropriately reprogram gene expression.
-          Gene regulatory networks integrate these signals
-          and control the expression of genes that drive
+          When bacteria encounter stress, survival depends on their
+          ability to sense environmental changes and appropriately
+          reprogram gene expression. Gene regulatory networks integrate
+          these signals and control the expression of genes that drive
           specific stress responses and cellular adaptation.
 
           <strong>
-
-            The Palma Lab investigates the regulatory
-            mechanisms that determine how GRNs process
-            stress signals and generate adaptive responses.
-
+            The Palma Lab investigates the regulatory mechanisms that
+            determine how GRNs process stress signals and generate
+            adaptive responses.
           </strong>
 
         </p>
-
 
       </div>
 
@@ -1634,18 +1239,14 @@
         <div class="mechanisms-heading-left">
 
           <h2>
-
             Regulatory mechanisms we study
-
           </h2>
 
         </div>
 
 
         <p class="mechanisms-tagline">
-
           Multiple layers. Integrated responses.
-
         </p>
 
 
@@ -1666,29 +1267,19 @@
 
 
           <span class="mechanism-number">
-
             01
-
           </span>
 
 
           <div class="mechanism-summary-text">
 
-
             <h3>
-
               Transcription factor dynamics
-
             </h3>
 
-
             <p>
-
-              How does the timing of a regulator
-              encode information?
-
+              How does the timing of a regulator encode information?
             </p>
-
 
           </div>
 
@@ -1710,42 +1301,32 @@
 
 
             <p>
-
-              Transcription factors (TFs) regulate gene
-              expression and can drive cell-fate decisions
-              by activating or repressing genes associated
-              with alternative cellular states [1,2].
-
+              Transcription factors (TFs) regulate gene expression and
+              can drive cell-fate decisions by activating or repressing
+              genes associated with alternative cellular states [1,2].
             </p>
 
 
             <p>
-
-              Traditionally, TF regulation has been viewed
-              from a steady-state perspective, in which TF
-              concentration determines the level of
-              activation or repression of its target genes.
-
+              Traditionally, TF regulation has been viewed from a
+              steady-state perspective, in which TF concentration
+              determines the level of activation or repression of its
+              target genes.
             </p>
 
 
             <p>
-
               However, TF activity can also exhibit complex
-              <strong>temporal dynamics</strong>, including
-              changes in amplitude, frequency, and duration
-              [3]. These dynamics can encode regulatory
-              information beyond TF concentration alone.
-
+              <strong>temporal dynamics</strong>, including changes in
+              amplitude, frequency, and duration [3]. These dynamics can
+              encode regulatory information beyond TF concentration
+              alone.
             </p>
 
 
             <p class="mechanism-focus">
-
-              We investigate how GRNs decode dynamic TF
-              signals to control gene expression and
-              cell-fate decisions.
-
+              We investigate how GRNs decode dynamic TF signals to
+              control gene expression and cell-fate decisions.
             </p>
 
 
@@ -1755,11 +1336,9 @@
 
           <div class="mechanism-image tf">
 
-
             <img
               src="images/TF.png"
               alt="Transcription factor concentration and temporal dynamics">
-
 
           </div>
 
@@ -1782,29 +1361,19 @@
 
 
           <span class="mechanism-number">
-
             02
-
           </span>
 
 
           <div class="mechanism-summary-text">
 
-
             <h3>
-
               DNA supercoiling
-
             </h3>
 
-
             <p>
-
-              How does DNA topology reshape
-              regulatory activity?
-
+              How does DNA topology reshape regulatory activity?
             </p>
-
 
           </div>
 
@@ -1819,18 +1388,14 @@
 
 
 
-        <div
-          class="mechanism-content reverse">
+        <div class="mechanism-content reverse">
 
 
-          <div
-            class="mechanism-image supercoiling">
-
+          <div class="mechanism-image supercoiling">
 
             <img
               src="images/Supercoiling.png"
               alt="DNA topology and supercoiling in bacterial cells">
-
 
           </div>
 
@@ -1840,45 +1405,34 @@
 
 
             <p>
-
-              DNA supercoiling describes changes in DNA
-              twisting relative to its relaxed state.
-              Overwinding generates
-              <strong>positive supercoiling</strong>,
-              whereas underwinding generates
+              DNA supercoiling describes changes in DNA twisting
+              relative to its relaxed state. Overwinding generates
+              <strong>positive supercoiling</strong>, whereas
+              underwinding generates
               <strong>negative supercoiling</strong> [4].
-
             </p>
 
 
             <p>
-
-              Supercoiling can change both locally and
-              globally. During transcription, RNA
-              polymerase generates negative supercoiling
-              behind it and positive supercoiling ahead
-              of it [5,6]. These local changes in DNA
-              topology can influence transcription of
-              nearby genes.
-
+              Supercoiling can change both locally and globally.
+              During transcription, RNA polymerase generates negative
+              supercoiling behind it and positive supercoiling ahead
+              of it [5,6]. These local changes in DNA topology can
+              influence transcription of nearby genes.
             </p>
 
 
             <p>
-
-              At the global level, DNA supercoiling also
-              changes when cells encounter different
-              environmental and stress conditions [7].
-
+              At the global level, DNA supercoiling also changes when
+              cells encounter different environmental and stress
+              conditions [7].
             </p>
 
 
             <p class="mechanism-focus">
-
-              We investigate how stress-induced changes
-              in DNA supercoiling are integrated into GRNs
-              and ultimately shape cellular responses.
-
+              We investigate how stress-induced changes in DNA
+              supercoiling are integrated into GRNs and ultimately
+              shape cellular responses.
             </p>
 
 
@@ -1893,7 +1447,7 @@
 
 
       <!-- =====================================================
-           POST-TRANSLATIONAL
+           POST-TRANSLATIONAL REGULATION
            ===================================================== -->
 
       <details class="mechanism">
@@ -1903,29 +1457,19 @@
 
 
           <span class="mechanism-number">
-
             03
-
           </span>
 
 
           <div class="mechanism-summary-text">
 
-
             <h3>
-
               Post-translational interactions
-
             </h3>
 
-
             <p>
-
-              How is regulator activity controlled
-              after synthesis?
-
+              How is regulator activity controlled after synthesis?
             </p>
-
 
           </div>
 
@@ -1947,47 +1491,33 @@
 
 
             <p>
-
-              Gene regulatory networks can regulate gene
-              expression not only by controlling the
-              abundance of transcription factors, but also
-              by modulating their
-              <strong>
-                activity after they have been produced
-              </strong>.
-
+              Gene regulatory networks can regulate gene expression not
+              only by controlling the abundance of transcription
+              factors, but also by modulating their
+              <strong>activity after they have been produced</strong>.
             </p>
 
 
             <p>
-
-              Protein–protein interactions can sequester
-              transcriptional regulators into inactive
-              complexes, as occurs when anti-sigma factors
-              bind sigma factors and prevent transcription.
-
+              Protein–protein interactions can sequester transcriptional
+              regulators into inactive complexes, as occurs when
+              anti-sigma factors bind sigma factors and prevent
+              transcription.
             </p>
 
 
             <p>
-
-              Alternatively, post-translational
-              modifications such as phosphorylation can
-              switch transcription factors between
-              inactive and active states and thereby
-              control their ability to regulate target
-              genes.
-
+              Alternatively, post-translational modifications such as
+              phosphorylation can switch transcription factors between
+              inactive and active states and thereby control their
+              ability to regulate target genes.
             </p>
 
 
             <p class="mechanism-focus">
-
-              We investigate how these post-translational
-              regulatory mechanisms are integrated within
-              GRNs and how they shape the dynamics of
-              cellular responses.
-
+              We investigate how these post-translational regulatory
+              mechanisms are integrated within GRNs and how they shape
+              the dynamics of cellular responses.
             </p>
 
 
@@ -1997,11 +1527,9 @@
 
           <div class="mechanism-image post">
 
-
             <img
               src="images/Post_translational.png"
               alt="Post-translational regulation through complex formation and phosphorylation">
-
 
           </div>
 
@@ -2020,47 +1548,35 @@
          OUR APPROACH
          ======================================================= -->
 
-    <section
-      class="approach-section
-             research-panel">
+    <section class="approach-section research-panel">
 
 
       <div class="approach-copy">
 
 
         <h2>
-
           Our approach
-
         </h2>
 
 
         <p>
-
           Our research follows an iterative
           <strong>model–experiment cycle</strong>.
-          We translate biological knowledge into
-          mathematical models, use these models to
-          generate testable predictions, and
-          experimentally test those predictions using
-          population- and single-cell measurements.
-
+          We translate biological knowledge into mathematical models,
+          use these models to generate testable predictions, and
+          experimentally test those predictions using population- and
+          single-cell measurements.
         </p>
 
 
         <p>
-
-          Experimental data are also used to parameterize
-          and refine the models. By iterating between
-
+          Experimental data are also used to parameterize and refine
+          the models. By iterating between
           <strong>
-            theory, prediction, perturbation, and
-            measurement
+            theory, prediction, perturbation, and measurement
           </strong>,
-
-          we aim to build quantitative and predictive
-          models of gene regulatory networks.
-
+          we aim to build quantitative and predictive models of gene
+          regulatory networks.
         </p>
 
 
@@ -2070,11 +1586,9 @@
 
       <div class="approach-image">
 
-
         <img
           src="images/Workflow.png"
           alt="Iterative model and experiment workflow used by the Palma Lab">
-
 
       </div>
 
@@ -2094,9 +1608,7 @@
 
 
         <summary>
-
           References
-
         </summary>
 
 
@@ -2106,28 +1618,24 @@
           <li>
             van Sinderen D, Luttinger A, Kong L, Dubnau D,
             Venema G, Hamoen L. comK encodes the competence
-            transcription factor, the key regulatory
-            protein for competence development in
-            Bacillus subtilis.
-            <em>Mol Microbiol.</em>
-            1995;15(3):455–462.
+            transcription factor, the key regulatory protein for
+            competence development in Bacillus subtilis.
+            <em>Mol Microbiol.</em> 1995;15(3):455–462.
           </li>
 
 
           <li>
-            Fujita M, Losick R. Evidence that entry into
-            sporulation in Bacillus subtilis is governed
-            by a gradual increase in the level and
-            activity of the master regulator Spo0A.
-            <em>Genes Dev.</em>
-            2005;19:2236–2244.
+            Fujita M, Losick R. Evidence that entry into sporulation
+            in Bacillus subtilis is governed by a gradual increase in
+            the level and activity of the master regulator Spo0A.
+            <em>Genes Dev.</em> 2005;19:2236–2244.
           </li>
 
 
           <li>
             Palma CS, Haller DJ, Tabor JJ, Igoshin OA.
-            Changes in Spo0A~P pulsing frequency control
-            biofilm matrix deactivation.
+            Changes in Spo0A~P pulsing frequency control biofilm
+            matrix deactivation.
             <em>PLoS Computational Biology.</em>
             2025;21(7):e1013263.
           </li>
@@ -2135,9 +1643,9 @@
 
           <li>
             Hustmyer CM, Landick R.
-            Bacterial chromatin proteins, transcription,
-            and DNA topology: inseparable partners in the
-            control of gene expression.
+            Bacterial chromatin proteins, transcription, and DNA
+            topology: inseparable partners in the control of gene
+            expression.
             <em>Molecular Microbiology.</em>
             2024;122(1):81–112.
           </li>
@@ -2145,22 +1653,15 @@
 
           <li>
             Palma C.
-            <em>
-              Repression Mechanisms in Bacterial
-              Transcription.
-            </em>
+            <em>Repression Mechanisms in Bacterial Transcription.</em>
             2022.
           </li>
 
 
           <li>
             Liu LF, Wang JC.
-            Supercoiling of the DNA template during
-            transcription.
-            <em>
-              Proceedings of the National Academy of
-              Sciences.
-            </em>
+            Supercoiling of the DNA template during transcription.
+            <em>Proceedings of the National Academy of Sciences.</em>
             1987;84(20):7024–7027.
           </li>
 
@@ -2168,9 +1669,8 @@
           <li>
             Dash S, Palma CS, Baptista IS, Almeida BL,
             Bahrudeen MN, Chauhan V, et al.
-            Alteration of DNA supercoiling serves as a
-            trigger of short-term cold shock repressed
-            genes of E. coli.
+            Alteration of DNA supercoiling serves as a trigger of
+            short-term cold shock repressed genes of E. coli.
             <em>Nucleic Acids Research.</em>
             2022;50(15):8512–8528.
           </li>
@@ -2336,9 +1836,7 @@
               rx="1.5">
             </rect>
 
-            <path
-              d="M4 7l8 6 8-6">
-            </path>
+            <path d="M4 7l8 6 8-6"></path>
 
           </svg>
 
@@ -2349,55 +1847,43 @@
 
 
 
-      <div class="footer-info">
+      <!-- INSTITUTIONAL INFORMATION -->
 
+      <div class="footer-info">
 
         <span>
           Palma Lab
         </span>
 
-
         <span class="footer-divider">
           ·
         </span>
-
 
         <a
           href="https://www.uwyo.edu/molecbio/index.html"
           target="_blank"
           rel="noopener noreferrer">
-
           Department of Molecular Biology
-
         </a>
-
 
         <span class="footer-divider">
           ·
         </span>
-
 
         <a
           href="https://www.uwyo.edu/soc/index.html"
           target="_blank"
           rel="noopener noreferrer">
-
           School of Computing
-
         </a>
-
 
         <span class="footer-divider">
           ·
         </span>
 
-
         <span>
-
           University of Wyoming
-
         </span>
-
 
       </div>
 
@@ -2423,68 +1909,51 @@
 
 
   <!-- =========================================================
-       VISION FLIP JAVASCRIPT
+       VISION FLIP SCRIPT
        ========================================================= -->
 
   <script>
 
-    (function () {
-
-      const vision =
-        document.getElementById(
-          "visionFlip"
-        );
+    const visionFlip =
+      document.getElementById("visionFlip");
 
 
-      if (!vision) {
-        return;
+    function toggleVision() {
+
+      const flipped =
+        visionFlip.classList.toggle("is-flipped");
+
+      visionFlip.setAttribute(
+        "aria-pressed",
+        flipped ? "true" : "false"
+      );
+
+    }
+
+
+    visionFlip.addEventListener(
+      "click",
+      toggleVision
+    );
+
+
+    visionFlip.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (
+          event.key === "Enter" ||
+          event.key === " "
+        ) {
+
+          event.preventDefault();
+
+          toggleVision();
+
+        }
+
       }
-
-
-      const faces =
-        vision.querySelectorAll(
-          ".vision-face"
-        );
-
-
-      function flipVision() {
-
-        vision.classList.toggle(
-          "is-flipped"
-        );
-
-      }
-
-
-      faces.forEach(function (face) {
-
-        face.addEventListener(
-          "click",
-          flipVision
-        );
-
-
-        face.addEventListener(
-          "keydown",
-          function (event) {
-
-            if (
-              event.key === "Enter" ||
-              event.key === " "
-            ) {
-
-              event.preventDefault();
-
-              flipVision();
-
-            }
-
-          }
-        );
-
-      });
-
-    })();
+    );
 
   </script>
 
