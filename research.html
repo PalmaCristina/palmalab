@@ -36,10 +36,8 @@
 
     .research-panel {
       background: #ffffff;
-
       border: 1px solid #e7ddd5;
       border-radius: 16px;
-
       box-sizing: border-box;
     }
 
@@ -54,7 +52,7 @@
 
       gap: 14px;
 
-      margin: 0 0 14px;
+      margin: 0 0 15px;
 
       color: #492f24;
 
@@ -78,218 +76,90 @@
 
 
     /* =========================================================
-       VISION FLIP SECTION
+       VISION
        ========================================================= */
 
     .vision-section {
+      position: relative;
+
       margin-bottom: 38px;
-    }
 
-    .vision-flip {
-      position: relative;
-
-      width: 100%;
-
-      aspect-ratio: 16 / 8.6;
-
-      perspective: 1500px;
-
-      cursor: pointer;
-
-      outline: none;
-    }
-
-    .vision-flip-inner {
-      position: relative;
-
-      width: 100%;
-      height: 100%;
-
-      transition: transform 0.75s cubic-bezier(.22, .61, .36, 1);
-
-      transform-style: preserve-3d;
-    }
-
-
-    /* =========================================================
-       HOVER FLIP
-       ========================================================= */
-
-    @media (hover: hover) and (pointer: fine) {
-
-      .vision-flip:hover .vision-flip-inner {
-        transform: rotateY(180deg);
-      }
-
-    }
-
-
-    /* =========================================================
-       CLICK / TAP FLIP
-       ========================================================= */
-
-    .vision-flip.is-flipped .vision-flip-inner {
-      transform: rotateY(180deg);
-    }
-
-
-    /* =========================================================
-       VISION FRONT / BACK
-       ========================================================= */
-
-    .vision-face {
-      position: absolute;
-
-      inset: 0;
-
-      width: 100%;
-      height: 100%;
+      padding: 48px 54px 50px;
 
       overflow: hidden;
-
-      border: 1px solid #e7ddd5;
-      border-radius: 16px;
-
-      background: #ffffff;
-
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-
-      box-sizing: border-box;
     }
 
+    .vision-content {
+      position: relative;
 
-    /* =========================================================
-       VISION FRONT
-       ========================================================= */
+      z-index: 2;
 
-    .vision-front {
-      display: flex;
-
-      align-items: center;
-      justify-content: center;
-
-      padding: 0;
-
-      background: #ffffff;
+      max-width: 940px;
     }
 
-    .vision-front img {
-      display: block;
-
-      width: 100%;
-      height: 100%;
-
-      object-fit: contain;
-    }
-
-
-    /* =========================================================
-       VISION HINT
-       ========================================================= */
-
-    .vision-hint {
-      position: absolute;
-
-      right: 18px;
-      bottom: 16px;
-
-      z-index: 3;
-
-      padding: 7px 11px;
-
-      border: 1px solid #e7ddd5;
-      border-radius: 20px;
-
-      background: rgba(255, 255, 255, 0.92);
+    .vision-title {
+      margin: 0 0 17px;
 
       color: #492f24;
 
-      font-size: 0.7rem;
-      font-weight: 650;
+      font-family: Georgia, "Times New Roman", serif;
 
-      letter-spacing: 0.04em;
+      font-size: clamp(2.3rem, 4.2vw, 4rem);
+      line-height: 1;
+
+      font-weight: 500;
     }
 
+    .vision-line {
+      width: 90px;
+      height: 3px;
 
-    /* =========================================================
-       VISION BACK
-       ========================================================= */
-
-    .vision-back {
-      display: flex;
-
-      align-items: center;
-      justify-content: center;
-
-      padding: 55px 70px;
-
-      background: #ffffff;
-
-      transform: rotateY(180deg);
-    }
-
-    .vision-back-content {
-      max-width: 860px;
-
-      text-align: center;
-    }
-
-    .vision-back-title {
-      display: flex;
-
-      align-items: center;
-      justify-content: center;
-
-      gap: 18px;
-
-      margin: 0 0 27px;
-
-      color: #492f24;
-
-      font-size: 0.82rem;
-      font-weight: 700;
-
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
-
-    .vision-back-title::before,
-    .vision-back-title::after {
-      content: "";
-
-      width: 95px;
-      height: 2px;
+      margin: 0 0 26px;
 
       background: #ffc425;
     }
 
-    .vision-back-text {
+    .vision-statement {
+      max-width: 960px;
+
       margin: 0;
 
       color: #2f211a;
 
       font-family: Georgia, "Times New Roman", serif;
 
-      font-size: clamp(1.65rem, 3vw, 2.5rem);
-      line-height: 1.45;
+      font-size: clamp(1.55rem, 2.6vw, 2.2rem);
+      line-height: 1.48;
 
       font-weight: 400;
     }
 
-    .vision-back-text strong {
+    .vision-statement strong {
       color: #c88700;
 
       font-weight: 600;
     }
 
-    .vision-back-small {
-      margin: 27px 0 0;
 
-      color: #806f65;
+    /* =========================================================
+       SUBTLE VISION DECORATION
+       ========================================================= */
 
-      font-size: 0.75rem;
-      letter-spacing: 0.05em;
+    .vision-section::after {
+      content: "";
+
+      position: absolute;
+
+      width: 230px;
+      height: 230px;
+
+      right: -80px;
+      bottom: -110px;
+
+      border: 1px solid rgba(255, 196, 37, 0.24);
+      border-radius: 50%;
+
+      pointer-events: none;
     }
 
 
@@ -300,9 +170,7 @@
     .central-question {
       margin-bottom: 48px;
 
-      padding: 34px 38px 35px;
-
-      background: #ffffff;
+      padding: 38px 40px 36px;
     }
 
     .central-question h1 {
@@ -327,9 +195,7 @@
        ========================================================= */
 
     .central-question-figure {
-      margin: 0 0 27px;
-
-      background: #ffffff;
+      margin: 0 0 28px;
     }
 
     .central-question-figure img {
@@ -723,7 +589,7 @@
 
       margin-top: 35px;
 
-      padding: 30px 32px;
+      padding: 32px 34px;
 
       background: #ffffff;
     }
@@ -862,12 +728,8 @@
 
     @media (max-width: 900px) {
 
-      .vision-flip {
-        aspect-ratio: 16 / 10;
-      }
-
-      .vision-back {
-        padding: 40px 45px;
+      .vision-section {
+        padding: 40px 38px;
       }
 
       .mechanisms-heading {
@@ -922,37 +784,21 @@
         padding-top: 38px;
       }
 
-      .vision-flip {
-        aspect-ratio: 4 / 3.7;
+      .vision-section {
+        padding: 32px 24px 34px;
       }
 
-      .vision-back {
-        padding: 28px 22px;
+      .vision-title {
+        font-size: 2.25rem;
       }
 
-      .vision-back-title {
-        margin-bottom: 18px;
-      }
-
-      .vision-back-title::before,
-      .vision-back-title::after {
-        width: 45px;
-      }
-
-      .vision-back-text {
-        font-size: 1.35rem;
-        line-height: 1.42;
-      }
-
-      .vision-hint {
-        right: 12px;
-        bottom: 11px;
-
-        font-size: 0.62rem;
+      .vision-statement {
+        font-size: 1.36rem;
+        line-height: 1.5;
       }
 
       .central-question {
-        padding: 26px 22px;
+        padding: 27px 22px;
       }
 
       .central-question h1 {
@@ -1086,85 +932,41 @@
 
 
     <!-- =======================================================
-         VISION FLIP PANEL
+         VISION
          ======================================================= -->
 
-    <section class="vision-section">
+    <section class="vision-section research-panel">
 
 
-      <div
-        class="vision-flip"
-        id="visionFlip"
-        tabindex="0"
-        role="button"
-        aria-label="Flip the Vision panel"
-        aria-pressed="false">
+      <div class="vision-content">
 
 
-        <div class="vision-flip-inner">
+        <h1 class="vision-title">
+          Vision
+        </h1>
 
 
-          <!-- FRONT -->
-
-          <div class="vision-face vision-front">
-
-            <img
-              src="images/Vision.png"
-              alt="Palma Lab vision connecting bacterial stress responses, gene regulatory networks, modeling and synthetic biology">
-
-            <span class="vision-hint">
-              Hover or tap to reveal →
-            </span>
-
-          </div>
+        <div class="vision-line"></div>
 
 
+        <p class="vision-statement">
 
-          <!-- BACK -->
+          Map
 
-          <div class="vision-face vision-back">
+          <strong>
+            bacterial stress responses
+          </strong>
 
+          to their underlying
 
-            <div class="vision-back-content">
+          <strong>
+            gene regulatory networks
+          </strong>
 
+          and uncover the signaling rules and regulatory mechanisms
+          that govern when and how each response is triggered.
 
-              <div class="vision-back-title">
-                Vision
-              </div>
-
-
-              <p class="vision-back-text">
-
-                Map
-
-                <strong>
-                  bacterial stress responses
-                </strong>
-
-                to their underlying
-
-                <strong>
-                  gene regulatory networks
-                </strong>
-
-                and uncover the signaling rules and regulatory mechanisms
-                that govern when and how each response is triggered.
-
-              </p>
-
-
-              <p class="vision-back-small">
-                Tap again to return to the figure.
-              </p>
-
-
-            </div>
-
-
-          </div>
-
-
-        </div>
+        </p>
 
 
       </div>
@@ -1905,57 +1707,6 @@
 
 
   </footer>
-
-
-
-  <!-- =========================================================
-       VISION FLIP SCRIPT
-       ========================================================= -->
-
-  <script>
-
-    const visionFlip =
-      document.getElementById("visionFlip");
-
-
-    function toggleVision() {
-
-      const flipped =
-        visionFlip.classList.toggle("is-flipped");
-
-      visionFlip.setAttribute(
-        "aria-pressed",
-        flipped ? "true" : "false"
-      );
-
-    }
-
-
-    visionFlip.addEventListener(
-      "click",
-      toggleVision
-    );
-
-
-    visionFlip.addEventListener(
-      "keydown",
-      function(event) {
-
-        if (
-          event.key === "Enter" ||
-          event.key === " "
-        ) {
-
-          event.preventDefault();
-
-          toggleVision();
-
-        }
-
-      }
-    );
-
-  </script>
 
 
 </body>
