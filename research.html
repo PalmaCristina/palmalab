@@ -23,80 +23,29 @@
        ========================================================= */
 
     .research-page {
-      max-width: 1100px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 58px var(--page-padding) 90px;
+      padding: 52px var(--page-padding) 90px;
       box-sizing: border-box;
     }
 
 
     /* =========================================================
-       GENERAL TYPOGRAPHY
+       SHARED SECTION PANEL
        ========================================================= */
 
-    .research-label {
-      margin: 0 0 10px;
+    .research-panel {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255, 251, 244, 0.96),
+          rgba(250, 246, 238, 0.88)
+        );
 
-      color: #492f24;
+      border: 1px solid #eee4d7;
+      border-radius: 18px;
 
-      font-size: 0.78rem;
-      font-weight: 700;
-
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-    }
-
-    .research-title {
-      margin: 0 0 18px;
-
-      color: #2f211a;
-
-      font-size: 1.65rem;
-      line-height: 1.35;
-
-      font-weight: 600;
-    }
-
-    .research-question {
-      margin: 0 0 23px;
-
-      color: #806c60;
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 1.03rem;
-      line-height: 1.55;
-
-      font-style: italic;
-    }
-
-    .research-text {
-      color: #4b413b;
-
-      font-size: 0.96rem;
-      line-height: 1.78;
-    }
-
-    .research-text p {
-      margin: 0 0 17px;
-    }
-
-    .research-text strong {
-      color: #492f24;
-    }
-
-
-    /* =========================================================
-       SECTION DIVIDER
-       ========================================================= */
-
-    .research-divider {
-      width: 72px;
-      height: 3px;
-
-      margin: 68px 0 30px;
-
-      background: #ffc425;
+      box-sizing: border-box;
     }
 
 
@@ -105,7 +54,9 @@
        ========================================================= */
 
     .vision-section {
-      margin-bottom: 70px;
+      margin-bottom: 34px;
+
+      padding: 25px 34px 28px;
     }
 
     .vision-figure {
@@ -127,27 +78,62 @@
        ========================================================= */
 
     .central-question {
-      margin-bottom: 20px;
+      margin-bottom: 48px;
+
+      padding: 34px 38px 35px;
+    }
+
+    .section-kicker {
+      display: flex;
+      align-items: center;
+
+      gap: 16px;
+
+      margin: 0 0 13px;
+
+      color: #492f24;
+
+      font-size: 0.82rem;
+      line-height: 1;
+
+      font-weight: 700;
+
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .section-kicker::after {
+      content: "";
+
+      width: 145px;
+      height: 2px;
+
+      background: #ffc425;
     }
 
     .central-question h1 {
-      max-width: 940px;
+      max-width: 1000px;
 
-      margin: 0 0 32px;
+      margin: 0 0 31px;
 
-      color: #2f211a;
+      color: #3b241c;
 
       font-family: Georgia, "Times New Roman", serif;
 
-      font-size: clamp(1.65rem, 2.6vw, 2.35rem);
-      line-height: 1.3;
+      font-size: clamp(2rem, 3.4vw, 3rem);
+      line-height: 1.18;
 
       font-weight: 400;
       font-style: italic;
     }
 
+
+    /* =========================================================
+       CENTRAL QUESTION FIGURE
+       ========================================================= */
+
     .central-question-figure {
-      margin: 0 0 32px;
+      margin: 0 0 27px;
     }
 
     .central-question-figure img {
@@ -159,90 +145,339 @@
       margin: 0 auto;
     }
 
+
+    /* =========================================================
+       CENTRAL QUESTION TEXT
+       ========================================================= */
+
     .central-intro {
-      max-width: 880px;
+      max-width: 980px;
     }
 
     .central-intro p {
       margin: 0;
 
-      color: #4b413b;
+      color: #4d433d;
 
       font-size: 1rem;
-      line-height: 1.82;
+      line-height: 1.75;
     }
 
     .central-intro strong {
       color: #492f24;
+      font-weight: 650;
     }
 
 
     /* =========================================================
-       REGULATORY MECHANISMS INTRO
+       MECHANISMS SECTION
        ========================================================= */
 
-    .mechanisms-intro {
-      max-width: 810px;
-
-      margin-bottom: 45px;
+    .mechanisms-section {
+      margin-bottom: 50px;
     }
 
-    .mechanisms-intro h2 {
-      margin: 0 0 12px;
+    .mechanisms-heading {
+      display: flex;
+
+      align-items: flex-end;
+      justify-content: space-between;
+
+      gap: 30px;
+
+      margin: 0 8px 18px;
+    }
+
+    .mechanisms-heading-left {
+      flex: 1;
+    }
+
+    .mechanisms-heading h2 {
+      display: flex;
+      align-items: center;
+
+      gap: 16px;
+
+      margin: 0;
+
+      color: #492f24;
+
+      font-size: 1rem;
+      line-height: 1.2;
+
+      font-weight: 700;
+
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .mechanisms-heading h2::after {
+      content: "";
+
+      width: 145px;
+      height: 2px;
+
+      background: #ffc425;
+    }
+
+    .mechanisms-tagline {
+      margin: 0;
+
+      color: #735e51;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 0.94rem;
+      font-style: italic;
+
+      white-space: nowrap;
+    }
+
+
+    /* =========================================================
+       ACCORDION
+       ========================================================= */
+
+    .mechanism {
+      margin-bottom: 13px;
+
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          110deg,
+          #fffdf9 0%,
+          #faf6ef 100%
+        );
+
+      border: 1px solid #e8ddcf;
+      border-radius: 15px;
+
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .mechanism:hover {
+      border-color: #dfcba9;
+    }
+
+    .mechanism[open] {
+      border-color: #e3c78f;
+
+      box-shadow:
+        0 8px 28px rgba(73, 47, 36, 0.06);
+    }
+
+
+    /* =========================================================
+       ACCORDION HEADER
+       ========================================================= */
+
+    .mechanism summary {
+      display: grid;
+
+      grid-template-columns: auto 1fr auto;
+
+      gap: 21px;
+
+      align-items: center;
+
+      padding: 17px 22px;
+
+      cursor: pointer;
+
+      list-style: none;
+
+      user-select: none;
+    }
+
+    .mechanism summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .mechanism summary::marker {
+      display: none;
+      content: "";
+    }
+
+
+    /* =========================================================
+       NUMBER
+       ========================================================= */
+
+    .mechanism-number {
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      width: 55px;
+      height: 55px;
+
+      flex: 0 0 55px;
+
+      border-radius: 50%;
+
+      background:
+        linear-gradient(
+          135deg,
+          #ffc425,
+          #cf8500
+        );
+
+      color: #fff;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 1.15rem;
+    }
+
+
+    /* =========================================================
+       SUMMARY TEXT
+       ========================================================= */
+
+    .mechanism-summary-text h3 {
+      margin: 0 0 3px;
 
       color: #2f211a;
 
-      font-size: 1.65rem;
-      line-height: 1.3;
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 1.42rem;
+      line-height: 1.25;
 
       font-weight: 600;
     }
 
-    .mechanisms-intro p {
+    .mechanism-summary-text p {
       margin: 0;
 
-      color: #665b55;
+      color: #75665d;
 
-      font-size: 0.97rem;
-      line-height: 1.75;
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 0.92rem;
+      line-height: 1.4;
+
+      font-style: italic;
     }
 
 
     /* =========================================================
-       REGULATORY MECHANISM ROWS
+       PLUS / MINUS
        ========================================================= */
 
-    .mechanism-row {
+    .accordion-symbol {
+      position: relative;
+
+      width: 25px;
+      height: 25px;
+
+      flex: 0 0 25px;
+    }
+
+    .accordion-symbol::before,
+    .accordion-symbol::after {
+      content: "";
+
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+
+      width: 16px;
+      height: 2px;
+
+      background: #492f24;
+
+      transform:
+        translate(-50%, -50%);
+
+      transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+    }
+
+    .accordion-symbol::after {
+      transform:
+        translate(-50%, -50%)
+        rotate(90deg);
+    }
+
+    .mechanism[open]
+    .accordion-symbol::after {
+      opacity: 0;
+    }
+
+
+    /* =========================================================
+       ACCORDION CONTENT
+       ========================================================= */
+
+    .mechanism-content {
       display: grid;
 
       grid-template-columns:
-        minmax(0, 0.92fr)
-        minmax(0, 1.08fr);
+        minmax(0, 1.04fr)
+        minmax(330px, 0.96fr);
 
-      gap: 58px;
+      gap: 48px;
 
       align-items: center;
 
-      padding: 35px 0 55px;
+      padding:
+        14px 28px
+        30px 82px;
     }
 
-    .mechanism-row.reverse {
+    .mechanism-content.reverse {
       grid-template-columns:
-        minmax(0, 1.08fr)
-        minmax(0, 0.92fr);
+        minmax(330px, 0.96fr)
+        minmax(0, 1.04fr);
     }
 
-    .mechanism-row.reverse .mechanism-image {
-      order: 2;
-    }
-
-    .mechanism-row.reverse .mechanism-copy {
+    .mechanism-content.reverse
+    .mechanism-image {
       order: 1;
+    }
+
+    .mechanism-content.reverse
+    .mechanism-copy {
+      order: 2;
     }
 
 
     /* =========================================================
-       MECHANISM IMAGES
+       ACCORDION TEXT
+       ========================================================= */
+
+    .mechanism-copy p {
+      margin: 0 0 15px;
+
+      color: #4d433d;
+
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+    .mechanism-copy strong {
+      color: #492f24;
+    }
+
+    .mechanism-focus {
+      margin-top: 20px !important;
+
+      color: #492f24 !important;
+
+      font-weight: 650;
+    }
+
+
+    /* =========================================================
+       FIGURES
        ========================================================= */
 
     .mechanism-image {
@@ -250,6 +485,8 @@
 
       justify-content: center;
       align-items: center;
+
+      min-width: 0;
     }
 
     .mechanism-image img {
@@ -258,184 +495,90 @@
       width: 100%;
       height: auto;
 
-      max-height: 590px;
-
       object-fit: contain;
     }
 
     .mechanism-image.tf img {
-      max-width: 470px;
-    }
-
-    .mechanism-image.supercoiling img {
-      max-width: 550px;
-    }
-
-    .mechanism-image.post img {
       max-width: 430px;
     }
 
-
-    /* =========================================================
-       MECHANISM TEXT
-       ========================================================= */
-
-    .mechanism-number {
-      display: block;
-
-      margin: 0 0 13px;
-
-      color: #c58a00;
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 1.25rem;
+    .mechanism-image.supercoiling img {
+      max-width: 520px;
     }
 
-    .mechanism-copy h3 {
-      margin: 0 0 8px;
-
-      color: #492f24;
-
-      font-size: 1.35rem;
-      line-height: 1.35;
-
-      font-weight: 600;
-    }
-
-    .mechanism-copy .mechanism-question {
-      margin: 0 0 22px;
-
-      color: #806c60;
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 1rem;
-      line-height: 1.55;
-
-      font-style: italic;
-    }
-
-    .mechanism-copy p {
-      margin: 0 0 17px;
-
-      color: #4b413b;
-
-      font-size: 0.94rem;
-      line-height: 1.75;
-    }
-
-    .mechanism-copy strong {
-      color: #492f24;
-    }
-
-    .mechanism-focus {
-      margin-top: 22px !important;
-
-      color: #492f24 !important;
-
-      font-weight: 600;
+    .mechanism-image.post img {
+      max-width: 410px;
     }
 
 
     /* =========================================================
-       SUBTLE SEPARATOR BETWEEN MECHANISMS
+       OUR APPROACH
        ========================================================= */
 
-    .mechanism-separator {
-      width: 100%;
-      height: 1px;
-
-      background: #eee8e1;
-    }
-
-
-    /* =========================================================
-       WORKFLOW
-       ========================================================= */
-
-    .workflow-section {
+    .approach-section {
       display: grid;
 
       grid-template-columns:
-        minmax(0, 0.95fr)
-        minmax(0, 1.05fr);
+        minmax(0, 0.92fr)
+        minmax(420px, 1.08fr);
 
-      gap: 55px;
+      gap: 46px;
 
       align-items: center;
 
-      margin-top: 15px;
+      margin-top: 35px;
+
+      padding: 30px 32px;
     }
 
-    .workflow-copy h2 {
-      margin: 0 0 17px;
+    .approach-copy h2 {
+      display: flex;
 
-      color: #2f211a;
+      align-items: center;
+
+      gap: 16px;
+
+      margin: 0 0 18px;
+
+      color: #492f24;
+
+      font-family: Georgia, "Times New Roman", serif;
 
       font-size: 1.65rem;
-      line-height: 1.3;
+      line-height: 1.25;
 
       font-weight: 600;
     }
 
-    .workflow-copy p {
-      margin: 0 0 17px;
+    .approach-copy h2::after {
+      content: "";
 
-      color: #4b413b;
+      width: 145px;
+      height: 2px;
 
-      font-size: 0.96rem;
-      line-height: 1.78;
+      background: #ffc425;
     }
 
-    .workflow-copy strong {
+    .approach-copy p {
+      margin: 0 0 15px;
+
+      color: #4d433d;
+
+      font-size: 0.91rem;
+      line-height: 1.7;
+    }
+
+    .approach-copy strong {
       color: #492f24;
     }
 
-    .workflow-image img {
+    .approach-image img {
       display: block;
 
       width: 100%;
       height: auto;
 
-      max-width: 620px;
-
       margin: 0 auto;
-    }
-
-
-    /* =========================================================
-       WORKFLOW KEYWORDS
-       ========================================================= */
-
-    .workflow-keywords {
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 8px;
-
-      margin-top: 24px;
-    }
-
-    .workflow-keyword {
-      padding: 7px 11px;
-
-      background: #faf7f1;
-
-      color: #492f24;
-
-      font-size: 0.8rem;
-      font-weight: 600;
-    }
-
-    .workflow-arrow {
-      display: flex;
-      align-items: center;
-
-      color: #c58a00;
-
-      font-size: 0.95rem;
     }
 
 
@@ -444,40 +587,66 @@
        ========================================================= */
 
     .research-references {
-      margin-top: 75px;
-
-      padding-top: 23px;
-
-      border-top: 1px solid #e5ddd6;
+      margin-top: 22px;
     }
 
     .research-references details {
-      max-width: 950px;
+      border-top: 1px solid #ded5cc;
+      border-bottom: 1px solid #ded5cc;
     }
 
     .research-references summary {
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      padding: 15px 7px;
+
       cursor: pointer;
 
       color: #492f24;
 
-      font-size: 0.93rem;
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 1rem;
       font-weight: 600;
+
+      list-style: none;
+    }
+
+    .research-references summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .research-references summary::before {
+      content: "▸";
+
+      color: #492f24;
+
+      font-size: 0.9rem;
+
+      transition: transform 0.2s ease;
+    }
+
+    .research-references details[open]
+    summary::before {
+      transform: rotate(90deg);
     }
 
     .references-list {
-      margin: 23px 0 0;
+      margin: 2px 0 22px;
 
-      padding-left: 22px;
+      padding: 0 25px 0 35px;
     }
 
     .references-list li {
-      margin-bottom: 12px;
-
-      padding-left: 4px;
+      margin-bottom: 11px;
 
       color: #71665f;
 
-      font-size: 0.77rem;
+      font-size: 0.76rem;
       line-height: 1.55;
     }
 
@@ -488,37 +657,43 @@
 
     @media (max-width: 900px) {
 
-      .mechanism-row,
-      .mechanism-row.reverse {
-        grid-template-columns: 1fr;
+      .mechanisms-heading {
+        align-items: flex-start;
+        flex-direction: column;
 
-        gap: 32px;
-
-        padding: 30px 0 45px;
+        gap: 8px;
       }
 
-      .mechanism-row.reverse .mechanism-image,
-      .mechanism-row.reverse .mechanism-copy {
+      .mechanisms-tagline {
+        white-space: normal;
+      }
+
+      .mechanism-content,
+      .mechanism-content.reverse {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+
+        padding:
+          10px 28px
+          30px 28px;
+      }
+
+      .mechanism-content.reverse
+      .mechanism-image,
+      .mechanism-content.reverse
+      .mechanism-copy {
         order: initial;
       }
 
-      .mechanism-image img {
-        max-height: 500px;
-      }
-
-      .mechanism-image.tf img,
-      .mechanism-image.post img {
-        max-width: 420px;
-      }
-
-      .mechanism-image.supercoiling img {
-        max-width: 600px;
-      }
-
-      .workflow-section {
+      .approach-section {
         grid-template-columns: 1fr;
 
-        gap: 34px;
+        gap: 28px;
+      }
+
+      .approach-image {
+        max-width: 700px;
       }
 
     }
@@ -531,36 +706,57 @@
     @media (max-width: 700px) {
 
       .research-page {
-        padding-top: 40px;
+        padding-top: 38px;
       }
 
       .vision-section {
-        margin-bottom: 52px;
+        padding: 17px;
+      }
+
+      .central-question {
+        padding: 26px 22px;
       }
 
       .central-question h1 {
-        margin-bottom: 25px;
+        font-size: 1.85rem;
       }
 
-      .central-question-figure {
-        margin-bottom: 25px;
+      .section-kicker::after,
+      .mechanisms-heading h2::after,
+      .approach-copy h2::after {
+        width: 75px;
       }
 
-      .research-divider {
-        margin-top: 52px;
+      .mechanism summary {
+        grid-template-columns: auto 1fr auto;
+
+        gap: 14px;
+
+        padding: 15px 15px;
       }
 
-      .mechanisms-intro {
-        margin-bottom: 30px;
+      .mechanism-number {
+        width: 46px;
+        height: 46px;
+
+        flex-basis: 46px;
+
+        font-size: 1rem;
       }
 
-      .mechanism-row,
-      .mechanism-row.reverse {
-        padding: 23px 0 38px;
+      .mechanism-summary-text h3 {
+        font-size: 1.15rem;
       }
 
-      .mechanism-copy h3 {
-        font-size: 1.25rem;
+      .mechanism-summary-text p {
+        font-size: 0.83rem;
+      }
+
+      .mechanism-content,
+      .mechanism-content.reverse {
+        padding:
+          8px 20px
+          26px;
       }
 
       .mechanism-image.tf img,
@@ -568,8 +764,8 @@
         max-width: 350px;
       }
 
-      .workflow-keywords {
-        gap: 6px;
+      .approach-section {
+        padding: 26px 23px;
       }
 
     }
@@ -655,7 +851,7 @@
          VISION
          ======================================================= -->
 
-    <section class="vision-section">
+    <section class="vision-section research-panel">
 
       <figure class="vision-figure">
 
@@ -673,15 +869,16 @@
          CENTRAL QUESTION
          ======================================================= -->
 
-    <section class="central-question">
+    <section class="central-question research-panel">
 
-      <p class="research-label">
+      <p class="section-kicker">
         Central question
       </p>
 
+
       <h1>
-        How do gene regulatory networks (GRNs) translate
-        stress signals into cellular responses?
+        How do gene regulatory networks (GRNs)
+        translate stress signals into cellular responses?
       </h1>
 
 
@@ -719,22 +916,21 @@
          REGULATORY MECHANISMS
          ======================================================= -->
 
-    <div class="research-divider"></div>
+    <section class="mechanisms-section">
 
 
-    <section>
+      <div class="mechanisms-heading">
 
-      <div class="mechanisms-intro">
+        <div class="mechanisms-heading-left">
 
-        <h2>
-          Regulatory mechanisms we study
-        </h2>
+          <h2>
+            Regulatory mechanisms we study
+          </h2>
 
-        <p>
-          Cellular responses emerge from multiple layers of regulation.
-          We investigate how different regulatory mechanisms encode,
-          transmit, and reshape information within gene regulatory
-          networks.
+        </div>
+
+        <p class="mechanisms-tagline">
+          Multiple layers. Integrated responses.
         </p>
 
       </div>
@@ -742,67 +938,94 @@
 
 
       <!-- =====================================================
-           TRANSCRIPTION FACTOR DYNAMICS
+           TRANSCRIPTION FACTORS
+           OPEN BY DEFAULT
            ===================================================== -->
 
-      <div class="mechanism-row">
+      <details
+        class="mechanism"
+        open>
 
 
-        <div class="mechanism-image tf">
+        <summary>
 
-          <img
-            src="images/TF.png"
-            alt="Transcription factor concentration and temporal dynamics">
-
-        </div>
-
-
-        <div class="mechanism-copy">
 
           <span class="mechanism-number">
             01
           </span>
 
-          <h3>
-            Transcription factor dynamics
-          </h3>
 
-          <p class="mechanism-question">
-            How does the timing of a regulator encode information?
-          </p>
+          <div class="mechanism-summary-text">
 
-          <p>
-            Transcription factors (TFs) regulate gene expression and can
-            drive cell-fate decisions by activating or repressing genes
-            associated with alternative cellular states [1,2].
-          </p>
+            <h3>
+              Transcription factor dynamics
+            </h3>
 
-          <p>
-            Traditionally, TF regulation has been viewed from a
-            steady-state perspective, in which TF concentration
-            determines the level of activation or repression of its
-            target genes. However, TF activity can also exhibit complex
-            <strong>temporal dynamics</strong>, including changes in
-            amplitude, frequency, and duration [3].
-          </p>
+            <p>
+              How does the timing of a regulator encode information?
+            </p>
 
-          <p>
-            These dynamics can encode information beyond TF
-            concentration alone.
-          </p>
+          </div>
 
-          <p class="mechanism-focus">
-            We investigate how GRNs decode dynamic TF signals to control
-            gene expression and cell-fate decisions.
-          </p>
+
+          <span
+            class="accordion-symbol"
+            aria-hidden="true">
+          </span>
+
+
+        </summary>
+
+
+
+        <div class="mechanism-content">
+
+
+          <div class="mechanism-copy">
+
+            <p>
+              Transcription factors (TFs) regulate gene expression and
+              can drive cell-fate decisions by activating or repressing
+              genes associated with alternative cellular states [1,2].
+            </p>
+
+            <p>
+              Traditionally, TF regulation has been viewed from a
+              steady-state perspective, in which TF concentration
+              determines the level of activation or repression of its
+              target genes.
+            </p>
+
+            <p>
+              However, TF activity can also exhibit complex
+              <strong>temporal dynamics</strong>, including changes in
+              amplitude, frequency, and duration [3]. These dynamics can
+              encode regulatory information beyond TF concentration
+              alone.
+            </p>
+
+            <p class="mechanism-focus">
+              We investigate how GRNs decode dynamic TF signals to
+              control gene expression and cell-fate decisions.
+            </p>
+
+          </div>
+
+
+
+          <div class="mechanism-image tf">
+
+            <img
+              src="images/TF.png"
+              alt="Transcription factor concentration and temporal dynamics">
+
+          </div>
+
 
         </div>
 
-      </div>
 
-
-
-      <div class="mechanism-separator"></div>
+      </details>
 
 
 
@@ -810,66 +1033,90 @@
            DNA SUPERCOILING
            ===================================================== -->
 
-      <div class="mechanism-row reverse">
+      <details class="mechanism">
 
 
-        <div class="mechanism-image supercoiling">
+        <summary>
 
-          <img
-            src="images/Supercoiling.png"
-            alt="DNA topology and supercoiling in bacterial cells">
-
-        </div>
-
-
-        <div class="mechanism-copy">
 
           <span class="mechanism-number">
             02
           </span>
 
-          <h3>
-            DNA supercoiling
-          </h3>
 
-          <p class="mechanism-question">
-            How does DNA topology reshape regulatory activity?
-          </p>
+          <div class="mechanism-summary-text">
 
-          <p>
-            DNA supercoiling describes changes in DNA twisting relative
-            to its relaxed state. Overwinding generates
-            <strong>positive supercoiling</strong>, whereas underwinding
-            generates <strong>negative supercoiling</strong> [4].
-          </p>
+            <h3>
+              DNA supercoiling
+            </h3>
 
-          <p>
-            Supercoiling can change both locally and globally.
-            During transcription, RNA polymerase generates negative
-            supercoiling behind it and positive supercoiling ahead of it
-            [5,6]. These local changes in DNA topology can influence
-            transcription of nearby genes.
-          </p>
+            <p>
+              How does DNA topology reshape regulatory activity?
+            </p>
 
-          <p>
-            At the global level, DNA supercoiling also changes when
-            cells encounter different environmental and stress
-            conditions [7].
-          </p>
+          </div>
 
-          <p class="mechanism-focus">
-            We investigate how stress-induced changes in DNA
-            supercoiling are integrated into GRNs and ultimately shape
-            cellular responses.
-          </p>
+
+          <span
+            class="accordion-symbol"
+            aria-hidden="true">
+          </span>
+
+
+        </summary>
+
+
+
+        <div class="mechanism-content reverse">
+
+
+          <div class="mechanism-image supercoiling">
+
+            <img
+              src="images/Supercoiling.png"
+              alt="DNA topology and supercoiling in bacterial cells">
+
+          </div>
+
+
+
+          <div class="mechanism-copy">
+
+            <p>
+              DNA supercoiling describes changes in DNA twisting
+              relative to its relaxed state. Overwinding generates
+              <strong>positive supercoiling</strong>, whereas
+              underwinding generates
+              <strong>negative supercoiling</strong> [4].
+            </p>
+
+            <p>
+              Supercoiling can change both locally and globally.
+              During transcription, RNA polymerase generates negative
+              supercoiling behind it and positive supercoiling ahead
+              of it [5,6]. These local changes in DNA topology can
+              influence transcription of nearby genes.
+            </p>
+
+            <p>
+              At the global level, DNA supercoiling also changes when
+              cells encounter different environmental and stress
+              conditions [7].
+            </p>
+
+            <p class="mechanism-focus">
+              We investigate how stress-induced changes in DNA
+              supercoiling are integrated into GRNs and ultimately
+              shape cellular responses.
+            </p>
+
+          </div>
+
 
         </div>
 
-      </div>
 
-
-
-      <div class="mechanism-separator"></div>
+      </details>
 
 
 
@@ -877,62 +1124,89 @@
            POST-TRANSLATIONAL REGULATION
            ===================================================== -->
 
-      <div class="mechanism-row">
+      <details class="mechanism">
 
 
-        <div class="mechanism-image post">
+        <summary>
 
-          <img
-            src="images/Post_translational.png"
-            alt="Post-translational regulation through complex formation and phosphorylation">
-
-        </div>
-
-
-        <div class="mechanism-copy">
 
           <span class="mechanism-number">
             03
           </span>
 
-          <h3>
-            Post-translational regulation
-          </h3>
 
-          <p class="mechanism-question">
-            How is regulator activity controlled after synthesis?
-          </p>
+          <div class="mechanism-summary-text">
 
-          <p>
-            Gene regulatory networks can regulate transcription not only
-            by controlling the abundance of transcription factors, but
-            also by modulating their
-            <strong>activity after they have been produced</strong>.
-          </p>
+            <h3>
+              Post-translational interactions
+            </h3>
 
-          <p>
-            Protein–protein interactions can sequester transcriptional
-            regulators into inactive complexes, as occurs when
-            anti-sigma factors bind sigma factors and prevent
-            transcription.
-          </p>
+            <p>
+              How is regulator activity controlled after synthesis?
+            </p>
 
-          <p>
-            Alternatively, post-translational modifications such as
-            phosphorylation can switch transcription factors between
-            inactive and active states and thereby regulate their
-            ability to control target genes.
-          </p>
+          </div>
 
-          <p class="mechanism-focus">
-            We investigate how these post-translational regulatory
-            mechanisms are integrated within GRNs and how they shape
-            the dynamics of cellular responses.
-          </p>
+
+          <span
+            class="accordion-symbol"
+            aria-hidden="true">
+          </span>
+
+
+        </summary>
+
+
+
+        <div class="mechanism-content">
+
+
+          <div class="mechanism-copy">
+
+            <p>
+              Gene regulatory networks can regulate gene expression not
+              only by controlling the abundance of transcription
+              factors, but also by modulating their
+              <strong>activity after they have been produced</strong>.
+            </p>
+
+            <p>
+              Protein–protein interactions can sequester transcriptional
+              regulators into inactive complexes, as occurs when
+              anti-sigma factors bind sigma factors and prevent
+              transcription.
+            </p>
+
+            <p>
+              Alternatively, post-translational modifications such as
+              phosphorylation can switch transcription factors between
+              inactive and active states and thereby control their
+              ability to regulate target genes.
+            </p>
+
+            <p class="mechanism-focus">
+              We investigate how these post-translational regulatory
+              mechanisms are integrated within GRNs and how they shape
+              the dynamics of cellular responses.
+            </p>
+
+          </div>
+
+
+
+          <div class="mechanism-image post">
+
+            <img
+              src="images/Post_translational.png"
+              alt="Post-translational regulation through complex formation and phosphorylation">
+
+          </div>
+
 
         </div>
 
-      </div>
+
+      </details>
 
 
     </section>
@@ -940,23 +1214,16 @@
 
 
     <!-- =======================================================
-         WORKFLOW
+         OUR APPROACH
          ======================================================= -->
 
-    <div class="research-divider"></div>
+    <section class="approach-section research-panel">
 
 
-    <section class="workflow-section">
-
-
-      <div class="workflow-copy">
-
-        <p class="research-label">
-          Our approach
-        </p>
+      <div class="approach-copy">
 
         <h2>
-          From mechanisms to predictive models
+          Our approach
         </h2>
 
         <p>
@@ -978,44 +1245,11 @@
           regulatory networks.
         </p>
 
-
-        <div class="workflow-keywords">
-
-          <span class="workflow-keyword">
-            Theory
-          </span>
-
-          <span class="workflow-arrow">
-            →
-          </span>
-
-          <span class="workflow-keyword">
-            Prediction
-          </span>
-
-          <span class="workflow-arrow">
-            →
-          </span>
-
-          <span class="workflow-keyword">
-            Perturbation
-          </span>
-
-          <span class="workflow-arrow">
-            →
-          </span>
-
-          <span class="workflow-keyword">
-            Measurement
-          </span>
-
-        </div>
-
       </div>
 
 
 
-      <div class="workflow-image">
+      <div class="approach-image">
 
         <img
           src="images/Workflow.png"
@@ -1034,7 +1268,9 @@
 
     <section class="research-references">
 
+
       <details>
+
 
         <summary>
           References
@@ -1042,6 +1278,7 @@
 
 
         <ol class="references-list">
+
 
           <li>
             van Sinderen D, Luttinger A, Kong L, Dubnau D,
@@ -1051,12 +1288,14 @@
             <em>Mol Microbiol.</em> 1995;15(3):455–462.
           </li>
 
+
           <li>
             Fujita M, Losick R. Evidence that entry into sporulation
             in Bacillus subtilis is governed by a gradual increase in
             the level and activity of the master regulator Spo0A.
             <em>Genes Dev.</em> 2005;19:2236–2244.
           </li>
+
 
           <li>
             Palma CS, Haller DJ, Tabor JJ, Igoshin OA.
@@ -1065,6 +1304,7 @@
             <em>PLoS Computational Biology.</em>
             2025;21(7):e1013263.
           </li>
+
 
           <li>
             Hustmyer CM, Landick R.
@@ -1075,11 +1315,13 @@
             2024;122(1):81–112.
           </li>
 
+
           <li>
             Palma C.
             <em>Repression Mechanisms in Bacterial Transcription.</em>
             2022.
           </li>
+
 
           <li>
             Liu LF, Wang JC.
@@ -1087,6 +1329,7 @@
             <em>Proceedings of the National Academy of Sciences.</em>
             1987;84(20):7024–7027.
           </li>
+
 
           <li>
             Dash S, Palma CS, Baptista IS, Almeida BL,
@@ -1097,9 +1340,12 @@
             2022;50(15):8512–8528.
           </li>
 
+
         </ol>
 
+
       </details>
+
 
     </section>
 
