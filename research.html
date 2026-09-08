@@ -2,12 +2,19 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
 
   <title>Research | Palma Lab</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link
+    rel="stylesheet"
+    href="css/style.css">
+
 
   <style>
 
@@ -16,264 +23,504 @@
        ========================================================= */
 
     .research-page {
-      width: 100%;
-      max-width: 1080px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 70px var(--page-padding) 70px;
+      padding: 58px var(--page-padding) 90px;
+      box-sizing: border-box;
     }
 
 
     /* =========================================================
-       OPENING
+       GENERAL TYPOGRAPHY
        ========================================================= */
 
-    .research-opening {
-      display: grid;
-      grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
-      gap: 60px;
-      align-items: center;
-      margin-bottom: 70px;
+    .research-label {
+      margin: 0 0 10px;
+
+      color: #492f24;
+
+      font-size: 0.78rem;
+      font-weight: 700;
+
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
     }
 
-    .research-opening-text {
-      max-width: 700px;
-    }
+    .research-title {
+      margin: 0 0 18px;
 
-    .research-opening-text h1 {
-      margin: 0 0 22px;
-      color: var(--brown-dark);
-      font-size: 2rem;
-      line-height: 1.2;
-      letter-spacing: -0.02em;
+      color: #2f211a;
+
+      font-size: 1.65rem;
+      line-height: 1.35;
+
       font-weight: 600;
     }
 
-    .research-opening-text p {
-      margin: 0;
-      color: var(--text-mid);
-      font-size: 1rem;
+    .research-question {
+      margin: 0 0 23px;
+
+      color: #806c60;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 1.03rem;
+      line-height: 1.55;
+
+      font-style: italic;
+    }
+
+    .research-text {
+      color: #4b413b;
+
+      font-size: 0.96rem;
       line-height: 1.78;
     }
 
-
-    /* =========================================================
-       OPENING FIGURE
-       ========================================================= */
-
-    .research-opening-figure {
-      margin: 0;
-      text-align: center;
+    .research-text p {
+      margin: 0 0 17px;
     }
 
-    .research-opening-figure img {
+    .research-text strong {
+      color: #492f24;
+    }
+
+
+    /* =========================================================
+       SECTION DIVIDER
+       ========================================================= */
+
+    .research-divider {
+      width: 72px;
+      height: 3px;
+
+      margin: 68px 0 30px;
+
+      background: #ffc425;
+    }
+
+
+    /* =========================================================
+       VISION
+       ========================================================= */
+
+    .vision-section {
+      margin-bottom: 70px;
+    }
+
+    .vision-figure {
+      margin: 0;
+    }
+
+    .vision-figure img {
       display: block;
+
       width: 100%;
-      max-width: 360px;
       height: auto;
+
       margin: 0 auto;
     }
 
-    .research-opening-figure figcaption {
-      margin-top: 13px;
-      color: var(--text-mid);
-      font-size: 0.78rem;
-      line-height: 1.5;
-    }
-
 
     /* =========================================================
-       RESEARCH LIST
+       CENTRAL QUESTION
        ========================================================= */
 
-    .research-list {
-      width: 100%;
-      border-top: 1px solid var(--border);
+    .central-question {
+      margin-bottom: 20px;
     }
 
-    .research-item {
-      border-bottom: 1px solid var(--border);
-    }
+    .central-question h1 {
+      max-width: 940px;
 
-    .research-item summary {
-      position: relative;
-      display: block;
-      padding: 28px 58px 28px 0;
-      cursor: pointer;
-      list-style: none;
-    }
+      margin: 0 0 32px;
 
-    .research-item summary::-webkit-details-marker {
-      display: none;
-    }
+      color: #2f211a;
 
-    .research-item summary::marker {
-      display: none;
-    }
+      font-family: Georgia, "Times New Roman", serif;
 
-    .research-item summary:hover h2 {
-      color: var(--brown);
-    }
-
-    .research-item summary:focus-visible {
-      outline: 2px solid var(--gold);
-      outline-offset: 5px;
-    }
-
-    .research-summary-text {
-      max-width: 820px;
-    }
-
-    .research-item h2 {
-      margin: 0 0 8px;
-      color: var(--brown-dark);
-      font-size: 1.35rem;
+      font-size: clamp(1.65rem, 2.6vw, 2.35rem);
       line-height: 1.3;
-      font-weight: 600;
-      transition: color 0.2s ease;
+
+      font-weight: 400;
+      font-style: italic;
     }
 
-    .research-preview {
+    .central-question-figure {
+      margin: 0 0 32px;
+    }
+
+    .central-question-figure img {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      margin: 0 auto;
+    }
+
+    .central-intro {
+      max-width: 880px;
+    }
+
+    .central-intro p {
       margin: 0;
-      color: var(--text-mid);
-      font-size: 0.94rem;
-      line-height: 1.65;
+
+      color: #4b413b;
+
+      font-size: 1rem;
+      line-height: 1.82;
+    }
+
+    .central-intro strong {
+      color: #492f24;
     }
 
 
     /* =========================================================
-       PLUS / MINUS
+       REGULATORY MECHANISMS INTRO
        ========================================================= */
 
-    .research-toggle {
-      position: absolute;
-      top: 29px;
-      right: 4px;
-      width: 28px;
-      height: 28px;
+    .mechanisms-intro {
+      max-width: 810px;
+
+      margin-bottom: 45px;
     }
 
-    .research-toggle::before,
-    .research-toggle::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      background: var(--gold);
-      transform: translate(-50%, -50%);
-      transition: transform 0.2s ease;
+    .mechanisms-intro h2 {
+      margin: 0 0 12px;
+
+      color: #2f211a;
+
+      font-size: 1.65rem;
+      line-height: 1.3;
+
+      font-weight: 600;
     }
 
-    .research-toggle::before {
-      width: 18px;
-      height: 2px;
-    }
+    .mechanisms-intro p {
+      margin: 0;
 
-    .research-toggle::after {
-      width: 2px;
-      height: 18px;
-    }
+      color: #665b55;
 
-    .research-item[open] .research-toggle::after {
-      transform: translate(-50%, -50%) rotate(90deg);
-    }
-
-
-    /* =========================================================
-       EXPANDED CONTENT
-       ========================================================= */
-
-    .research-detail {
-      max-width: 850px;
-      padding: 0 40px 32px 0;
-    }
-
-    .research-detail p {
-      margin: 0 0 16px;
-      color: var(--text-mid);
-      font-size: 0.96rem;
+      font-size: 0.97rem;
       line-height: 1.75;
     }
 
-    .research-detail p:last-child {
-      margin-bottom: 0;
+
+    /* =========================================================
+       REGULATORY MECHANISM ROWS
+       ========================================================= */
+
+    .mechanism-row {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 0.92fr)
+        minmax(0, 1.08fr);
+
+      gap: 58px;
+
+      align-items: center;
+
+      padding: 35px 0 55px;
     }
 
-    .research-item[open] {
-      background: #fffdf8;
+    .mechanism-row.reverse {
+      grid-template-columns:
+        minmax(0, 1.08fr)
+        minmax(0, 0.92fr);
     }
 
-    .research-item[open] summary {
-      padding-left: 20px;
-      padding-right: 68px;
+    .mechanism-row.reverse .mechanism-image {
+      order: 2;
     }
 
-    .research-item[open] .research-detail {
-      padding-left: 20px;
+    .mechanism-row.reverse .mechanism-copy {
+      order: 1;
     }
 
 
     /* =========================================================
-       FOOTER SOCIAL ICONS
+       MECHANISM IMAGES
        ========================================================= */
 
-    .footer-social {
+    .mechanism-image {
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mechanism-image img {
+      display: block;
+
       width: 100%;
+      height: auto;
+
+      max-height: 590px;
+
+      object-fit: contain;
+    }
+
+    .mechanism-image.tf img {
+      max-width: 470px;
+    }
+
+    .mechanism-image.supercoiling img {
+      max-width: 550px;
+    }
+
+    .mechanism-image.post img {
+      max-width: 430px;
+    }
+
+
+    /* =========================================================
+       MECHANISM TEXT
+       ========================================================= */
+
+    .mechanism-number {
+      display: block;
+
+      margin: 0 0 13px;
+
+      color: #c58a00;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 1.25rem;
+    }
+
+    .mechanism-copy h3 {
+      margin: 0 0 8px;
+
+      color: #492f24;
+
+      font-size: 1.35rem;
+      line-height: 1.35;
+
+      font-weight: 600;
+    }
+
+    .mechanism-copy .mechanism-question {
+      margin: 0 0 22px;
+
+      color: #806c60;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 1rem;
+      line-height: 1.55;
+
+      font-style: italic;
+    }
+
+    .mechanism-copy p {
+      margin: 0 0 17px;
+
+      color: #4b413b;
+
+      font-size: 0.94rem;
+      line-height: 1.75;
+    }
+
+    .mechanism-copy strong {
+      color: #492f24;
+    }
+
+    .mechanism-focus {
+      margin-top: 22px !important;
+
+      color: #492f24 !important;
+
+      font-weight: 600;
+    }
+
+
+    /* =========================================================
+       SUBTLE SEPARATOR BETWEEN MECHANISMS
+       ========================================================= */
+
+    .mechanism-separator {
+      width: 100%;
+      height: 1px;
+
+      background: #eee8e1;
+    }
+
+
+    /* =========================================================
+       WORKFLOW
+       ========================================================= */
+
+    .workflow-section {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 0.95fr)
+        minmax(0, 1.05fr);
+
+      gap: 55px;
+
+      align-items: center;
+
+      margin-top: 15px;
+    }
+
+    .workflow-copy h2 {
+      margin: 0 0 17px;
+
+      color: #2f211a;
+
+      font-size: 1.65rem;
+      line-height: 1.3;
+
+      font-weight: 600;
+    }
+
+    .workflow-copy p {
+      margin: 0 0 17px;
+
+      color: #4b413b;
+
+      font-size: 0.96rem;
+      line-height: 1.78;
+    }
+
+    .workflow-copy strong {
+      color: #492f24;
+    }
+
+    .workflow-image img {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      max-width: 620px;
+
+      margin: 0 auto;
+    }
+
+
+    /* =========================================================
+       WORKFLOW KEYWORDS
+       ========================================================= */
+
+    .workflow-keywords {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 8px;
+
+      margin-top: 24px;
+    }
+
+    .workflow-keyword {
+      padding: 7px 11px;
+
+      background: #faf7f1;
+
+      color: #492f24;
+
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .workflow-arrow {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 23px;
 
-      padding: 28px var(--page-padding) 4px;
+      color: #c58a00;
 
-      position: relative;
-      z-index: 3;
+      font-size: 0.95rem;
     }
 
-    .footer-social a,
-    .footer-social .social-disabled {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
 
-      width: 30px;
-      height: 30px;
+    /* =========================================================
+       REFERENCES
+       ========================================================= */
 
-      color: var(--brown-dark);
-      text-decoration: none;
+    .research-references {
+      margin-top: 75px;
+
+      padding-top: 23px;
+
+      border-top: 1px solid #e5ddd6;
     }
 
-    .footer-social svg {
-      display: block;
-      width: 25px;
-      height: 25px;
+    .research-references details {
+      max-width: 950px;
     }
 
-    .footer-social a {
-      transition:
-        color 0.2s ease,
-        transform 0.2s ease;
+    .research-references summary {
+      cursor: pointer;
+
+      color: #492f24;
+
+      font-size: 0.93rem;
+      font-weight: 600;
     }
 
-    .footer-social a:hover {
-      color: var(--gold);
-      transform: translateY(-2px);
+    .references-list {
+      margin: 23px 0 0;
+
+      padding-left: 22px;
     }
 
-    .footer-social a:focus-visible {
-      outline: 2px solid var(--gold);
-      outline-offset: 5px;
+    .references-list li {
+      margin-bottom: 12px;
+
+      padding-left: 4px;
+
+      color: #71665f;
+
+      font-size: 0.77rem;
+      line-height: 1.55;
     }
 
-    .footer-social .social-disabled {
-      cursor: default;
-    }
 
-    /* LinkedIn looks visually larger than the other icons,
-       so it is intentionally slightly smaller. */
+    /* =========================================================
+       TABLET
+       ========================================================= */
 
-    .footer-social .linkedin-icon {
-      width: 21px;
-      height: 21px;
+    @media (max-width: 900px) {
+
+      .mechanism-row,
+      .mechanism-row.reverse {
+        grid-template-columns: 1fr;
+
+        gap: 32px;
+
+        padding: 30px 0 45px;
+      }
+
+      .mechanism-row.reverse .mechanism-image,
+      .mechanism-row.reverse .mechanism-copy {
+        order: initial;
+      }
+
+      .mechanism-image img {
+        max-height: 500px;
+      }
+
+      .mechanism-image.tf img,
+      .mechanism-image.post img {
+        max-width: 420px;
+      }
+
+      .mechanism-image.supercoiling img {
+        max-width: 600px;
+      }
+
+      .workflow-section {
+        grid-template-columns: 1fr;
+
+        gap: 34px;
+      }
+
     }
 
 
@@ -281,98 +528,48 @@
        MOBILE
        ========================================================= */
 
-    @media (max-width: 800px) {
-
-      .research-opening {
-        grid-template-columns: 1fr;
-        gap: 38px;
-        align-items: start;
-      }
-
-      .research-opening-text {
-        max-width: 760px;
-      }
-
-      .research-opening-figure {
-        max-width: 420px;
-      }
-
-    }
-
-
-    @media (max-width: 650px) {
+    @media (max-width: 700px) {
 
       .research-page {
-        padding-top: 50px;
-        padding-bottom: 55px;
+        padding-top: 40px;
       }
 
-      .research-opening {
-        margin-bottom: 50px;
-        gap: 30px;
+      .vision-section {
+        margin-bottom: 52px;
       }
 
-      .research-opening-text h1 {
-        margin-bottom: 18px;
-        font-size: 1.65rem;
+      .central-question h1 {
+        margin-bottom: 25px;
       }
 
-      .research-opening-text p {
-        font-size: 0.94rem;
-        line-height: 1.72;
+      .central-question-figure {
+        margin-bottom: 25px;
       }
 
-      .research-opening-figure img {
-        max-width: 320px;
+      .research-divider {
+        margin-top: 52px;
       }
 
-      .research-item summary {
-        padding: 23px 48px 23px 0;
+      .mechanisms-intro {
+        margin-bottom: 30px;
       }
 
-      .research-item h2 {
-        font-size: 1.15rem;
+      .mechanism-row,
+      .mechanism-row.reverse {
+        padding: 23px 0 38px;
       }
 
-      .research-preview {
-        font-size: 0.9rem;
+      .mechanism-copy h3 {
+        font-size: 1.25rem;
       }
 
-      .research-toggle {
-        top: 24px;
+      .mechanism-image.tf img,
+      .mechanism-image.post img {
+        max-width: 350px;
       }
 
-      .research-item[open] summary {
-        padding-left: 15px;
-        padding-right: 52px;
-      }
-
-      .research-item[open] .research-detail {
-        padding-left: 15px;
-      }
-
-      .research-detail {
-        padding-right: 15px;
-        padding-bottom: 27px;
-      }
-
-      .research-detail p {
-        font-size: 0.91rem;
-      }
-
-      .footer-social {
-        gap: 19px;
-        padding-top: 24px;
-      }
-
-      .footer-social svg {
-        width: 23px;
-        height: 23px;
-      }
-
-      .footer-social .linkedin-icon {
-        width: 20px;
-        height: 20px;
+      .workflow-keywords {
+        gap: 6px;
       }
 
     }
@@ -380,6 +577,7 @@
   </style>
 
 </head>
+
 
 
 <body>
@@ -396,9 +594,11 @@
       <div class="logo">
 
         <a href="index.html">
+
           <img
             src="images/palma-lab-logo.png"
             alt="Palma Lab">
+
         </a>
 
       </div>
@@ -406,7 +606,9 @@
 
       <nav>
 
-        <a class="active" href="research.html">
+        <a
+          class="active"
+          href="research.html">
           Research
         </a>
 
@@ -443,250 +645,461 @@
 
 
   <!-- =========================================================
-       RESEARCH
+       MAIN
        ========================================================= -->
 
   <main class="research-page">
 
 
-    <!-- =====================================================
-         OPENING
-         ===================================================== -->
+    <!-- =======================================================
+         VISION
+         ======================================================= -->
 
-    <section class="research-opening">
+    <section class="vision-section">
+
+      <figure class="vision-figure">
+
+        <img
+          src="images/Vision.png"
+          alt="Palma Lab vision connecting bacterial stress responses, gene regulatory networks, modeling and synthetic biology">
+
+      </figure>
+
+    </section>
 
 
-      <div class="research-opening-text">
 
-        <h1>
-          How do microorganisms make decisions under stress?
-        </h1>
+    <!-- =======================================================
+         CENTRAL QUESTION
+         ======================================================= -->
+
+    <section class="central-question">
+
+      <p class="research-label">
+        Central question
+      </p>
+
+      <h1>
+        How do gene regulatory networks (GRNs) translate
+        stress signals into cellular responses?
+      </h1>
+
+
+      <figure class="central-question-figure">
+
+        <img
+          src="images/Central Question.png"
+          alt="Bacterial stress sensing, gene regulatory responses and cellular adaptation">
+
+      </figure>
+
+
+      <div class="central-intro">
 
         <p>
-          Microbial cells integrate multiple layers of gene regulation to
-          sense environmental changes and mount appropriate responses.
-          We study how transcription factors' temporal dynamics,
-          DNA topology, and other regulatory mechanisms interact to control
-          gene expression and microbial adaptation. By combining quantitative
-          experiments with stochastic and deterministic modeling, we aim to
-          uncover these mechanisms and predict how cells respond to changing
-          environments.
+          When bacteria encounter stress, survival depends on their
+          ability to sense environmental changes and appropriately
+          reprogram gene expression. Gene regulatory networks integrate
+          these signals and control the expression of genes that drive
+          specific stress responses and cellular adaptation.
+          <strong>
+            The Palma Lab investigates the regulatory mechanisms that
+            determine how GRNs process stress signals and generate
+            adaptive responses.
+          </strong>
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         REGULATORY MECHANISMS
+         ======================================================= -->
+
+    <div class="research-divider"></div>
+
+
+    <section>
+
+      <div class="mechanisms-intro">
+
+        <h2>
+          Regulatory mechanisms we study
+        </h2>
+
+        <p>
+          Cellular responses emerge from multiple layers of regulation.
+          We investigate how different regulatory mechanisms encode,
+          transmit, and reshape information within gene regulatory
+          networks.
         </p>
 
       </div>
 
 
-      <figure class="research-opening-figure">
 
-        <img
-          src="images/research-regulation.png"
-          alt="Diagram illustrating multiple mechanisms of microbial gene regulation">
+      <!-- =====================================================
+           TRANSCRIPTION FACTOR DYNAMICS
+           ===================================================== -->
 
-        <figcaption>
-          Multiple regulatory mechanisms shape microbial stress responses
-          and adaptation.
-        </figcaption>
+      <div class="mechanism-row">
 
-      </figure>
+
+        <div class="mechanism-image tf">
+
+          <img
+            src="images/TF.png"
+            alt="Transcription factor concentration and temporal dynamics">
+
+        </div>
+
+
+        <div class="mechanism-copy">
+
+          <span class="mechanism-number">
+            01
+          </span>
+
+          <h3>
+            Transcription factor dynamics
+          </h3>
+
+          <p class="mechanism-question">
+            How does the timing of a regulator encode information?
+          </p>
+
+          <p>
+            Transcription factors (TFs) regulate gene expression and can
+            drive cell-fate decisions by activating or repressing genes
+            associated with alternative cellular states [1,2].
+          </p>
+
+          <p>
+            Traditionally, TF regulation has been viewed from a
+            steady-state perspective, in which TF concentration
+            determines the level of activation or repression of its
+            target genes. However, TF activity can also exhibit complex
+            <strong>temporal dynamics</strong>, including changes in
+            amplitude, frequency, and duration [3].
+          </p>
+
+          <p>
+            These dynamics can encode information beyond TF
+            concentration alone.
+          </p>
+
+          <p class="mechanism-focus">
+            We investigate how GRNs decode dynamic TF signals to control
+            gene expression and cell-fate decisions.
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="mechanism-separator"></div>
+
+
+
+      <!-- =====================================================
+           DNA SUPERCOILING
+           ===================================================== -->
+
+      <div class="mechanism-row reverse">
+
+
+        <div class="mechanism-image supercoiling">
+
+          <img
+            src="images/Supercoiling.png"
+            alt="DNA topology and supercoiling in bacterial cells">
+
+        </div>
+
+
+        <div class="mechanism-copy">
+
+          <span class="mechanism-number">
+            02
+          </span>
+
+          <h3>
+            DNA supercoiling
+          </h3>
+
+          <p class="mechanism-question">
+            How does DNA topology reshape regulatory activity?
+          </p>
+
+          <p>
+            DNA supercoiling describes changes in DNA twisting relative
+            to its relaxed state. Overwinding generates
+            <strong>positive supercoiling</strong>, whereas underwinding
+            generates <strong>negative supercoiling</strong> [4].
+          </p>
+
+          <p>
+            Supercoiling can change both locally and globally.
+            During transcription, RNA polymerase generates negative
+            supercoiling behind it and positive supercoiling ahead of it
+            [5,6]. These local changes in DNA topology can influence
+            transcription of nearby genes.
+          </p>
+
+          <p>
+            At the global level, DNA supercoiling also changes when
+            cells encounter different environmental and stress
+            conditions [7].
+          </p>
+
+          <p class="mechanism-focus">
+            We investigate how stress-induced changes in DNA
+            supercoiling are integrated into GRNs and ultimately shape
+            cellular responses.
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="mechanism-separator"></div>
+
+
+
+      <!-- =====================================================
+           POST-TRANSLATIONAL REGULATION
+           ===================================================== -->
+
+      <div class="mechanism-row">
+
+
+        <div class="mechanism-image post">
+
+          <img
+            src="images/Post_translational.png"
+            alt="Post-translational regulation through complex formation and phosphorylation">
+
+        </div>
+
+
+        <div class="mechanism-copy">
+
+          <span class="mechanism-number">
+            03
+          </span>
+
+          <h3>
+            Post-translational regulation
+          </h3>
+
+          <p class="mechanism-question">
+            How is regulator activity controlled after synthesis?
+          </p>
+
+          <p>
+            Gene regulatory networks can regulate transcription not only
+            by controlling the abundance of transcription factors, but
+            also by modulating their
+            <strong>activity after they have been produced</strong>.
+          </p>
+
+          <p>
+            Protein–protein interactions can sequester transcriptional
+            regulators into inactive complexes, as occurs when
+            anti-sigma factors bind sigma factors and prevent
+            transcription.
+          </p>
+
+          <p>
+            Alternatively, post-translational modifications such as
+            phosphorylation can switch transcription factors between
+            inactive and active states and thereby regulate their
+            ability to control target genes.
+          </p>
+
+          <p class="mechanism-focus">
+            We investigate how these post-translational regulatory
+            mechanisms are integrated within GRNs and how they shape
+            the dynamics of cellular responses.
+          </p>
+
+        </div>
+
+      </div>
 
 
     </section>
 
 
 
-    <!-- =====================================================
-         RESEARCH AREAS
-         ===================================================== -->
+    <!-- =======================================================
+         WORKFLOW
+         ======================================================= -->
 
-    <section class="research-list">
+    <div class="research-divider"></div>
 
 
-      <!-- AREA 1 -->
+    <section class="workflow-section">
 
-      <details class="research-item">
 
-        <summary>
+      <div class="workflow-copy">
 
-          <div class="research-summary-text">
+        <p class="research-label">
+          Our approach
+        </p>
 
-            <h2>
-              Microbial Stress Sensing, Response &amp; Adaptation
-            </h2>
+        <h2>
+          From mechanisms to predictive models
+        </h2>
 
-            <p class="research-preview">
-              How microorganisms detect environmental stress and coordinate
-              adaptive responses.
-            </p>
+        <p>
+          Our research follows an iterative
+          <strong>model–experiment cycle</strong>.
+          We translate biological knowledge into mathematical models,
+          use these models to generate testable predictions, and
+          experimentally test those predictions using population- and
+          single-cell measurements.
+        </p>
 
-          </div>
+        <p>
+          Experimental data are also used to parameterize and refine
+          the models. By iterating between
+          <strong>
+            theory, prediction, perturbation, and measurement
+          </strong>,
+          we aim to build quantitative and predictive models of gene
+          regulatory networks.
+        </p>
 
-          <span
-            class="research-toggle"
-            aria-hidden="true">
+
+        <div class="workflow-keywords">
+
+          <span class="workflow-keyword">
+            Theory
           </span>
 
-        </summary>
+          <span class="workflow-arrow">
+            →
+          </span>
 
+          <span class="workflow-keyword">
+            Prediction
+          </span>
 
-        <div class="research-detail">
+          <span class="workflow-arrow">
+            →
+          </span>
 
-          <p>
-            Microorganisms constantly experience changing environments.
-            To survive, they must sense stress, process information, and
-            reorganize gene expression in ways that preserve cellular function.
-          </p>
+          <span class="workflow-keyword">
+            Perturbation
+          </span>
 
-          <p>
-            We investigate the regulatory mechanisms that allow microbial cells
-            to detect stress and coordinate adaptive responses across multiple
-            molecular pathways and timescales.
-          </p>
+          <span class="workflow-arrow">
+            →
+          </span>
+
+          <span class="workflow-keyword">
+            Measurement
+          </span>
 
         </div>
 
-      </details>
+      </div>
 
 
 
-      <!-- AREA 2 -->
+      <div class="workflow-image">
 
-      <details class="research-item">
+        <img
+          src="images/Workflow.png"
+          alt="Iterative model and experiment workflow used by the Palma Lab">
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =======================================================
+         REFERENCES
+         ======================================================= -->
+
+    <section class="research-references">
+
+      <details>
 
         <summary>
-
-          <div class="research-summary-text">
-
-            <h2>
-              Dynamics of Gene Regulatory Networks
-            </h2>
-
-            <p class="research-preview">
-              Understanding how network architecture and temporal dynamics
-              shape cellular behavior.
-            </p>
-
-          </div>
-
-          <span
-            class="research-toggle"
-            aria-hidden="true">
-          </span>
-
+          References
         </summary>
 
 
-        <div class="research-detail">
+        <ol class="references-list">
 
-          <p>
-            Gene regulatory networks are dynamic systems rather than static
-            wiring diagrams. Their temporal behavior can determine whether a
-            cell adapts, changes phenotype, or loses viability.
-          </p>
+          <li>
+            van Sinderen D, Luttinger A, Kong L, Dubnau D,
+            Venema G, Hamoen L. comK encodes the competence
+            transcription factor, the key regulatory protein for
+            competence development in Bacillus subtilis.
+            <em>Mol Microbiol.</em> 1995;15(3):455–462.
+          </li>
 
-          <p>
-            We use deterministic and stochastic mathematical models to
-            understand how network architecture, feedback, molecular noise,
-            and timescale separation shape regulatory dynamics.
-          </p>
+          <li>
+            Fujita M, Losick R. Evidence that entry into sporulation
+            in Bacillus subtilis is governed by a gradual increase in
+            the level and activity of the master regulator Spo0A.
+            <em>Genes Dev.</em> 2005;19:2236–2244.
+          </li>
 
-        </div>
+          <li>
+            Palma CS, Haller DJ, Tabor JJ, Igoshin OA.
+            Changes in Spo0A~P pulsing frequency control biofilm
+            matrix deactivation.
+            <em>PLoS Computational Biology.</em>
+            2025;21(7):e1013263.
+          </li>
 
-      </details>
+          <li>
+            Hustmyer CM, Landick R.
+            Bacterial chromatin proteins, transcription, and DNA
+            topology: inseparable partners in the control of gene
+            expression.
+            <em>Molecular Microbiology.</em>
+            2024;122(1):81–112.
+          </li>
 
+          <li>
+            Palma C.
+            <em>Repression Mechanisms in Bacterial Transcription.</em>
+            2022.
+          </li>
 
+          <li>
+            Liu LF, Wang JC.
+            Supercoiling of the DNA template during transcription.
+            <em>Proceedings of the National Academy of Sciences.</em>
+            1987;84(20):7024–7027.
+          </li>
 
-      <!-- AREA 3 -->
+          <li>
+            Dash S, Palma CS, Baptista IS, Almeida BL,
+            Bahrudeen MN, Chauhan V, et al.
+            Alteration of DNA supercoiling serves as a trigger of
+            short-term cold shock repressed genes of E. coli.
+            <em>Nucleic Acids Research.</em>
+            2022;50(15):8512–8528.
+          </li>
 
-      <details class="research-item">
-
-        <summary>
-
-          <div class="research-summary-text">
-
-            <h2>
-              Predictive &amp; Quantitative Systems Biology
-            </h2>
-
-            <p class="research-preview">
-              Integrating mathematical models and quantitative experiments
-              to generate testable predictions.
-            </p>
-
-          </div>
-
-          <span
-            class="research-toggle"
-            aria-hidden="true">
-          </span>
-
-        </summary>
-
-
-        <div class="research-detail">
-
-          <p>
-            Our goal is to develop models that do more than explain existing
-            observations. We aim to build quantitative frameworks that generate
-            experimentally testable predictions about cellular behavior.
-          </p>
-
-          <p>
-            Experimental measurements are used to constrain model parameters,
-            distinguish alternative mechanisms, and iteratively improve our
-            understanding of biological regulation.
-          </p>
-
-        </div>
+        </ol>
 
       </details>
-
-
-
-      <!-- AREA 4 -->
-
-      <details class="research-item">
-
-        <summary>
-
-          <div class="research-summary-text">
-
-            <h2>
-              Synthetic Biology as a Tool to Understand Regulation
-            </h2>
-
-            <p class="research-preview">
-              Using engineered perturbations to test regulatory mechanisms
-              and model predictions.
-            </p>
-
-          </div>
-
-          <span
-            class="research-toggle"
-            aria-hidden="true">
-          </span>
-
-        </summary>
-
-
-        <div class="research-detail">
-
-          <p>
-            Synthetic biology provides a powerful way to perturb regulatory
-            systems in controlled and interpretable ways.
-          </p>
-
-          <p>
-            By modifying network architecture, feedback strength, gene dosage,
-            and regulatory interactions, we can directly test mechanistic
-            predictions and uncover the design principles that govern natural
-            biological systems.
-          </p>
-
-        </div>
-
-      </details>
-
 
     </section>
 
@@ -702,204 +1115,203 @@
   <footer>
 
 
-    <!-- =====================================================
-         SOCIAL / PROFILE ICONS
-         ===================================================== -->
-
-    <div class="footer-social">
+    <div class="footer-main-row">
 
 
-      <!-- GOOGLE SCHOLAR -->
-
-      <a
-        href="https://scholar.google.com/citations?user=hZ1ScywAAAAJ&hl=en"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Cristina Palma on Google Scholar"
-        title="Google Scholar">
-
-        <svg
-          viewBox="0 0 24 24"
-          aria-hidden="true">
-
-          <path
-            fill="currentColor"
-            d="M12 2L1 8l11 6 9-4.91V17h2V8L12 2zm-6.5 9.18V16c0 2.21 2.91 4 6.5 4s6.5-1.79 6.5-4v-4.82L12 14.73 5.5 11.18z">
-          </path>
-
-        </svg>
-
-      </a>
+      <div class="footer-social">
 
 
+        <!-- GOOGLE SCHOLAR -->
 
-      <!-- ORCID -->
+        <a
+          href="https://scholar.google.com/citations?user=hZ1ScywAAAAJ&hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Cristina Palma on Google Scholar"
+          title="Google Scholar">
 
-      <a
-        href="https://orcid.org/0000-0002-0390-1440"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Cristina Palma on ORCID"
-        title="ORCID">
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true">
 
-        <svg
-          viewBox="0 0 24 24"
-          aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2L1 8l11 6 9-4.91V17h2V8L12 2zm-6.5 9.18V16c0 2.21 2.91 4 6.5 4s6.5-1.79 6.5-4v-4.82L12 14.73 5.5 11.18z">
+            </path>
 
-          <circle
-            cx="12"
-            cy="12"
-            r="10"
-            fill="currentColor">
-          </circle>
+          </svg>
 
-          <text
-            x="12"
-            y="15.7"
-            text-anchor="middle"
-            fill="white"
-            font-family="Arial, Helvetica, sans-serif"
-            font-size="10"
-            font-weight="600">
-            iD
-          </text>
-
-        </svg>
-
-      </a>
+        </a>
 
 
 
-      <!-- LINKEDIN -->
+        <!-- ORCID -->
 
-      <a
-        href="https://www.linkedin.com/in/cristina-palma-312704156/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Cristina Palma on LinkedIn"
-        title="LinkedIn">
+        <a
+          href="https://orcid.org/0000-0002-0390-1440"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Cristina Palma on ORCID"
+          title="ORCID">
 
-        <svg
-          class="linkedin-icon"
-          viewBox="0 0 24 24"
-          aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true">
 
-          <path
-            fill="currentColor"
-            d="M5.34 3.5A2.34 2.34 0 1 1 .66 3.5a2.34 2.34 0 0 1 4.68 0ZM1 8h4.7v15H1V8Zm7.6 0h4.5v2.05h.06c.63-1.2 2.17-2.46 4.47-2.46C22.4 7.59 23 10.73 23 14.81V23h-4.69v-7.25c0-1.73-.03-3.95-2.41-3.95-2.41 0-2.78 1.88-2.78 3.82V23H8.6V8Z">
-          </path>
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+              fill="currentColor">
+            </circle>
 
-        </svg>
+            <text
+              x="12"
+              y="15.7"
+              text-anchor="middle"
+              fill="white"
+              font-family="Arial, Helvetica, sans-serif"
+              font-size="10"
+              font-weight="600">
+              iD
+            </text>
 
-      </a>
+          </svg>
 
-
-
-      <!-- YOUTUBE
-           NOT CLICKABLE YET -->
-
-      <span
-        class="social-disabled"
-        aria-label="Palma Lab YouTube coming soon"
-        title="YouTube">
-
-        <svg
-          viewBox="0 0 24 24"
-          aria-hidden="true">
-
-          <path
-            fill="currentColor"
-            d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z">
-          </path>
-
-        </svg>
-
-      </span>
+        </a>
 
 
 
-      <!-- EMAIL -->
+        <!-- LINKEDIN -->
 
-      <a
-        href="mailto:csantosd@uwyo.edu"
-        aria-label="Email Cristina Palma"
-        title="Email">
+        <a
+          href="https://www.linkedin.com/in/cristina-palma-312704156/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Cristina Palma on LinkedIn"
+          title="LinkedIn">
 
-        <svg
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.8"
-          stroke-linecap="round"
-          stroke-linejoin="round">
+          <svg
+            class="linkedin-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true">
 
-          <rect
-            x="3"
-            y="5"
-            width="18"
-            height="14"
-            rx="1.5">
-          </rect>
+            <path
+              fill="currentColor"
+              d="M5.34 3.5A2.34 2.34 0 1 1 .66 3.5a2.34 2.34 0 0 1 4.68 0ZM1 8h4.7v15H1V8Zm7.6 0h4.5v2.05h.06c.63-1.2 2.17-2.46 4.47-2.46C22.4 7.59 23 10.73 23 14.81V23h-4.69v-7.25c0-1.73-.03-3.95-2.41-3.95-2.41 0-2.78 1.88-2.78 3.82V23H8.6V8Z">
+            </path>
 
-          <path d="M4 7l8 6 8-6"></path>
+          </svg>
 
-        </svg>
+        </a>
 
-      </a>
+
+
+        <!-- YOUTUBE -->
+
+        <a
+          href="https://www.youtube.com/@PalmaLabWyo"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Palma Lab on YouTube"
+          title="YouTube">
+
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true">
+
+            <path
+              fill="currentColor"
+              d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z">
+            </path>
+
+          </svg>
+
+        </a>
+
+
+
+        <!-- EMAIL -->
+
+        <a
+          href="mailto:csantosd@uwyo.edu"
+          aria-label="Email Cristina Palma"
+          title="Email">
+
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+
+            <rect
+              x="3"
+              y="5"
+              width="18"
+              height="14"
+              rx="1.5">
+            </rect>
+
+            <path d="M4 7l8 6 8-6"></path>
+
+          </svg>
+
+        </a>
+
+
+      </div>
+
+
+
+      <!-- INSTITUTIONAL INFORMATION -->
+
+      <div class="footer-info">
+
+        <span>
+          Palma Lab
+        </span>
+
+        <span class="footer-divider">
+          ·
+        </span>
+
+        <a
+          href="https://www.uwyo.edu/molecbio/index.html"
+          target="_blank"
+          rel="noopener noreferrer">
+          Department of Molecular Biology
+        </a>
+
+        <span class="footer-divider">
+          ·
+        </span>
+
+        <a
+          href="https://www.uwyo.edu/soc/index.html"
+          target="_blank"
+          rel="noopener noreferrer">
+          School of Computing
+        </a>
+
+        <span class="footer-divider">
+          ·
+        </span>
+
+        <span>
+          University of Wyoming
+        </span>
+
+      </div>
 
 
     </div>
 
 
 
-    <!-- =====================================================
-         INSTITUTIONAL LINKS
-         ===================================================== -->
-
-    <div class="footer-content">
-
-      <span>
-        Palma Lab
-      </span>
-
-      <span class="footer-divider">
-        ·
-      </span>
-
-      <a
-        href="https://www.uwyo.edu/molecbio/index.html"
-        target="_blank"
-        rel="noopener noreferrer">
-        Department of Molecular Biology
-      </a>
-
-      <span class="footer-divider">
-        ·
-      </span>
-
-      <a
-        href="https://www.uwyo.edu/soc/index.html"
-        target="_blank"
-        rel="noopener noreferrer">
-        School of Computing
-      </a>
-
-      <span class="footer-divider">
-        ·
-      </span>
-
-      <span>
-        University of Wyoming
-      </span>
-
-    </div>
-
-
-
-    <!-- =====================================================
-         MOUNTAINS
-         ===================================================== -->
+    <!-- MOUNTAINS -->
 
     <div class="footer-mountains">
 
