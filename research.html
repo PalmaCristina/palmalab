@@ -145,7 +145,7 @@
       font-family: Georgia, "Times New Roman", serif;
 
    font-size: clamp(1.45rem, 2.2vw, 1.95rem);
-  line-height: 1.25
+      line-height: 1.25;
 
       font-weight: 400;
       font-style: italic;
@@ -628,6 +628,33 @@
 
 
     /* =========================================================
+       IN-TEXT CITATIONS
+       ========================================================= */
+
+    .citation-link {
+      color: #492f24;
+      font-size: 0.82em;
+      font-weight: 650;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.2s ease;
+    }
+
+    .citation-link:hover {
+      color: #c88700;
+      text-decoration: underline;
+      text-decoration-color: #ffc425;
+      text-underline-offset: 2px;
+    }
+
+    .citation-link:focus-visible {
+      outline: 2px solid #ffc425;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+
+    /* =========================================================
        REFERENCES
        ========================================================= */
 
@@ -1077,7 +1104,15 @@
             <p>
               Transcription factors (TFs) regulate gene expression and
               can drive cell-fate decisions by activating or repressing
-              genes associated with alternative cellular states [1,2].
+              genes associated with alternative cellular states
+              <a class="citation-link"
+                 href="https://doi.org/10.1111/j.1365-2958.1995.tb02259.x"
+                 target="_blank"
+                 rel="noopener noreferrer">[1]</a>
+              <a class="citation-link"
+                 href="https://pubmed.ncbi.nlm.nih.gov/16166384/"
+                 target="_blank"
+                 rel="noopener noreferrer">[2]</a>.
             </p>
 
             <p>
@@ -1090,7 +1125,11 @@
             <p>
               However, TF activity can also exhibit complex
              temporal dynamics, including changes in
-              amplitude, frequency, and duration [3]. These dynamics can
+              amplitude, frequency, and duration
+              <a class="citation-link"
+                 href="https://doi.org/10.1371/journal.pcbi.1013263"
+                 target="_blank"
+                 rel="noopener noreferrer">[3]</a>. These dynamics can
               encode regulatory information beyond TF concentration
               alone.
             </p>
@@ -1167,21 +1206,37 @@
               relative to its relaxed state. Overwinding generates
               positive supercoiling, whereas
               underwinding generates
-              negative supercoiling [4].
+              negative supercoiling
+              <a class="citation-link"
+                 href="https://doi.org/10.1111/mmi.15283"
+                 target="_blank"
+                 rel="noopener noreferrer">[4]</a>.
             </p>
 
             <p>
               Supercoiling can change both locally and globally.
               During transcription, RNA polymerase generates negative
               supercoiling behind it and positive supercoiling ahead
-              of it [5,6]. These local changes in DNA topology can
+              of it
+              <a class="citation-link"
+                 href="https://trepo.tuni.fi/handle/10024/142804"
+                 target="_blank"
+                 rel="noopener noreferrer">[5]</a>
+              <a class="citation-link"
+                 href="https://doi.org/10.1073/pnas.84.20.7024"
+                 target="_blank"
+                 rel="noopener noreferrer">[6]</a>. These local changes in DNA topology can
               influence transcription of nearby genes.
             </p>
 
             <p>
               At the global level, DNA supercoiling also changes when
               cells encounter different environmental and stress
-              conditions [7].
+              conditions
+              <a class="citation-link"
+                 href="https://doi.org/10.1093/nar/gkac643"
+                 target="_blank"
+                 rel="noopener noreferrer">[7]</a>.
             </p>
 
             <p class="mechanism-focus">
