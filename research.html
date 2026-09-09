@@ -138,17 +138,17 @@
     .central-question h1 {
       max-width: 900px;
 
-  margin: 0 0 26px;
+      margin: 0 0 26px;
 
-  color: #3b241c;
+      color: #3b241c;
 
-  font-family: Georgia, "Times New Roman", serif;
+      font-family: Georgia, "Times New Roman", serif;
 
-  font-size: clamp(1.55rem, 2.4vw, 2.1rem);
-  line-height: 1.28;
+      font-size: clamp(1.55rem, 2.4vw, 2.1rem);
+      line-height: 1.28;
 
-  font-weight: 400;
-  font-style: italic;
+      font-weight: 400;
+      font-style: italic;
     }
 
 
@@ -523,16 +523,28 @@
       background: #ffffff;
     }
 
+
+    /* TF FIGURE - SMALLER */
+
     .mechanism-image.tf img {
-      max-width: 430px;
+      width: 72%;
+      max-width: 310px;
     }
 
+
+    /* SUPERCOILING - KEEP LARGER */
+
     .mechanism-image.supercoiling img {
+      width: 100%;
       max-width: 520px;
     }
 
+
+    /* POST-TRANSLATIONAL FIGURE - SMALLER */
+
     .mechanism-image.post img {
-      max-width: 410px;
+      width: 72%;
+      max-width: 295px;
     }
 
 
@@ -686,6 +698,34 @@
     }
 
 
+    /* CLICKABLE REFERENCE LINKS */
+
+    .references-list a {
+      color: #71665f;
+
+      text-decoration: none;
+
+      transition:
+        color 0.2s ease,
+        text-decoration-color 0.2s ease;
+    }
+
+    .references-list a:hover {
+      color: #b47b00;
+
+      text-decoration: underline;
+
+      text-decoration-color: #ffc425;
+      text-underline-offset: 3px;
+    }
+
+    .references-list a:focus-visible {
+      outline: 2px solid #ffc425;
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+
     /* =========================================================
        TABLET
        ========================================================= */
@@ -719,6 +759,16 @@
       .mechanism-content.reverse
       .mechanism-copy {
         order: initial;
+      }
+
+      .mechanism-image.tf img {
+        width: 58%;
+        max-width: 300px;
+      }
+
+      .mechanism-image.post img {
+        width: 58%;
+        max-width: 285px;
       }
 
       .approach-section {
@@ -799,9 +849,14 @@
           26px;
       }
 
-      .mechanism-image.tf img,
+      .mechanism-image.tf img {
+        width: 68%;
+        max-width: 270px;
+      }
+
       .mechanism-image.post img {
-        max-width: 350px;
+        width: 68%;
+        max-width: 260px;
       }
 
       .approach-section {
@@ -901,7 +956,18 @@
 
         <p class="vision-statement">
 
-          Map  bacterial stress responses to their underlying  gene regulatory networks
+          Map
+
+          <strong>
+            bacterial stress responses
+          </strong>
+
+          to their underlying
+
+          <strong>
+            gene regulatory networks
+          </strong>
+
           and uncover the signaling rules and regulatory mechanisms
           that govern when and how each response is triggered.
 
@@ -1288,59 +1354,130 @@
 
         <ol class="references-list">
 
-          <li>
-            van Sinderen D, Luttinger A, Kong L, Dubnau D,
-            Venema G, Hamoen L. comK encodes the competence
-            transcription factor, the key regulatory protein for
-            competence development in Bacillus subtilis.
-            <em>Mol Microbiol.</em> 1995;15(3):455–462.
-          </li>
 
           <li>
-            Fujita M, Losick R. Evidence that entry into sporulation
-            in Bacillus subtilis is governed by a gradual increase in
-            the level and activity of the master regulator Spo0A.
-            <em>Genes Dev.</em> 2005;19:2236–2244.
+
+            <a
+              href="https://doi.org/10.1111/j.1365-2958.1995.tb02259.x"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              van Sinderen D, Luttinger A, Kong L, Dubnau D,
+              Venema G, Hamoen L. comK encodes the competence
+              transcription factor, the key regulatory protein for
+              competence development in Bacillus subtilis.
+              <em>Mol Microbiol.</em> 1995;15(3):455–462.
+
+            </a>
+
           </li>
 
-          <li>
-            Palma CS, Haller DJ, Tabor JJ, Igoshin OA.
-            Changes in Spo0A~P pulsing frequency control biofilm
-            matrix deactivation.
-            <em>PLoS Computational Biology.</em>
-            2025;21(7):e1013263.
-          </li>
 
           <li>
-            Hustmyer CM, Landick R.
-            Bacterial chromatin proteins, transcription, and DNA
-            topology: inseparable partners in the control of gene
-            expression.
-            <em>Molecular Microbiology.</em>
-            2024;122(1):81–112.
+
+            <a
+              href="https://doi.org/10.1101/gad.1335705"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              Fujita M, Losick R. Evidence that entry into sporulation
+              in Bacillus subtilis is governed by a gradual increase in
+              the level and activity of the master regulator Spo0A.
+              <em>Genes Dev.</em> 2005;19:2236–2244.
+
+            </a>
+
           </li>
 
-          <li>
-            Palma C.
-            <em>Repression Mechanisms in Bacterial Transcription.</em>
-            2022.
-          </li>
 
           <li>
-            Liu LF, Wang JC.
-            Supercoiling of the DNA template during transcription.
-            <em>Proceedings of the National Academy of Sciences.</em>
-            1987;84(20):7024–7027.
+
+            <a
+              href="https://doi.org/10.1371/journal.pcbi.1013263"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              Palma CS, Haller DJ, Tabor JJ, Igoshin OA.
+              Changes in Spo0A~P pulsing frequency control biofilm
+              matrix deactivation.
+              <em>PLoS Computational Biology.</em>
+              2025;21(7):e1013263.
+
+            </a>
+
           </li>
 
+
           <li>
-            Dash S, Palma CS, Baptista IS, Almeida BL,
-            Bahrudeen MN, Chauhan V, et al.
-            Alteration of DNA supercoiling serves as a trigger of
-            short-term cold shock repressed genes of E. coli.
-            <em>Nucleic Acids Research.</em>
-            2022;50(15):8512–8528.
+
+            <a
+              href="https://doi.org/10.1111/mmi.15283"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              Hustmyer CM, Landick R.
+              Bacterial chromatin proteins, transcription, and DNA
+              topology: inseparable partners in the control of gene
+              expression.
+              <em>Molecular Microbiology.</em>
+              2024;122(1):81–112.
+
+            </a>
+
           </li>
+
+
+          <li>
+
+            <a
+              href="https://trepo.tuni.fi/handle/10024/142804"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              Palma C.
+              <em>Repression Mechanisms in Bacterial Transcription.</em>
+              Tampere University, 2022.
+
+            </a>
+
+          </li>
+
+
+          <li>
+
+            <a
+              href="https://doi.org/10.1073/pnas.84.20.7024"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              Liu LF, Wang JC.
+              Supercoiling of the DNA template during transcription.
+              <em>Proceedings of the National Academy of Sciences.</em>
+              1987;84(20):7024–7027.
+
+            </a>
+
+          </li>
+
+
+          <li>
+
+            <a
+              href="https://doi.org/10.1093/nar/gkac643"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              Dash S, Palma CS, Baptista IS, Almeida BL,
+              Bahrudeen MN, Chauhan V, et al.
+              Alteration of DNA supercoiling serves as a trigger of
+              short-term cold shock repressed genes of E. coli.
+              <em>Nucleic Acids Research.</em>
+              2022;50(15):8512–8528.
+
+            </a>
+
+          </li>
+
 
         </ol>
 
