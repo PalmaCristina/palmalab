@@ -17,7 +17,7 @@
 
     .join-philosophy {
       max-width: 850px;
-      margin: 0 0 65px;
+      margin: 0 0 55px;
       padding-left: 28px;
       border-left: 3px solid var(--gold);
     }
@@ -31,16 +31,107 @@
       font-weight: 400;
     }
 
+
+    /* =========================================================
+       CURRENT OPEN POSITION
+       ========================================================= */
+
+    .current-opening {
+      max-width: 850px;
+      margin: 0 0 55px;
+      padding: 26px 30px;
+      background: #faf8f5;
+      border: 1px solid #e7dfd8;
+      border-left: 4px solid var(--gold);
+    }
+
+    .current-opening-label {
+      margin: 0 0 8px;
+      color: #8a6a20;
+      font-size: 0.72rem;
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .current-opening h2 {
+      margin: 0 0 10px;
+      color: var(--brown);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.45rem;
+      line-height: 1.3;
+      font-weight: 400;
+    }
+
+    .current-opening p {
+      max-width: 700px;
+      margin: 0 0 20px;
+      line-height: 1.65;
+    }
+
+    .position-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 11px 18px;
+      background: var(--gold);
+      color: #2f211a;
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+      font-size: 0.88rem;
+      line-height: 1.2;
+      font-weight: 650;
+      text-decoration: none;
+      transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .position-button:hover {
+      background: var(--brown);
+      border-color: var(--brown);
+      color: #ffffff;
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .position-button:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    .position-arrow {
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
     @media (max-width: 650px) {
 
       .join-philosophy {
-        margin-bottom: 50px;
+        margin-bottom: 45px;
         padding-left: 20px;
       }
 
       .join-philosophy p {
         font-size: 1.15rem;
         line-height: 1.6;
+      }
+
+      .current-opening {
+        margin-bottom: 45px;
+        padding: 22px 22px;
+      }
+
+      .current-opening h2 {
+        font-size: 1.3rem;
       }
 
     }
@@ -105,6 +196,41 @@
         grow, explore ambitious ideas, and develop into an independent
         scientist.
       </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CURRENT OPEN POSITION
+         ===================================================== -->
+
+    <section class="current-opening">
+
+      <p class="current-opening-label">
+        Current Open Position
+      </p>
+
+      <h2>
+        Postdoctoral Researcher
+      </h2>
+
+      <p>
+        We are currently recruiting a postdoctoral researcher to join the
+        Palma Lab at the University of Wyoming.
+      </p>
+
+      <a
+        class="position-button"
+        href="https://drive.google.com/file/d/1BLKsHYD6dWNYR1fwLIAlHlcCsxqaoasR/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        View Position Announcement
+
+        <span class="position-arrow" aria-hidden="true">→</span>
+
+      </a>
 
     </section>
 
@@ -178,201 +304,201 @@
 
 
 
- <footer>
+  <footer>
 
 
-  <div class="footer-main-row">
+    <div class="footer-main-row">
 
 
-    <!-- SOCIAL ICONS -->
+      <!-- SOCIAL ICONS -->
 
-    <div class="footer-social">
-
-
-      <!-- GOOGLE SCHOLAR -->
-
-      <a
-        href="https://scholar.google.com/citations?user=hZ1ScywAAAAJ&hl=en"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Cristina Palma on Google Scholar"
-        title="Google Scholar">
-
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-
-          <path
-            fill="currentColor"
-            d="M12 2L1 8l11 6 9-4.91V17h2V8L12 2zm-6.5 9.18V16c0 2.21 2.91 4 6.5 4s6.5-1.79 6.5-4v-4.82L12 14.73 5.5 11.18z">
-          </path>
-
-        </svg>
-
-      </a>
+      <div class="footer-social">
 
 
+        <!-- GOOGLE SCHOLAR -->
 
-      <!-- ORCID -->
+        <a
+          href="https://scholar.google.com/citations?user=hZ1ScywAAAAJ&hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Cristina Palma on Google Scholar"
+          title="Google Scholar">
 
-      <a
-        href="https://orcid.org/0000-0002-0390-1440"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Cristina Palma on ORCID"
-        title="ORCID">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
 
-        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2L1 8l11 6 9-4.91V17h2V8L12 2zm-6.5 9.18V16c0 2.21 2.91 4 6.5 4s6.5-1.79 6.5-4v-4.82L12 14.73 5.5 11.18z">
+            </path>
 
-          <circle
-            cx="12"
-            cy="12"
-            r="10"
-            fill="currentColor">
-          </circle>
+          </svg>
 
-          <text
-            x="12"
-            y="15.7"
-            text-anchor="middle"
-            fill="white"
-            font-family="Arial, Helvetica, sans-serif"
-            font-size="10"
-            font-weight="600">
-            iD
-          </text>
-
-        </svg>
-
-      </a>
+        </a>
 
 
 
-      <!-- LINKEDIN -->
+        <!-- ORCID -->
 
-      <a
-        href="https://www.linkedin.com/in/cristina-palma-312704156/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Cristina Palma on LinkedIn"
-        title="LinkedIn">
+        <a
+          href="https://orcid.org/0000-0002-0390-1440"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Cristina Palma on ORCID"
+          title="ORCID">
 
-        <svg
-          class="linkedin-icon"
-          viewBox="0 0 24 24"
-          aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
 
-          <path
-            fill="currentColor"
-            d="M5.34 3.5A2.34 2.34 0 1 1 .66 3.5a2.34 2.34 0 0 1 4.68 0ZM1 8h4.7v15H1V8Zm7.6 0h4.5v2.05h.06c.63-1.2 2.17-2.46 4.47-2.46C22.4 7.59 23 10.73 23 14.81V23h-4.69v-7.25c0-1.73-.03-3.95-2.41-3.95-2.41 0-2.78 1.88-2.78 3.82V23H8.6V8Z">
-          </path>
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+              fill="currentColor">
+            </circle>
 
-        </svg>
+            <text
+              x="12"
+              y="15.7"
+              text-anchor="middle"
+              fill="white"
+              font-family="Arial, Helvetica, sans-serif"
+              font-size="10"
+              font-weight="600">
+              iD
+            </text>
 
-      </a>
+          </svg>
 
-
-
-      <!-- YOUTUBE -->
-
-      <a
-        href="https://www.youtube.com/@PalmaLabWyo"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Palma Lab on YouTube"
-        title="YouTube">
-
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-
-          <path
-            fill="currentColor"
-            d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z">
-          </path>
-
-        </svg>
-
-      </a>
+        </a>
 
 
 
-      <!-- EMAIL -->
+        <!-- LINKEDIN -->
 
-      <a
-        href="mailto:csantosd@uwyo.edu"
-        aria-label="Email Cristina Palma"
-        title="Email">
+        <a
+          href="https://www.linkedin.com/in/cristina-palma-312704156/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Cristina Palma on LinkedIn"
+          title="LinkedIn">
 
-        <svg
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.8"
-          stroke-linecap="round"
-          stroke-linejoin="round">
+          <svg
+            class="linkedin-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true">
 
-          <rect
-            x="3"
-            y="5"
-            width="18"
-            height="14"
-            rx="1.5">
-          </rect>
+            <path
+              fill="currentColor"
+              d="M5.34 3.5A2.34 2.34 0 1 1 .66 3.5a2.34 2.34 0 0 1 4.68 0ZM1 8h4.7v15H1V8Zm7.6 0h4.5v2.05h.06c.63-1.2 2.17-2.46 4.47-2.46C22.4 7.59 23 10.73 23 14.81V23h-4.69v-7.25c0-1.73-.03-3.95-2.41-3.95-2.41 0-2.78 1.88-2.78 3.82V23H8.6V8Z">
+            </path>
 
-          <path d="M4 7l8 6 8-6"></path>
+          </svg>
 
-        </svg>
+        </a>
 
-      </a>
+
+
+        <!-- YOUTUBE -->
+
+        <a
+          href="https://www.youtube.com/@PalmaLabWyo"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Palma Lab on YouTube"
+          title="YouTube">
+
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+
+            <path
+              fill="currentColor"
+              d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z">
+            </path>
+
+          </svg>
+
+        </a>
+
+
+
+        <!-- EMAIL -->
+
+        <a
+          href="mailto:csantosd@uwyo.edu"
+          aria-label="Email Cristina Palma"
+          title="Email">
+
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+
+            <rect
+              x="3"
+              y="5"
+              width="18"
+              height="14"
+              rx="1.5">
+            </rect>
+
+            <path d="M4 7l8 6 8-6"></path>
+
+          </svg>
+
+        </a>
+
+      </div>
+
+
+
+      <!-- INSTITUTIONAL INFORMATION -->
+
+      <div class="footer-info">
+
+        <span>Palma Lab</span>
+
+        <span class="footer-divider">·</span>
+
+        <a
+          href="https://www.uwyo.edu/molecbio/index.html"
+          target="_blank"
+          rel="noopener noreferrer">
+          Department of Molecular Biology
+        </a>
+
+        <span class="footer-divider">·</span>
+
+        <a
+          href="https://www.uwyo.edu/soc/index.html"
+          target="_blank"
+          rel="noopener noreferrer">
+          School of Computing
+        </a>
+
+        <span class="footer-divider">·</span>
+
+        <span>University of Wyoming</span>
+
+      </div>
+
 
     </div>
 
 
 
-    <!-- INSTITUTIONAL INFORMATION -->
+    <div class="footer-mountains">
 
-    <div class="footer-info">
-
-      <span>Palma Lab</span>
-
-      <span class="footer-divider">·</span>
-
-      <a
-        href="https://www.uwyo.edu/molecbio/index.html"
-        target="_blank"
-        rel="noopener noreferrer">
-        Department of Molecular Biology
-      </a>
-
-      <span class="footer-divider">·</span>
-
-      <a
-        href="https://www.uwyo.edu/soc/index.html"
-        target="_blank"
-        rel="noopener noreferrer">
-        School of Computing
-      </a>
-
-      <span class="footer-divider">·</span>
-
-      <span>University of Wyoming</span>
+      <img
+        src="images/mountains-footer.png"
+        alt=""
+        aria-hidden="true">
 
     </div>
 
 
-  </div>
-
-
-
-  <div class="footer-mountains">
-
-    <img
-      src="images/mountains-footer.png"
-      alt=""
-      aria-hidden="true">
-
-  </div>
-
-
-</footer>
+  </footer>
 
 </body>
 
