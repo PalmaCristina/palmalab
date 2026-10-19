@@ -120,6 +120,39 @@
       text-underline-offset: 3px;
     }
 
+    /* =========================================================
+       SMALL LAB PHOTO
+       ========================================================= */
+
+    .news-content a.news-photo-link {
+      display: inline-block;
+      width: 100%;
+      max-width: 300px;
+      margin-top: 2px;
+      text-decoration: none;
+      vertical-align: top;
+    }
+
+    .news-content .news-photo {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      margin: 0;
+      border-radius: 5px;
+      transition: opacity 0.2s ease;
+    }
+
+    .news-content a.news-photo-link:hover .news-photo {
+      opacity: 0.85;
+    }
+
+    .news-content a.news-photo-link:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 4px;
+      border-radius: 5px;
+    }
+
 
     /* =========================================================
        MOBILE
@@ -247,15 +280,26 @@
           </h2>
 
           <p>
-           The Palma Lab is officially open! We have a fantastic
-            laboratory space and are excited to start 
-            setting it up and bringing our research to life.
+            The Palma Lab is officially open at the University of Wyoming!
+            We have a fantastic new laboratory space and are excited
+            to start setting it up and bringing our research to life.
+            A new chapter begins!
           </p>
 
-          <img
-            src="images/Lab_Space.jpeg"
-            alt="New Palma Lab laboratory space at the University of Wyoming"
-            loading="lazy">
+          <a
+            class="news-photo-link"
+            href="images/Lab_Space.jpg"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View full-size photo of the Palma Lab">
+
+            <img
+              class="news-photo"
+              src="images/Lab_Space.jpg"
+              alt="New Palma Lab laboratory space at the University of Wyoming"
+              loading="lazy">
+
+          </a>
 
         </div>
 
@@ -455,7 +499,7 @@
 
             <path
               fill="currentColor"
-              d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z">
+              d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0 .5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z">
             </path>
 
           </svg>
