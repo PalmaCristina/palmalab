@@ -1,158 +1,99 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Internal | Palma Lab</title>
-
   <link rel="stylesheet" href="../css/style.css">
 
-
   <style>
-
-    /* =========================================================
-       INTERNAL PAGE
-       ========================================================= */
-
+    /* INTERNAL PAGE */
     .internal-page {
       width: 100%;
       max-width: 1050px;
-
       margin: 0 auto;
-
       padding: 70px var(--page-padding) 70px;
-
       box-sizing: border-box;
     }
 
-
-    /* =========================================================
-       INTRO
-       ========================================================= */
-
+    /* INTRO */
     .internal-intro {
       max-width: 820px;
-
       margin-bottom: 55px;
-
       padding-left: 25px;
-
       border-left: 3px solid var(--gold);
     }
 
     .internal-intro h1 {
       margin: 0 0 14px;
-
       color: var(--brown-dark);
-
       font-size: 2rem;
       line-height: 1.2;
-
       letter-spacing: -0.02em;
-
       font-weight: 600;
     }
 
     .internal-intro p {
       margin: 0;
-
       color: var(--text-mid);
-
       font-size: 0.96rem;
       line-height: 1.75;
     }
 
     .internal-intro strong {
       color: var(--brown);
-
       font-weight: 600;
     }
 
-
-    /* =========================================================
-       RESOURCE GRID
-       ========================================================= */
-
+    /* RESOURCE GRID */
     .internal-grid {
       display: grid;
-
       grid-template-columns: repeat(2, minmax(0, 1fr));
-
       gap: 20px;
-
       align-items: start;
     }
 
-
-    /* =========================================================
-       RESOURCE CARDS
-       ========================================================= */
-
+    /* RESOURCE CARDS */
     .internal-card {
       position: relative;
-
       min-height: 175px;
-
       padding: 28px;
-
       box-sizing: border-box;
-
       background: #fffdf8;
-
       border: 1px solid #e6dccb;
       border-top: 4px solid var(--gold);
     }
 
     .internal-card h2 {
       margin: 0 0 11px;
-
       color: var(--brown);
-
       font-size: 1.25rem;
       line-height: 1.3;
-
       font-weight: 600;
     }
 
     .internal-card p {
       margin: 0 0 22px;
-
       color: var(--text-mid);
-
       font-size: 0.92rem;
       line-height: 1.65;
     }
 
     .internal-status {
       display: inline-block;
-
       color: var(--brown);
-
       font-size: 0.69rem;
-
       font-weight: 700;
-
       letter-spacing: 0.1em;
-
       text-transform: uppercase;
     }
 
-
-    /* =========================================================
-       ACTIVE RESOURCE CARDS
-       ========================================================= */
-
+    /* ACTIVE RESOURCE CARDS */
     .internal-card-link {
       display: block;
-
       color: inherit;
-
       text-decoration: none;
-
       transition:
         transform 0.2s ease,
         border-color 0.2s ease,
@@ -161,9 +102,7 @@
 
     .internal-card-link:hover {
       transform: translateY(-2px);
-
       border-color: var(--gold);
-
       box-shadow: 0 8px 22px rgba(73, 47, 36, 0.08);
     }
 
@@ -178,28 +117,18 @@
       text-underline-offset: 4px;
     }
 
-
-    /* =========================================================
-       UW RESOURCES EXPANDABLE CARD
-       ========================================================= */
-
+    /* UW RESOURCES EXPANDABLE CARD */
     .uw-resources-card {
       padding: 0;
-
       overflow: hidden;
     }
 
     .uw-resources-card summary {
       min-height: 175px;
-
       padding: 28px;
-
       box-sizing: border-box;
-
       cursor: pointer;
-
       list-style: none;
-
       position: relative;
     }
 
@@ -213,19 +142,13 @@
 
     .uw-resources-card summary::after {
       content: "+";
-
       position: absolute;
-
       right: 27px;
       bottom: 25px;
-
       color: var(--brown);
-
       font-size: 1.3rem;
       line-height: 1;
-
       font-weight: 400;
-
       transition: transform 0.2s ease;
     }
 
@@ -235,29 +158,23 @@
 
     .uw-resources-card summary:hover .internal-status {
       text-decoration: underline;
-
       text-decoration-color: var(--gold);
-
       text-underline-offset: 4px;
     }
 
     .uw-resources-card summary:focus-visible {
       outline: 2px solid var(--gold);
-
       outline-offset: -4px;
     }
 
     .uw-resources-card[open] summary {
       min-height: auto;
-
       border-bottom: 1px solid #e6dccb;
     }
 
     .uw-resource-list {
       margin: 0;
-
       padding: 6px 28px 25px;
-
       list-style: none;
     }
 
@@ -271,56 +188,37 @@
 
     .uw-resource-list a {
       display: flex;
-
       align-items: center;
-
       justify-content: space-between;
-
       gap: 18px;
-
       padding: 14px 0;
-
       color: var(--brown);
-
       text-decoration: none;
-
       font-size: 0.9rem;
       line-height: 1.4;
-
       font-weight: 500;
     }
 
     .uw-resource-list a::after {
       content: "↗";
-
       flex-shrink: 0;
-
       color: var(--gold);
-
       font-size: 0.95rem;
     }
 
     .uw-resource-list a:hover {
       text-decoration: underline;
-
       text-decoration-color: var(--gold);
-
       text-underline-offset: 4px;
     }
 
     .uw-resource-list a:focus-visible {
       outline: 2px solid var(--gold);
-
       outline-offset: 3px;
     }
 
-
-    /* =========================================================
-       MOBILE
-       ========================================================= */
-
+    /* MOBILE */
     @media (max-width: 700px) {
-
       .internal-page {
         padding-top: 50px;
         padding-bottom: 55px;
@@ -328,7 +226,6 @@
 
       .internal-intro {
         margin-bottom: 42px;
-
         padding-left: 18px;
       }
 
@@ -342,13 +239,11 @@
 
       .internal-grid {
         grid-template-columns: 1fr;
-
         gap: 16px;
       }
 
       .internal-card {
         min-height: auto;
-
         padding: 24px;
       }
 
@@ -362,7 +257,6 @@
 
       .uw-resources-card summary {
         min-height: auto;
-
         padding: 24px;
       }
 
@@ -374,94 +268,42 @@
       .uw-resource-list {
         padding: 5px 24px 20px;
       }
-
     }
-
   </style>
-
 </head>
-
 
 <body>
 
-
-  <!-- =========================================================
-       HEADER
-       ========================================================= -->
-
+  <!-- HEADER -->
   <header>
-
     <div class="header-inner">
 
-
       <div class="logo">
-
         <a href="../index.html">
-
           <img
             src="../images/palma-lab-logo.png"
             alt="Palma Lab">
-
         </a>
-
       </div>
 
-
       <nav>
-
-        <a href="../research.html">
-          Research
-        </a>
-
-        <a href="../people.html">
-          Team
-        </a>
-
-        <a href="../publications.html">
-          Publications
-        </a>
-
-        <a href="../news.html">
-          News
-        </a>
-
-        <a href="../join.html">
-          Join Us
-        </a>
-
-        <a href="../contact.html">
-          Contact
-        </a>
-
-        <a
-          class="active"
-          href="./">
-          Internal
-        </a>
-
+        <a href="../research.html">Research</a>
+        <a href="../people.html">Team</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../news.html">News</a>
+        <a href="../join.html">Join Us</a>
+        <a href="../contact.html">Contact</a>
+        <a class="active" href="./">Internal</a>
       </nav>
 
-
     </div>
-
   </header>
 
-
-
-  <!-- =========================================================
-       MAIN CONTENT
-       ========================================================= -->
-
+  <!-- MAIN CONTENT -->
   <main class="internal-page">
 
-
-    <!-- INTRO -->
-
     <section class="internal-intro">
-
-      <h1>
-        Resources for Lab Members
-      </h1>
+      <h1>Resources for Lab Members</h1>
 
       <p>
         Internal Palma Lab resources, documents, and shared information
@@ -470,33 +312,20 @@
           University or lab login may be required to access some resources.
         </strong>
       </p>
-
     </section>
-
-
-
-    <!-- =======================================================
-         RESOURCES
-         ======================================================= -->
 
     <section
       class="internal-grid"
       aria-label="Internal lab resources">
 
-
-      <!-- =====================================================
-           LAB CALENDAR
-           ===================================================== -->
-
+      <!-- LAB CALENDAR -->
       <a
         class="internal-card internal-card-link"
         href="https://calendar.google.com/calendar/u/0?cid=MmEwNmE1NTRjNGVkYjQ5MDExMTIyYWExNzdkNDhiNGEzZWUxYTg3Y2JhMjdlY2JjMTg0OWQwZjQ2ZjJlNDYxN0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
         target="_blank"
         rel="noopener noreferrer">
 
-        <h2>
-          Lab Calendar
-        </h2>
+        <h2>Lab Calendar</h2>
 
         <p>
           Group meetings, presentations, deadlines, and lab events.
@@ -505,24 +334,16 @@
         <span class="internal-status">
           Open calendar →
         </span>
-
       </a>
 
-
-
-      <!-- =====================================================
-           EQUIPMENT
-           ===================================================== -->
-
+      <!-- EQUIPMENT -->
       <a
         class="internal-card internal-card-link"
-        href="https://drive.google.com/drive/folders/1CAnshAYTbFHujIGkKjSPKEtt5SZcNfPn?usp=drive_link"
+        href="https://uwy-my.sharepoint.com/:f:/r/personal/csantosd_uwyo_edu/Documents/Palma%20Lab/Equipment?d=w5eb477c6cc444d8ea1d5264d38d576e1&amp;csf=1&amp;web=1&amp;e=3VWSA1"
         target="_blank"
         rel="noopener noreferrer">
 
-        <h2>
-          Equipment &amp; Reservations
-        </h2>
+        <h2>Equipment &amp; Reservations</h2>
 
         <p>
           Shared equipment information and reservation resources.
@@ -531,24 +352,16 @@
         <span class="internal-status">
           Open folder →
         </span>
-
       </a>
 
-
-
-      <!-- =====================================================
-           PROTOCOLS
-           ===================================================== -->
-
+      <!-- PROTOCOLS -->
       <a
         class="internal-card internal-card-link"
-        href="https://drive.google.com/drive/folders/1TooaHBrb0uDvu35YLbLuDy5H_6EicPeI?usp=drive_link"
+        href="https://uwy-my.sharepoint.com/:f:/r/personal/csantosd_uwyo_edu/Documents/Palma%20Lab/Protocols?d=w364eb74c003942fea5fc278673fb0a12&amp;csf=1&amp;web=1&amp;e=Gi2rLB"
         target="_blank"
         rel="noopener noreferrer">
 
-        <h2>
-          Protocols
-        </h2>
+        <h2>Protocols</h2>
 
         <p>
           Experimental protocols and standard lab procedures.
@@ -557,24 +370,16 @@
         <span class="internal-status">
           Open folder →
         </span>
-
       </a>
 
-
-
-      <!-- =====================================================
-           ONBOARDING
-           ===================================================== -->
-
+      <!-- ONBOARDING -->
       <a
         class="internal-card internal-card-link"
-        href="https://drive.google.com/drive/folders/1e15W2V1ocCeriWcDRioYf6qUHl3FQcmO?usp=drive_link"
+        href="https://uwy-my.sharepoint.com/:f:/r/personal/csantosd_uwyo_edu/Documents/Palma%20Lab/Onboarding?d=wd0da816b2d6945c3bdc22331e8af42d0&amp;csf=1&amp;web=1&amp;e=hNyPdX"
         target="_blank"
         rel="noopener noreferrer">
 
-        <h2>
-          Onboarding
-        </h2>
+        <h2>Onboarding</h2>
 
         <p>
           Information and resources for new lab members.
@@ -583,24 +388,16 @@
         <span class="internal-status">
           Open folder →
         </span>
-
       </a>
 
-
-
-      <!-- =====================================================
-           ORDERING
-           ===================================================== -->
-
+      <!-- ORDERING -->
       <a
         class="internal-card internal-card-link"
-        href="https://drive.google.com/drive/folders/145A-8rwTXHxFQPf4MqhrRFe1yE_UvJJN?usp=drive_link"
+        href="https://uwy-my.sharepoint.com/:f:/r/personal/csantosd_uwyo_edu/Documents/Palma%20Lab/Ordering?d=w517219351fb84f66a4d1aa0beb3021b1&amp;csf=1&amp;web=1&amp;e=JX7KpK"
         target="_blank"
         rel="noopener noreferrer">
 
-        <h2>
-          Ordering
-        </h2>
+        <h2>Ordering</h2>
 
         <p>
           Information for purchasing supplies and requesting orders.
@@ -609,22 +406,31 @@
         <span class="internal-status">
           Open folder →
         </span>
-
       </a>
 
+      <!-- OPEN POSITIONS -->
+      <a
+        class="internal-card internal-card-link"
+        href="https://uwy-my.sharepoint.com/:f:/r/personal/csantosd_uwyo_edu/Documents/Palma%20Lab/Open%20positions?d=wfd82751d910143289b9f00666b8d7aab&amp;csf=1&amp;web=1&amp;e=F1fUBp"
+        target="_blank"
+        rel="noopener noreferrer">
 
+        <h2>Open Positions</h2>
 
-      <!-- =====================================================
-           UW RESOURCES
-           ===================================================== -->
+        <p>
+          Recruitment materials, job announcements, and hiring resources.
+        </p>
 
+        <span class="internal-status">
+          Open folder →
+        </span>
+      </a>
+
+      <!-- UW RESOURCES -->
       <details class="internal-card uw-resources-card">
 
         <summary>
-
-          <h2>
-            UW Resources
-          </h2>
+          <h2>UW Resources</h2>
 
           <p>
             Useful University of Wyoming resources for lab members.
@@ -633,117 +439,75 @@
           <span class="internal-status">
             View resources
           </span>
-
         </summary>
-
 
         <ul class="uw-resource-list">
 
-
           <li>
-
             <a
               href="https://www.uwyo.edu/safety/training/index.html"
               target="_blank"
               rel="noopener noreferrer">
-
               Safety &amp; Lab Training
-
             </a>
-
           </li>
 
-
           <li>
-
             <a
               href="https://www.uwyo.edu/uwgrad/enrolled-students/index.html"
               target="_blank"
               rel="noopener noreferrer">
-
               Graduate Education
-
             </a>
-
           </li>
 
-
           <li>
-
             <a
               href="https://www.uwyo.edu/research/index.html"
               target="_blank"
               rel="noopener noreferrer">
-
               Research &amp; Compliance
-
             </a>
-
           </li>
 
-
           <li>
-
             <a
               href="https://www.uwyo.edu/software/"
               target="_blank"
               rel="noopener noreferrer">
-
               IT &amp; Software
-
             </a>
-
           </li>
 
-
           <li>
-
             <a
               href="https://www.uwyo.edu/libraries/"
               target="_blank"
               rel="noopener noreferrer">
-
               UW Libraries
-
             </a>
-
           </li>
 
-
           <li>
-
             <a
               href="https://www.uwyo.edu/research/researchers-and-faculty.html"
               target="_blank"
               rel="noopener noreferrer">
-
               Researcher &amp; Faculty Resources
-
             </a>
-
           </li>
 
-
         </ul>
-
-
       </details>
 
-
-
-      <!-- =====================================================
-           LAB HANDBOOK
-           ===================================================== -->
-
+      <!-- LAB HANDBOOK -->
       <a
         class="internal-card internal-card-link"
-        href="https://drive.google.com/drive/folders/1suN71wsw1NmoRj48M98JtSk2bR6-Ax5f?usp=drive_link"
+        href="https://uwy-my.sharepoint.com/:f:/r/personal/csantosd_uwyo_edu/Documents/Palma%20Lab/Lab%20Handbook?d=w268fd672df2844db90ff4576727ccff2&amp;csf=1&amp;web=1&amp;e=4wRTsF"
         target="_blank"
         rel="noopener noreferrer">
 
-        <h2>
-          Lab Handbook
-        </h2>
+        <h2>Lab Handbook</h2>
 
         <p>
           Lab expectations, practices, and shared guidelines.
@@ -752,58 +516,36 @@
         <span class="internal-status">
           Open folder →
         </span>
-
       </a>
 
-
     </section>
-
-
   </main>
 
-
-
-  <!-- =========================================================
-       FOOTER
-       ========================================================= -->
-
+  <!-- FOOTER -->
   <footer>
-
 
     <div class="footer-main-row">
 
-
       <!-- SOCIAL ICONS -->
-
       <div class="footer-social">
 
-
         <!-- GOOGLE SCHOLAR -->
-
         <a
-          href="https://scholar.google.com/citations?user=hZ1ScywAAAAJ&hl=en"
+          href="https://scholar.google.com/citations?user=hZ1ScywAAAAJ&amp;hl=en"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Cristina Palma on Google Scholar"
           title="Google Scholar">
 
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true">
-
+          <svg viewBox="0 0 24 24" aria-hidden="true">
             <path
               fill="currentColor"
               d="M12 2L1 8l11 6 9-4.91V17h2V8L12 2zm-6.5 9.18V16c0 2.21 2.91 4 6.5 4s6.5-1.79 6.5-4v-4.82L12 14.73 5.5 11.18z">
             </path>
-
           </svg>
-
         </a>
 
-
-
         <!-- ORCID -->
-
         <a
           href="https://orcid.org/0000-0002-0390-1440"
           target="_blank"
@@ -811,17 +553,13 @@
           aria-label="Cristina Palma on ORCID"
           title="ORCID">
 
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true">
-
+          <svg viewBox="0 0 24 24" aria-hidden="true">
             <circle
               cx="12"
               cy="12"
               r="10"
               fill="currentColor">
             </circle>
-
             <text
               x="12"
               y="15.7"
@@ -832,15 +570,10 @@
               font-weight="600">
               iD
             </text>
-
           </svg>
-
         </a>
 
-
-
         <!-- LINKEDIN -->
-
         <a
           href="https://www.linkedin.com/in/cristina-palma-312704156/"
           target="_blank"
@@ -857,15 +590,10 @@
               fill="currentColor"
               d="M5.34 3.5A2.34 2.34 0 1 1 .66 3.5a2.34 2.34 0 0 1 4.68 0ZM1 8h4.7v15H1V8Zm7.6 0h4.5v2.05h.06c.63-1.2 2.17-2.46 4.47-2.46C22.4 7.59 23 10.73 23 14.81V23h-4.69v-7.25c0-1.73-.03-3.95-2.41-3.95-2.41 0-2.78 1.88-2.78 3.82V23H8.6V8Z">
             </path>
-
           </svg>
-
         </a>
 
-
-
         <!-- YOUTUBE -->
-
         <a
           href="https://www.youtube.com/@PalmaLabWyo"
           target="_blank"
@@ -873,23 +601,15 @@
           aria-label="Palma Lab on YouTube"
           title="YouTube">
 
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true">
-
+          <svg viewBox="0 0 24 24" aria-hidden="true">
             <path
               fill="currentColor"
               d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z">
             </path>
-
           </svg>
-
         </a>
 
-
-
         <!-- EMAIL -->
-
         <a
           href="mailto:csantosd@uwyo.edu"
           aria-label="Email Cristina Palma"
@@ -911,32 +631,17 @@
               height="14"
               rx="1.5">
             </rect>
-
             <path d="M4 7l8 6 8-6"></path>
-
           </svg>
-
         </a>
-
 
       </div>
 
-
-
       <!-- INSTITUTIONAL INFORMATION -->
-
       <div class="footer-info">
 
-
-        <span>
-          Palma Lab
-        </span>
-
-
-        <span class="footer-divider">
-          ·
-        </span>
-
+        <span>Palma Lab</span>
+        <span class="footer-divider">·</span>
 
         <a
           href="https://www.uwyo.edu/molecbio/index.html"
@@ -945,11 +650,7 @@
           Department of Molecular Biology
         </a>
 
-
-        <span class="footer-divider">
-          ·
-        </span>
-
+        <span class="footer-divider">·</span>
 
         <a
           href="https://www.uwyo.edu/soc/index.html"
@@ -958,41 +659,21 @@
           School of Computing
         </a>
 
-
-        <span class="footer-divider">
-          ·
-        </span>
-
-
-        <span>
-          University of Wyoming
-        </span>
-
+        <span class="footer-divider">·</span>
+        <span>University of Wyoming</span>
 
       </div>
-
-
     </div>
 
-
-
-    <!-- =======================================================
-         MOUNTAINS
-         ======================================================= -->
-
+    <!-- MOUNTAINS -->
     <div class="footer-mountains">
-
       <img
         src="../images/mountains-footer.png"
         alt=""
         aria-hidden="true">
-
     </div>
-
 
   </footer>
 
-
 </body>
-
 </html>
